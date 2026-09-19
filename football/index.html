@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football, 11v11 and 8v8 | Anton Abyzov</title>
+<meta name="description" content="Five seasons in the ALF Minsk top division as a defender, silver in 2014 and 2018, a winning goal in Germany, UPSL with Dade County FC, and Miami 8v8.">
+<link rel="canonical" href="https://anton-abyzov.github.io/football.antonabyzov.com/football/">
+<meta name="author" content="Anton Abyzov">
+<meta name="theme-color" content="#06120e">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Anton Abyzov · Football">
+<meta property="og:title" content="Anton Abyzov - 11v11 and 8v8 Football">
+<meta property="og:description" content="ALF Minsk top division defender, 2014 and 2018 silver, the only goal in a German district win, UPSL Division 1, Miami Superliga 8v8 champion.">
+<meta property="og:url" content="https://anton-abyzov.github.io/football.antonabyzov.com/football/">
+<meta property="og:image" content="https://anton-abyzov.github.io/football.antonabyzov.com/assets/og/og-football.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anton Abyzov - 11v11 and 8v8 Football">
+<meta name="twitter:description" content="ALF Minsk top division defender, 2014 and 2018 silver, the only goal in a German district win, UPSL Division 1, Miami Superliga 8v8 champion.">
+<meta name="twitter:image" content="https://anton-abyzov.github.io/football.antonabyzov.com/assets/og/og-football.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..700&display=swap">
+<link rel="stylesheet" href="/football.antonabyzov.com/assets/css/site.css">
+<link rel="icon" href="/football.antonabyzov.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/football.antonabyzov.com/site.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Anton Abyzov: outdoor football, Minsk to Brandenburg to Miami",
+      "author": { "@type": "Person", "name": "Anton Abyzov" },
+      "datePublished": "2026-09-19",
+      "dateModified": "2026-09-19",
+      "mainEntityOfPage": "https://anton-abyzov.github.io/football.antonabyzov.com/football/",
+      "isPartOf": { "@type": "WebSite", "name": "Anton Abyzov · Football", "url": "https://anton-abyzov.github.io/football.antonabyzov.com/" },
+      "about": [
+        { "@type": "SportsOrganization", "name": "United Premier Soccer League (UPSL)" },
+        { "@type": "SportsTeam", "name": "Dade County FC" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://anton-abyzov.github.io/football.antonabyzov.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Football", "item": "https://anton-abyzov.github.io/football.antonabyzov.com/football/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Page-scoped CSS only. Two components that site.css does not have yet:
+     .stats (the ALF season table, scrollable on a phone) and .pager
+     (prev/next). Both read the section theme tokens, never raw colours, so
+     they work on pitch and on paper. Fold them into site.css §16 when a
+     second page needs them. -->
+<style>
+.stats{ overflow-x:auto; border-top:1.5px solid var(--fg); }
+.stats table{ width:100%; min-width:680px; border-collapse:collapse; }
+.stats caption{
+  text-align:left; padding:0 0 12px;
+  font:600 var(--t-label)/1.4 var(--body); letter-spacing:.2em;
+  text-transform:uppercase; color:var(--fg-fade);
+}
+.stats th,.stats td{
+  padding:11px 10px 10px; text-align:right; white-space:nowrap;
+  border-bottom:1px solid var(--hair); font-size:13px; color:var(--fg-dim);
+}
+.stats thead th{
+  font:600 var(--t-micro)/1.3 var(--body); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--fg-fade); border-bottom-color:var(--fg);
+}
+.stats th[scope=row]{
+  text-align:left; font:400 21px/1 var(--display); letter-spacing:.03em; color:var(--fg);
+}
+.stats td.l{ text-align:left; color:var(--fg); }
+.stats tbody tr:hover{ background:color-mix(in srgb, var(--accent) 6%, transparent); }
+.stats tr.is-medal th[scope=row]{ color:var(--gold-ink); }
+.stats tr.is-medal td.l{ font-weight:700; }
+.stats tr.is-medal{ box-shadow:inset 3px 0 0 var(--gold); }
+.stats tfoot th,.stats tfoot td{ border-bottom:0; border-top:1.5px solid var(--fg); color:var(--fg); font-weight:700; }
+.stats tfoot th[scope=row]{ font-size:15px; font-family:var(--body); font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.stats__hint{ margin:10px 0 0; font-size:11.5px; letter-spacing:.06em; color:var(--fg-fade); }
+@media (min-width:760px){ .stats__hint{ display:none; } }
+
+.pager{ display:grid; gap:10px; margin-top:clamp(34px,4vw,52px); border-top:1px solid var(--hair); padding-top:22px; }
+@media (min-width:620px){ .pager{ grid-template-columns:1fr 1fr; } }
+.pager a{ display:block; padding:15px 17px; border:1px solid var(--hair); text-decoration:none; color:var(--fg); transition:border-color .22s var(--ease), color .22s var(--ease); }
+.pager a+a{ text-align:right; }
+.pager a:hover{ border-color:var(--accent); color:var(--accent); }
+.pager em{ display:block; font:600 var(--t-micro)/1 var(--body); font-style:normal; letter-spacing:.2em; text-transform:uppercase; color:var(--fg-fade); }
+.pager b{ display:block; margin-top:7px; font:400 22px/1 var(--display); letter-spacing:.03em; text-transform:uppercase; }
+
+/* QA fix. .pill was #fff on --live = 3.42:1, an AA fail; dark ink on the bright
+   fill is .pill--gold's own pattern, #2a0906 on #ff4438 = 5.38:1, and --live
+   stays as it is. The .dataline scroller affordance moved to site.css. */
+.pill:not(.pill--out):not(.pill--gold){ color:#2a0906; }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER · score bug with the merged data line (docs/_partials/header.html) ══ -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="fx fx--grain" aria-hidden="true"></div>
+
+<header class="bug" id="top">
+  <div class="bug__bar">
+    <a class="bug__crest" href="/football.antonabyzov.com/">
+      <span class="bug__mark" aria-hidden="true">A</span>
+      <span class="bug__id"><b>ABYZOV</b><i>Utility &middot; Playmaker</i></span>
+    </a>
+
+    <nav class="bug__nav" aria-label="Sections">
+      <a href="/football.antonabyzov.com/highlights/">Highlights</a>
+      <a href="/football.antonabyzov.com/career/">Career</a>
+      <a href="/football.antonabyzov.com/futsal/">Futsal</a>
+      <a href="/football.antonabyzov.com/football/" aria-current="page">Football</a>
+      <a href="/football.antonabyzov.com/coaching/">Coaching</a>
+      <a href="/football.antonabyzov.com/gallery/">Gallery</a>
+      <a href="/football.antonabyzov.com/records/">Records</a>
+      <a href="/football.antonabyzov.com/baller-league/">Baller League</a>
+    </nav>
+
+    <button class="bug__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+      <span class="bug__burger" aria-hidden="true"><i></i></span>Menu
+    </button>
+  </div>
+
+  <nav class="bug__panel" id="nav-panel" aria-label="Sections, compact" hidden>
+    <a href="/football.antonabyzov.com/highlights/">Highlights</a>
+    <a href="/football.antonabyzov.com/career/">Career</a>
+    <a href="/football.antonabyzov.com/futsal/">Futsal</a>
+    <a href="/football.antonabyzov.com/football/" aria-current="page">Football</a>
+    <a href="/football.antonabyzov.com/coaching/">Coaching</a>
+    <a href="/football.antonabyzov.com/gallery/">Gallery</a>
+    <a href="/football.antonabyzov.com/records/">Records</a>
+    <a href="/football.antonabyzov.com/baller-league/">Baller League</a>
+  </nav>
+
+  <dl class="dataline" role="group" aria-label="Player data" tabindex="0">
+    <div><dt>Position</dt><dd>Utility &middot; Playmaker</dd></div>
+    <div><dt>Height</dt><dd>6ft 2in</dd></div>
+    <div><dt>Foot</dt><dd>Right, scores with both</dd></div>
+    <div><dt>Based in</dt><dd>Miami, FL</dd></div>
+    <div class="is-live"><dt>Open to</dt><dd><span class="dot" aria-hidden="true"></span> 6v6 indoor</dd></div>
+    <div><dt>City</dt><dd>Miami</dd></div>
+  </dl>
+</header>
+
+<main id="main">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol><li><a href="/football.antonabyzov.com/">Home</a></li><li aria-current="page">Football</li></ol>
+  </nav>
+
+  <!-- ══ 1 · OPENING · pitch ════════════════════════════════════════════════ -->
+  <section class="sec sec--pitch" id="outdoor" aria-labelledby="h-outdoor">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Outdoor</span>Eleven, eight and seven a side</p>
+        <h1 id="h-outdoor">Football,<br>11v11 and 8v8.</h1>
+      </div>
+
+      <p class="lede">
+        Eleven-a-side is where I learned to defend and to pass, and where my goal numbers are modest and
+        honest. Everything from 8v8 down is where they climb.
+      </p>
+
+      <!-- src: alfoot.net pid=2125 -->
+      <p class="prose" style="margin-top:22px">
+        The single most useful line on my official record: <strong>three goals in 59 appearances of
+        11-a-side, against 50 goals in 8v8, 5v5 and futsal on the same page.</strong> Same player, same
+        association, same career card. The pitch is the variable.
+      </p>
+
+      <!-- .tiles draws its cell hairlines with gap:1px over the container
+           background, so `reveal` must NOT sit on the grid itself: site.css
+           animates .reveal > * and every cell would rise on its own, opening
+           the 1px row rule into an 18px band of bare background mid-scroll.
+           Wrapping the grid makes the ul the single reveal child, so the
+           hairlines stay 1px throughout. -->
+      <div class="reveal" style="margin-top:clamp(30px,4vw,44px)">
+      <ul class="tiles">
+        <!-- BEGIN:stats -->
+        <!-- src: alfoot.net pid=2125 -->
+        <li class="tile"><span class="tile__n" data-count="59">59</span><span class="tile__l">Appearances of 11-a-side<em>ALF Minsk card, 2011 to 2017</em></span></li>
+        <!-- src: alfoot.net pid=2125 -->
+        <li class="tile"><span class="tile__n" data-count="3">3</span><span class="tile__l">Goals in those 59 games<em>Registered as a defender</em></span></li>
+        <!-- src: alfoot.net pid=2125, season table -->
+        <li class="tile"><span class="tile__n" data-count="50">50</span><span class="tile__l">Goals small-sided on the same card<em>8v8, 5v5 and futsal</em></span></li>
+        <!-- src: alfoot.net showResultsRank&p=40 and showResultsRank&p=90 -->
+        <li class="tile tile--gold"><span class="tile__n" data-count="2">2</span><span class="tile__l">Silver medals in the ALF<em>11v11 in 2014, 8x8 in 2018</em></span></li>
+        <!-- src: research/easychamp-8v8-stats.md production audit of PS23 seasons C83 to C108, live PS23 pages and the audit JSON in agreement; approximate because two early seasons are partially published -->
+        <li class="tile"><span class="tile__n" data-count="88">~88</span><span class="tile__l">Games for EasyChamp FC 8v8<em>Seven PS23 seasons, 100 per cent attendance</em></span></li>
+        <!-- src: fussball.de spiel 02HPT56JPG000000VS5489B3VUL5IRNT -->
+        <li class="tile"><span class="tile__n" data-count="1">1</span><span class="tile__l">Goal in Germany, the only one of the game<em>Rangsdorf 1-0 Siethen, April 2022</em></span></li>
+        <!-- END:stats -->
+      </ul>
+      </div>
+
+      <p class="note">
+        Every figure here is recorded, not a career total. These come off league pages and off the match
+        archive I have kept myself since 2012, and plenty of games were never filmed or logged.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ 2 · ALF MINSK SEASON TABLE · paper ═════════════════════════════════ -->
+  <section class="sec sec--paper" id="alf" aria-labelledby="h-alf">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Ledger</span>ALF Minsk, 11-a-side, 2011 to 2017</p>
+        <h2 id="h-alf">Seven seasons, five of them in the top division.</h2>
+      </div>
+
+      <p class="prose">
+        Registered as a <strong>defender</strong> (Защитники, zashchitniki), shirt 55 on the career card.
+        Meteor for one season, then Exiteq (Экситек) for six, promoted out of the Pervaya Liga in 2012 and
+        in the Vysshaya Liga from 2013 on.
+      </p>
+
+      <!-- src: alfoot.net pid=2125, all rows -->
+      <div class="stats" role="region" aria-labelledby="h-alf" tabindex="0">
+        <table>
+          <caption>Association of Amateur Football, Minsk &middot; official career card, 11-a-side</caption>
+          <thead>
+            <tr>
+              <th scope="col">Season</th>
+              <th scope="col" class="l">Division</th>
+              <th scope="col" class="l">Team</th>
+              <th scope="col">Shirt</th>
+              <th scope="col">Apps</th>
+              <th scope="col">Starts</th>
+              <th scope="col">Min</th>
+              <th scope="col">G</th>
+              <th scope="col">A</th>
+              <th scope="col" class="l">Team finish</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2011</th><td class="l">Vtoraya Liga</td><td class="l">Meteor</td>
+              <td>4</td><td>8</td><td>6</td><td>410</td><td>0</td><td>0</td><td class="l">5th of 16</td>
+            </tr>
+            <tr>
+              <th scope="row">2012</th><td class="l">Pervaya Liga</td><td class="l">Exiteq</td>
+              <td>4</td><td>13</td><td>11</td><td>655</td><td>0</td><td>0</td><td class="l">4th of 16, promoted</td>
+            </tr>
+            <tr>
+              <th scope="row">2013</th><td class="l">Vysshaya Liga</td><td class="l">Exiteq</td>
+              <td>4</td><td>15</td><td>8</td><td>685</td><td>1</td><td>1</td><td class="l">5th of 14</td>
+            </tr>
+            <tr class="is-medal">
+              <th scope="row">2014</th><td class="l">Vysshaya Liga</td><td class="l">Exiteq</td>
+              <td>4</td><td>10</td><td>2</td><td>296</td><td>0</td><td>0</td><td class="l">2nd of 14, silver</td>
+            </tr>
+            <tr>
+              <th scope="row">2015</th><td class="l">Vysshaya Liga</td><td class="l">Exiteq</td>
+              <td>36</td><td>12</td><td>5</td><td>554</td><td>2</td><td>1</td><td class="l">10th of 16</td>
+            </tr>
+            <tr>
+              <th scope="row">2016</th><td class="l">Vysshaya Liga</td><td class="l">Exiteq</td>
+              <td>4</td><td>1</td><td>0</td><td>15</td><td>0</td><td>0</td><td class="l">9th of 16</td>
+            </tr>
+            <tr>
+              <th scope="row">2017</th><td class="l">Vysshaya Liga</td><td class="l">Exiteq</td>
+              <td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="l">5th of 16, left 26 July</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total</th><td class="l">2011 to 2017</td><td class="l">Two clubs</td>
+              <td></td><td>59</td><td>32</td><td>2,615</td><td>3</td><td>2</td><td class="l">2 yellow cards, 0 red</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="stats__hint">Scroll the table sideways to see every column.</p>
+
+      <div class="honours__grid" style="margin-top:clamp(34px,4.4vw,54px)">
+        <div>
+          <ul class="hon">
+            <!-- BEGIN:honours:alf -->
+            <!-- src: alfoot.net showResultsRank&p=40 -->
+            <li class="hon--gold">
+              <span class="hon__y">2014 &middot; Silver</span>
+              <span class="hon__t">ALF Minsk Vysshaya Liga, Exiteq</span>
+              <p class="hon__d">Second of fourteen in the top division. 26 games, 19 wins, 2 draws, 5 defeats, 73-43, 59 points.</p>
+            </li>
+            <!-- src: alfoot.net pid=2125; devby.io interview, 22 October 2012 -->
+            <li>
+              <span class="hon__y">2012 &middot; Correction</span>
+              <span class="hon__t">Fourth and promoted, not a title</span>
+              <p class="hon__d">The 2012 season with Exiteq in the Pervaya Liga ended in fourth place and promotion. It was not a division title, and I would rather say so here than let anyone read it the wrong way. The real title from those years is the futsal Minsk city championship with Itransition.</p>
+            </li>
+            <!-- END:honours:alf -->
+          </ul>
+        </div>
+
+        <div class="honours__aside">
+          <!-- src: alfoot.net pid=2125 -->
+          <figure style="border:1px solid var(--hair);padding:22px 20px">
+            <p class="sec-kick" style="margin-bottom:10px">Why the pitch size matters</p>
+            <p style="margin:0;font:400 clamp(30px,5vw,52px)/.95 var(--display);letter-spacing:.02em;color:var(--fg)">
+              3 <span style="color:var(--fg-fade)">vs</span> 50
+            </p>
+            <figcaption class="hon__d" style="margin-top:12px">Three goals in 59 appearances of 11v11 on
+              this card, against 50 goals in 8v8, 5v5 and futsal on the same card.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 3 · 8x8 AND 7x7 · pitch ════════════════════════════════════════════ -->
+  <section class="sec sec--pitch" id="small-sided" aria-labelledby="h-small">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill">Replay</span>8x8 and 7x7</p>
+        <h2 id="h-small">The formats nearest to 6v6.<br><span class="muted">This is where the numbers turn.</span></h2>
+      </div>
+
+      <div class="tape__grid">
+        <div>
+          <!-- BEGIN:player:p-itcup -->
+          <!-- src: YouTube DuwUJHRf00U, stream title carries "Финал"; own match note, 12 August 2021; goal at 2501s -->
+          <div class="player" id="p-itcup" data-video="DuwUJHRf00U" data-start="2497"
+               data-title="IT Cup final, 8v8, ISsoft against Luch, 12 August 2021, played at the equaliser">
+            <div class="player__frame">
+              <div class="player__poster" aria-hidden="true">
+                <picture><source srcset="/football.antonabyzov.com/assets/img/poster-itcup.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/poster-itcup.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBwnI4z0ppmPfpTI4i8auWxu6VX8zp9ea5+V9SC35w7cH1oqucdSoHuKKpRb2DlP//Z);background-size:cover;background-position:center"></picture>
+              </div>
+              <span class="player__scoreline" aria-hidden="true"><b>IT Cup final &middot; 8v8</b> &middot; AFL Belarus &middot; 12 Aug 2021</span>
+              <a class="player__play" href="https://www.youtube.com/watch?v=DuwUJHRf00U&amp;t=2497s" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play at the equaliser<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <!-- END:player:p-itcup -->
+          <p class="player__note">
+            Nothing is requested from YouTube until you press play.
+          </p>
+
+          <!-- src: YouTube DuwUJHRf00U; own match note, 12 August 2021 -->
+          <p class="prose" style="margin-top:16px">
+            <strong>IT Cup, AFL Belarus, 8v8, 12 August 2021: I scored the equaliser in the final.</strong>
+            ISsoft 3-2 Luch. A first-time finish in open play on a three-against-three break, at 2501
+            seconds of the broadcast. The stream title carries the word &laquo;Финал&raquo; (final), which
+            is what proves which game this was.
+          </p>
+          <p class="note">
+            It was not a free kick, and I have seen it written up that way. Open play, first time, on the
+            break. The commentary on the stream has not been transcribed, so I am not quoting it.
+          </p>
+        </div>
+
+        <div data-player="p-itcup">
+          <h3 class="chapters__h">The moment</h3>
+          <ol class="chapters__list">
+            <!-- BEGIN:moments:itcup -->
+            <!-- src: YouTube DuwUJHRf00U, goal at 2501s -->
+            <li><a href="https://www.youtube.com/watch?v=DuwUJHRf00U&amp;t=2497s" rel="noopener" data-t="2497"><span class="ts">41:41</span><span class="cap">The equaliser<em>3v3 break, first-time finish</em></span></a></li>
+            <!-- END:moments:itcup -->
+          </ol>
+
+          <h3 class="chapters__h chapters__h--alt">Honours in these formats</h3>
+          <ul class="hon">
+            <!-- BEGIN:honours:small-sided -->
+            <!-- src: alfoot.net showResultsRank&p=90 -->
+            <li class="hon--gold">
+              <span class="hon__y">2018 &middot; Silver</span>
+              <span class="hon__t">ALF 8x8 championship, Blugrana</span>
+              <p class="hon__d">Team second of eight. My line: 4 goals, 3 assists, one best-player award, shirt 25.</p>
+            </li>
+            <!-- src: alfoot.net pid=2125 -->
+            <li>
+              <span class="hon__y">2018/19 &middot; Winter</span>
+              <span class="hon__t">ALF 8x8 winter championship, Blugrana</span>
+              <p class="hon__d">Third of nine.</p>
+            </li>
+            <!-- END:honours:small-sided -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- src: streams Ug8xz0pgpmk, WvjSQYcwtqs, H8DPaEk5ZEk; published film VKLUxHV11BM, end card reads 3 games, 3 wins, 4 goals, 1 assist -->
+      <p class="prose" style="margin-top:clamp(34px,4.4vw,54px)">
+        <strong>Summer 2026, Minsk: three games, three wins, four goals, one assist.</strong> LFL 7x7 and
+        Premierliga 8x8. 26 July, Valknut 4-11 Blugrana, shirt 12. 28 July, 7 Tonn 0-4 Bezgrima, shirt 17.
+        3 August, Team Fox 2-6 Bezgrima, shirt 18. The long-range goal on 3 August is the one to watch.
+      </p>
+
+      <ul class="reels">
+        <!-- BEGIN:small-sided-reels -->
+        <li class="reel">
+          <!-- src: published film VKLUxHV11BM, hero goal at 4:19 -->
+          <div class="player" id="p-summer7" data-video="VKLUxHV11BM" data-start="254"
+               data-title="Summer 2026 in Minsk, LFL 7x7 and Premierliga 8x8, played at the long-range goal">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=VKLUxHV11BM&amp;t=254s" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play at the long-range goal<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>Three games, three wins, summer 2026</b> The published film of the Minsk 7x7 and 8x8 run. Hero goal at 4:19. No frame grab is cut for this one yet, so the poster is drawn.</p>
+        </li>
+        <li class="reel">
+          <!-- src: YouTube 3zbbJ5dihno -->
+          <div class="player" id="p-backheel" data-video="3zbbJ5dihno"
+               data-title="LFL 7x7 Minsk, 17 July 2026, backheel goal reel">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=3zbbJ5dihno" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the 1:36 reel<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>Backheel, dummy, heel finish</b> A fourth 7x7 game, 17 July 2026, cut into a 1:36 reel.</p>
+        </li>
+        <li class="reel">
+          <!-- src: YouTube UZmmD6TzHDA, LmaLGJ8hBPI, wepW9g3lNBE, EasyChamp channel -->
+          <div class="player" id="p-masterliga" data-video="UZmmD6TzHDA"
+               data-title="PS23 Master Liga 8v8, EasyChamp against Atenas Pocito, February 2026, full match">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=UZmmD6TzHDA" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the full match<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>PS23 Master Liga 8v8, 2026</b> Three full EasyChamp matches are published: Atenas Pocito, La Pichanga FC and Futbol Cracks FC. This facade opens the first of them.</p>
+        </li>
+        <!-- END:small-sided-reels -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ 4 · GERMANY · paper ════════════════════════════════════════════════ -->
+  <section class="sec sec--paper" id="germany" aria-labelledby="h-germany">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Brandenburg</span>Germany, 10 April 2022</p>
+        <h2 id="h-germany">Four weeks in the country,<br>and the only goal of the game.</h2>
+      </div>
+
+      <div class="honours__grid">
+        <div>
+          <!-- src: fussball.de spiel 02HPT56JPG000000VS5489B3VUL5IRNT, live; screenshot media/evidence/fussball-de-rangsdorf-siethen-2022-04-10.png; own match note -->
+          <p class="prose">
+            <strong>SV Rangsdorf 28 1-0 SV Siethen.</strong> Kreisfreundschaftsspiel, Kreis
+            Dahme/Fläming, Brandenburg. Stadion Rangsdorfer See, Birkenallee 49, Rangsdorf. 45 spectators,
+            kick-off 15:00, final whistle 16:40.
+          </p>
+          <!-- src: fussball.de spiel 02HPT56JPG000000VS5489B3VUL5IRNT; own match note; video -b36FHlDdJA -->
+          <p class="prose">
+            <strong>I scored the only goal and Rangsdorf's coach Michi named me man of the match.</strong>
+            The official fixture page records the 1:0 and one goal event at 57 minutes.
+          </p>
+          <!-- src: sv-rangsdorf.de club history; fussball.de club page -->
+          <p class="prose">
+            SV Rangsdorf 28 e.V. plays German district amateur football, Kreisliga level. That is how this
+            should be described, and it is enough on its own: I turned up in a country I had been in for
+            four weeks and scored the winner.
+          </p>
+
+          <ul class="hon" style="margin-top:26px">
+            <!-- src: fussball.de spiel 02HPT56JPG000000VS5489B3VUL5IRNT -->
+            <li>
+              <span class="hon__y">Receipt &middot; fussball.de</span>
+              <span class="hon__t">The official fixture page</span>
+              <p class="hon__d">The German FA's own match record for
+                <a href="https://www.fussball.de/spiel/sv-rangsdorf-28-sv-siethen/-/spiel/02HPT56JPG000000VS5489B3VUL5IRNT" rel="noopener">SV Rangsdorf 28 against SV Siethen</a>:
+                1:0 at full time, 0:0 at the break, one goal event at 57 minutes, 45 spectators, referee
+                Christopher Kyselka. The page does not name the scorer, which is normal for a county
+                friendly, so the goal being mine rests on my own match note and on the coach's word. A
+                screenshot is kept in the project in case the page moves.</p>
+            </li>
+            <!-- src: video -b36FHlDdJA -->
+            <li>
+              <span class="hon__y">Receipt &middot; Video</span>
+              <span class="hon__t">Footage from the day</span>
+              <p class="hon__d"><a href="https://www.youtube.com/watch?v=-b36FHlDdJA" rel="noopener">The
+                clip from Rangsdorf</a> is on YouTube. It is not chaptered yet, so I am not pointing at a
+                timestamp I have not verified.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="honours__aside">
+          <figure>
+            <!-- src: media/google-photos/germany/2022-04-10_rangsdorf_match_red-kit_IMG_2576.HEIC, EXIF 15:05:47, five minutes after kick-off -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/rangsdorf-2022.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/rangsdorf-2022.jpg" width="675" height="900" alt="Anton Abyzov in the red SV Rangsdorf 28 kit during the match against SV Siethen, April 2022." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMnizLKhGRFwSKsW9k0sYaKMsxXge1W/s65c5+8cn3qSOR0kDLM3A29BWXOio2d7lE6RdZ/wCPQ/n/APXorU+0y/8APU0U+eJFxuKTaKKK5xCbfrRRRQB//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>Rangsdorf, 10 April 2022</b>
+              In the red Rangsdorf kit. The photograph is time-stamped 15:05:47, five minutes after
+              kick-off.
+            </figcaption>
+          </figure>
+
+          <figure style="margin-top:22px">
+            <!-- src: media/google-photos/germany/2022-04-10_150545_rangsdorf_img_2571.heic, one of 149 frames inside the match window; research/chrome-round2.md Rangsdorf match day -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/rangsdorf-2022-kit.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/rangsdorf-2022-kit.jpg" width="800" height="1067" alt="Anton Abyzov standing in the red SV Rangsdorf 28 kit in front of the home dugout at Stadion Rangsdorfer See." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDJlcJJjJPNKzs4bHAHFSRRSNCrgZZmwFrRgsRchlEixFODnnJqClG6b7GYHOBxRWz/AGK3/P3H/wB8n/GiqsTdCeWgH3aaiBS3ycZzRRXLcSbSsSYH92iiii4j/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>The kit, the crest and the sponsor</b>
+              Same afternoon, 15:05. SV Rangsdorf 28 red, the club crest on the chest and the
+              SystemBau Semrok shirt sponsor that runs round the ground.
+            </figcaption>
+          </figure>
+
+          <figure style="margin-top:22px">
+            <!-- src: media/google-photos/germany/2022-04-10_150835_rangsdorf_img_2583.heic, EXIF 15:08:35; research/chrome-round2.md Rangsdorf match day -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/rangsdorf-2022-close.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/rangsdorf-2022-close.jpg" width="1100" height="733" alt="Anton Abyzov in the red SV Rangsdorf 28 kit close to the touchline, the away bench behind him." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCn5F0VACOOMH5ajeyePBm3Kp74rU86Y9ZGP41HPukiK8saz9oioWckmUZGi2tG8hA9KKuRRgxrvUbsc5FFL2i7Ey0bR//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>15:08, eight minutes in</b>
+              Closer to the touchline, the Siethen bench behind. There are 149 photographs from inside
+              the match window on 10 April 2022; these are two of them.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- src: fussball.de spiel 02HPT56JPG000000VS5489B3VUL5IRNT, screenshot media/evidence/fussball-de-rangsdorf-siethen-2022-04-10.png -->
+      <figure style="margin-top:clamp(30px,4vw,46px);border:1px solid var(--hair);max-width:1100px">
+        <a href="/football.antonabyzov.com/assets/img/receipt-fussballde.jpg"><picture><source srcset="/football.antonabyzov.com/assets/img/receipt-fussballde.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/receipt-fussballde.jpg" width="1100" height="378" alt="The fussball.de fixture page for SV Rangsdorf 28 against SV Siethen on 10 April 2022, showing the 1 to 0 result, the venue and 45 spectators." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCi2RRPuB8/I2c8D1zUv2j9z0bzPoMUUVK3MSKRkaOPajedk789D6UUUVZSP/Z);background-size:cover;background-position:center"></picture></a>
+        <figcaption class="hon__d" style="padding:14px 16px 16px">
+          <strong>The receipt.</strong> fussball.de's own header for the fixture: Freundschaftsspiele
+          Kreis Dahme/Fläming, Sonntag 10.04.2022, 15:00, Rasenplatz Stadion Rangsdorfer See, Birkenallee
+          49, 1:0 with 0:0 at the break, 45 spectators. Saved as an image because German club pages come
+          and go. Tap it to read it full size.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ 5 · UNITED STATES · pitch, deep ════════════════════════════════════ -->
+  <section class="sec sec--pitch sec--pitch-deep" id="usa" aria-labelledby="h-usa">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Florida</span>UPSL and USSL, Dade County FC</p>
+        <h2 id="h-usa">Registered, signed and still on the roster.</h2>
+      </div>
+
+      <div class="honours__grid">
+        <div>
+          <!-- src: signed documents in the vault -->
+          <p class="prose">
+            <strong>2023, UPSL Premier Division, Spring and Fall.</strong> Two signed instruments in my
+            name: a Release of Liability naming UPSL and USSF, and a Premier Player Acceptance Letter for
+            the 2023 Fall Season under the Dade County FC banner, plus the same letter for Spring.
+          </p>
+
+          <ul class="hon">
+            <!-- src: premier.upsl.com mako-soccer-club-36876-vs-dade-county-fc-590978-05-13-2023 -->
+            <li>
+              <span class="hon__y">13 May 2023</span>
+              <span class="hon__t">Mako Soccer Club 4-3 Dade County FC, UPSL Premier</span>
+              <p class="hon__d">South County Regional Sports Complex, Port St. Lucie, away. I assisted the
+                first DCFC goal, to Daniel Revivo.
+                <a href="https://premier.upsl.com/matches/mako-soccer-club-36876-vs-dade-county-fc-590978-05-13-2023/" rel="noopener">The public box score</a>
+                lists no assists at all, so that one is my own account and not a league record.</p>
+            </li>
+            <!-- src: division1.upsl.com dade-county-fc-590978-vs-river-miami-fc-405139-09-12-2026 -->
+            <li>
+              <span class="hon__y">12 September 2026</span>
+              <span class="hon__t">Dade County FC 1-1 River Miami FC</span>
+              <p class="hon__d">UPSL Division 1, Florida South South. Northwestern High School, 18:00 ET.
+                <a href="https://division1.upsl.com/matches/dade-county-fc-590978-vs-river-miami-fc-405139-09-12-2026/" rel="noopener">League fixture page</a>.</p>
+            </li>
+            <!-- src: Anton's own UPSL registration dashboard, 19 September 2026 -->
+            <li>
+              <span class="hon__y">19 September 2026</span>
+              <span class="hon__t">On the current Dade County FC roster</span>
+              <p class="hon__d">Listed as <strong>Defense</strong> in the UPSL registration system, player
+                id 230103-049614. The prefix means my first registration was 3 January 2023.</p>
+            </li>
+            <!-- src: Baloa payment record; club operations note, 14 September 2026 -->
+            <li>
+              <span class="hon__y">12 September 2026</span>
+              <span class="hon__t">USSL South Florida, Fall 2026</span>
+              <p class="hon__d">The club runs a USSL strand alongside the UPSL first team. I paid the
+                player inscription for it.</p>
+            </li>
+          </ul>
+
+          <!-- src: own DCFC match note -->
+          <p class="prose" style="margin-top:26px">
+            One thing I can put a number on from Dade County FC: my own per-match stat sheet from a game
+            against Tropical Sporting FC reads <strong>86% pass accuracy</strong> (13 completed,
+            2 missed), 3 interceptions, 2 clearances, 8 accurate forward passes. A passing and defending
+            profile, which is what the position asks for.
+          </p>
+        </div>
+
+        <div class="honours__aside">
+          <figure>
+            <!-- src: SanDisk event folder 2026-05-24, IMG_6949.MOV at ~12.5s; instagram.com/reel/DYmZRImlfWf/ -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/still-1v1.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/still-1v1.jpg" width="595" height="744" alt="Anton Abyzov shoulder to shoulder with a defender in a one against one drill on Miami turf." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCzLKy5IXdUEMzNKROyxL2Bolacoy7DychgRVJ1uGdS8JfA9aLkl5pQrEGVTjviissR3WOEcD0x0opXA1fMpQ4oorEBfMFFFFAz/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>One against one, Miami</b>
+              The defending half of the job, in training. Session with Artem Baranovskyi on Miami turf,
+              24 May 2026.
+            </figcaption>
+          </figure>
+
+          <!-- src: instagram.com/p/CyOdTOoOxgw/ (@dadecountyfc), 10 October 2023; permission not yet granted -->
+          <div class="pending" role="note" style="margin-top:18px">
+            <b>DCFC still, not cleared</b>
+            <span>The club's own post from 10 October 2023 shows me in the number 11 red bib and, in the
+            second frame, blocking a shot from Daniel Revivo. It is @dadecountyfc's photograph, so it goes
+            up here when I have permission and a credit line, and not before.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 6 · MIAMI HONOURS · paper ══════════════════════════════════════════ -->
+  <section class="sec sec--paper" id="miami" aria-labelledby="h-miami">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--gold">Board</span>Miami 8v8 and five-a-side</p>
+        <h2 id="h-miami">Two titles, and the games where the goals come in fours.</h2>
+      </div>
+
+      <div class="honours__grid">
+        <div>
+          <ul class="hon">
+            <!-- BEGIN:honours:miami -->
+            <!-- src: research/easychamp-8v8-stats.md production audit of PS23 seasons C83 to C108, live PS23 pages and the audit JSON in agreement -->
+            <li>
+              <span class="hon__y">2024 to 2026 &middot; Miami</span>
+              <span class="hon__t">About 88 games for EasyChamp FC, every one of them played</span>
+              <p class="hon__d">Seven PS23 seasons of 8v8, about 88 games, and 100 per cent attendance in every season that was measured. Registered Midfield and Admin, captain. PS23 stopped publishing per-player scorers after season C92, so there is no goal count to put here and none is claimed.</p>
+            </li>
+            <!-- src: own championship note; instagram.com/reel/DYZrl5ckQN5/ and DYnd7pDAWSQ; research/easychamp-8v8-stats.md production audit of PS23 seasons C83 to C108, live PS23 pages and the audit JSON in agreement -->
+            <li class="hon--gold">
+              <span class="hon__y">July 2025 &middot; Champion</span>
+              <span class="hon__t">Miami Superliga 8v8, EasyChamp FC</span>
+              <p class="hon__d">The club I own, coach and play in, shirt 8 with ABYZOV on the back. I allocated a 3,000 dollar prize pool across the squad myself after the final. The title season read 11 wins, 1 draw, 4 defeats, 96 goals for and 61 against, 34 points.</p>
+            </li>
+            <!-- src: Anton's own public Facebook post, posted with MIAMI FULBO LEAGUES; Patagonia FC cup and medal photograph, plate reading 5v5 Champions, Patagonia; research/gallery-curation.md -->
+            <li class="hon--gold">
+              <span class="hon__y">North Miami &middot; Title</span>
+              <span class="hon__t">Championship Clubs League 5x5, Team Patagonia</span>
+              <p class="hon__d">In my own words at the time: I had the honour of playing with Team Patagonia in the Championship Clubs League 5x5 in North Miami, and we took home the title. PS23, Miami Fulbo Leagues. I played for Patagonia in that five-a-side. In the 8v8 game of February 2026 they were the opponents and I was in EasyChamp white, number 8.</p>
+            </li>
+            <!-- src: YouTube p3kv0_LCCqA at 1586 s, kit check against the title photograph; content/LATE-ADDITIONS.md EasyChamp FC production audit -->
+            <li>
+              <span class="hon__y">17 February 2026</span>
+              <span class="hon__t">A goal against Patagonia in the PS23 Superliga 8v8</span>
+              <p class="hon__d">For EasyChamp FC, in white number 8, against Patagonia in maroon. One goal is verified frame by frame on the public stream, at 1586 seconds. The near goal is mostly outside this camera's frame, so nothing else from that night is counted.</p>
+            </li>
+            <!-- src: Anton's own public Facebook post, full text recovered; own match note; video dJL-yvc4qI8 -->
+            <li>
+              <span class="hon__y">November 2024</span>
+              <span class="hon__t">Four goals in a 5-1 win over Five Stars FC</span>
+              <p class="hon__d">One of the toughest teams in Liga Corporativa La Red, for End It Soccer X Spanish, in the week of my fortieth birthday.</p>
+            </li>
+            <!-- src: own match note; YouTube O5f6Z1YwImo; YouTube dP7uCHUt-VQ -->
+            <li>
+              <span class="hon__y">2025 &middot; Gulfstream FC</span>
+              <span class="hon__t">Hallandale Beach, 8v8</span>
+              <p class="hon__d">A headed goal in a 7-2 win over Miami All Stars on 2 May 2025, and the low finish off a corner routine against 8 Machos in Liga Evolution Fecha 9 on 15 November 2025, at 2415 seconds of the stream.</p>
+            </li>
+            <!-- src: Miami match archive; videos 32-XK0X6n24, HVUX8yfTpT8 -->
+            <li>
+              <span class="hon__y">2023 &middot; UKG Dream Team</span>
+              <span class="hon__t">Liga Evolution 8v8, shirt 9</span>
+              <p class="hon__d">A goal on 10 November 2023 and a brace against Nicoya FC on 17 November 2023.</p>
+            </li>
+            <!-- src: Miami match archive, Veo links -->
+            <li>
+              <span class="hon__y">6 November 2023</span>
+              <span class="hon__t">MVP, Nomadas against Santile</span>
+              <p class="hon__d">Miami Futsal League, Doral, 2023-24. A 7-6 win.</p>
+            </li>
+            <!-- END:honours:miami -->
+          </ul>
+          <p class="note">Gold on this board means a real title. Four-goal games and one-off goals are
+            printed plain, however much I liked them.</p>
+        </div>
+
+        <div class="honours__aside">
+          <figure>
+            <!-- src: own championship note; instagram.com/reel/DYZrl5ckQN5/ -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/easychamp-champions.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/easychamp-champions.jpg" width="800" height="1067" alt="EasyChamp FC players holding the Miami Superliga 8v8 trophy after the July 2025 final." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxe3UMyEvHn6cVkxzmGT91lR7itBJt8SusYCd9xqLyTLKkuY9rclc9KHIFEeNQbH3/ANKKrs0O48Ec+tFL2gWIGkY5XOBjHFCvjA/SiisAuL8tFFFAz//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>Miami Superliga 8v8 champions, July 2025</b>
+              EasyChamp FC. Owner, coach and number 8 in the same team.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 7 · THE MIAMI TAPE · pitch ═════════════════════════════════════════ -->
+  <section class="sec sec--pitch" id="tape" aria-labelledby="h-tape">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill">Replay</span>The 8v8 tape</p>
+        <h2 id="h-tape">One goal, verified frame by frame.<br><span class="muted">Miami, PS23 Superliga, February 2026.</span></h2>
+      </div>
+
+      <div class="tape__grid">
+        <div>
+          <!-- BEGIN:player:p-patagonia -->
+          <!-- src: YouTube p3kv0_LCCqA, goal by white number 8 at 1586 s verified frame by frame; kit check against the Superliga title photograph, EasyChamp white and purple against Patagonia maroon; content/LATE-ADDITIONS.md EasyChamp FC production audit -->
+          <div class="player" id="p-patagonia" data-video="p3kv0_LCCqA" data-start="1578"
+               data-title="PS23 Superliga 8v8, EasyChamp FC against Patagonia, 17 February 2026, played at the goal">
+            <div class="player__frame">
+              <div class="player__poster" aria-hidden="true">
+                <picture><source srcset="/football.antonabyzov.com/assets/img/poster-patagonia.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/poster-patagonia.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCePUFYfMAfrTjNbyZBjUfhWAJABxuzQtyzZ64FZWC5rtFAWJVRzRVG2kZpVBJx1opq7KP/2Q==);background-size:cover;background-position:center"></picture>
+              </div>
+              <span class="player__scoreline" aria-hidden="true"><b>PS23 Superliga 8v8</b> &middot; Miami &middot; 17 Feb 2026</span>
+              <a class="player__play" href="https://www.youtube.com/watch?v=p3kv0_LCCqA&amp;t=1578s" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the stream at the goal<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <!-- END:player:p-patagonia -->
+          <p class="player__note">
+            Nothing is requested from YouTube until you press play. Full stream: PS23 SOCCER,
+            17 February 2026, EasyChamp FC against Patagonia.
+          </p>
+          <p class="prose" style="margin-top:14px">
+            <!-- src: YouTube p3kv0_LCCqA at 1586 s, frame-by-frame review; kit check against the Superliga title photograph -->
+            EasyChamp in white and purple, number 8, against Patagonia in maroon. My goal is at
+            <strong>26:26</strong> and it has been checked frame by frame.
+          </p>
+          <p class="note">
+            <!-- src: content/LATE-ADDITIONS.md EasyChamp FC production audit, kit check and frame review -->
+            The broadcast scoreboard overlay dies early in that stream, so the final score is my own
+            record rather than something you can read off the tape. The camera sits at one end with the
+            near goal mostly out of frame, so other moments from that night cannot be checked on it and
+            are not counted. Two different relationships with the same club, and they get confused: the
+            <a href="#miami">5v5 title</a> in North Miami was won playing <em>for</em> Patagonia, this
+            8v8 game was played <em>against</em> them.
+          </p>
+        </div>
+
+        <div data-player="p-patagonia">
+          <h3 class="chapters__h">The goal</h3>
+          <ol class="chapters__list">
+            <!-- BEGIN:moments:patagonia -->
+            <li><a href="https://www.youtube.com/watch?v=p3kv0_LCCqA&amp;t=1578s" rel="noopener" data-t="1578"><span class="ts">26:26</span><span class="cap">The goal<em>White number 8, verified frame by frame</em></span></a></li>
+            <!-- END:moments:patagonia -->
+          </ol>
+
+          <h3 class="chapters__h chapters__h--alt">The cut of this game</h3>
+          <div class="pending" role="note">
+            <b>3:30 cut, ready</b>
+            <span>A chaptered cut of this game is edited. It is waiting on a YouTube upload, so until
+            then the full stream is the tape.</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="reels">
+        <!-- BEGIN:tape-reels -->
+        <li class="reel">
+          <!-- src: YouTube dP7uCHUt-VQ, goal at 2415s; own match note -->
+          <div class="player" id="p-machos" data-video="dP7uCHUt-VQ" data-start="2410"
+               data-title="Liga Evolution Fecha 9, Gulfstream FC against 8 Machos, 15 November 2025, played at the corner-routine goal">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=dP7uCHUt-VQ&amp;t=2410s" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play at the corner routine<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>The corner we called, finished low</b> Gulfstream FC in Liga Evolution Fecha 9, 15 November 2025, at 2415 seconds.</p>
+        </li>
+        <li class="reel">
+          <!-- src: video dJL-yvc4qI8; Anton's own public Facebook post; own match note -->
+          <div class="player" id="p-fivestars" data-video="dJL-yvc4qI8"
+               data-title="Four goals against Five Stars FC, Liga Corporativa La Red, November 2024">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=dJL-yvc4qI8" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the Five Stars game<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>Four in a 5-1 win, at forty</b> Against Five Stars FC, Liga Corporativa La Red, November 2024, for End It Soccer X Spanish.</p>
+        </li>
+        <li class="reel">
+          <!-- src: YouTube O5f6Z1YwImo; own match note -->
+          <div class="player" id="p-allstars" data-video="O5f6Z1YwImo"
+               data-title="Gulfstream FC against Miami All Stars, 2 May 2025, headed goal in a 7-2 win">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <a class="player__play" href="https://www.youtube.com/watch?v=O5f6Z1YwImo" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the All Stars game<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>Headed goal, 7-2</b> Gulfstream FC against Miami All Stars, Hallandale Beach, 2 May 2025.</p>
+        </li>
+        <li class="reel">
+          <!-- src: YouTube KMrn87K-320; research/CRITIQUE.md trophy-footage correction; research/easychamp-8v8-stats.md -->
+          <div class="player" id="p-trophy-2025" data-video="KMrn87K-320" data-start="0"
+               data-title="EasyChamp FC celebrating the Superliga 8v8 title, Miami, July 2025">
+            <div class="player__frame">
+              <div class="player__poster player__poster--chalk" aria-hidden="true"></div>
+              <span class="player__scoreline" aria-hidden="true"><b>Superliga 8v8</b> &middot; Miami &middot; July 2025</span>
+              <a class="player__play" href="https://www.youtube.com/watch?v=KMrn87K-320&amp;t=0s" rel="noopener">
+                <span class="player__tri" aria-hidden="true"></span>
+                <span class="player__cta">Play the celebration<em>Loads YouTube on click</em></span>
+              </a>
+            </div>
+          </div>
+          <p class="reel__cap"><b>The cup, on the pitch</b> 1:08 of the squad with the Superliga 8v8 trophy after the final. The season behind it read 11 wins, 1 draw, 4 defeats, 96-61.</p>
+        </li>
+        <!-- END:tape-reels -->
+      </ul>
+
+      <p class="cta-row">
+        <a class="btn btn--ghost" href="/football.antonabyzov.com/highlights/">Every clip, with the receipts</a>
+        <a class="btn btn--ghost" href="/football.antonabyzov.com/futsal/">The futsal side of it</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ 8 · WHERE IT STARTED, AND TWO CONTESTS · paper ═════════════════════ -->
+  <section class="sec sec--paper" id="origins" aria-labelledby="h-origins">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Baranovichi</span>Where the outdoor game started</p>
+        <h2 id="h-origins">My first coach took me to the city tournaments.</h2>
+      </div>
+
+      <div class="honours__grid">
+        <div>
+          <!-- src: tmpc.barsu.by/index.php/o-sektsii/sotrudniki-sektsii/churilov-evgenij-vladimirovich; media/evidence/churilov/churilov-barsu-page.png; Anton's own account -->
+          <p class="prose">
+            My first football coach was <strong>Чурилов Евгений Владимирович (Churilov Evgeny
+            Vladimirovich)</strong>, the physical education teacher at <strong>Лицей №1 (Lyceum No 1) in
+            Baranovichi</strong>, where I was a pupil. He is a football coach by qualification, a BGOIFK
+            graduate who coached at the Luninets and Baranovichi youth sports schools before he taught at
+            my school, and he has lectured at Baranovichi State University since 2004. He is the man who
+            took me to the city tournaments, and that is where all of this begins.
+          </p>
+          <p class="prose">
+            The lyceum kept no sport archive that survives online, so there are no team photographs from
+            those years to show you. His own university page does exist, and I have saved a copy of it in
+            case it goes the way of the school's.
+          </p>
+
+          <h3 style="margin:clamp(30px,4vw,44px) 0 18px">One accuracy contest, for the record</h3>
+
+          <ul class="hon">
+            <!-- src: own VK post, November 2022; instagram.com/reel/DOxXwHBjI_a/ -->
+            <li>
+              <span class="hon__y">Miami &middot; November 2022</span>
+              <span class="hon__t">A penalty past Ruslan Nigmatullin, then the accuracy contest</span>
+              <p class="hon__d">I scored a penalty past the former Russia international goalkeeper and
+                then won the accuracy contest on the same night: crossbar twice in a row from the spot,
+                out of about twenty players, with the prize handed over by Nigmatullin himself. The
+                crossbar detail is my own account of the evening, not something the footage shows.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="honours__aside">
+          <figure style="max-width:212px">
+            <!-- src: tmpc.barsu.by/index.php/o-sektsii/sotrudniki-sektsii/churilov-evgenij-vladimirovich; portrait saved at media/evidence/churilov/churilov-evgenij-vladimirovich.jpg. The published portrait is only 210px wide, so the card is sized to it rather than upscaled. -->
+            <picture><source srcset="/football.antonabyzov.com/assets/img/churilov.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/churilov.jpg" width="210" height="280" alt="Evgeny Vladimirovich Churilov, the physical education teacher at Lyceum No 1 in Baranovichi who took Anton Abyzov to the city football tournaments." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/football.antonabyzov.com/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>
+              <b>My first football coach</b>
+              Чурилов Евгений Владимирович (Churilov Evgeny Vladimirovich), Лицей №1, Baranovichi. Photo:
+              Baranovichi State University, tmpc.barsu.by
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 9 · CLOSING BAND ═══════════════════════════════════════════════════ -->
+  <section class="band" id="next" aria-labelledby="h-next">
+    <div class="band__in">
+      <p class="sec-kick" style="color:var(--chalk-fade)"><span class="pill">Pitch</span>Why this page matters for 6v6</p>
+      <h2 id="h-next">Three in 59, fifty in the small stuff.</h2>
+      <div class="band__cols">
+        <!-- src: alfoot.net pid=2125 -->
+        <p>
+          Eleven-a-side taught me to defend, to pass and to read a game from the back. The scoring came
+          the moment the pitch shrank, and the official card says so in one line: 3 goals in 59 games of
+          11v11, 50 goals in 8v8, 5v5 and futsal.
+        </p>
+        <!-- src: alfoot.net showResultsRank&p=90; YouTube DuwUJHRf00U; research/easychamp-8v8-stats.md production audit, PS23 seasons C83 to C108 -->
+        <p>
+          The 8v8 record is the closest thing I have to a 6v6 record: an ALF silver with 4 goals and 3
+          assists, an equaliser in a cup final, a Miami Superliga title, and about 88 games of 8v8 for
+          my own club with 100 per cent attendance, still playing them at 41.
+        </p>
+      </div>
+      <p class="cta-row">
+        <a class="btn btn--volt" href="/football.antonabyzov.com/baller-league/"><span class="btn__ico" aria-hidden="true">&#9654;</span>The 6v6 pitch, and my application answers</a>
+        <a class="btn btn--ghost" href="/football.antonabyzov.com/records/">Check every number</a>
+      </p>
+
+      <!-- src: Anton's instruction 2026-09-19 -->
+      <p class="note" style="margin-top:34px;max-width:72ch;color:var(--chalk-fade)">
+        EasyChamp FC is not just a team I turn out for. I founded
+        <a href="https://easychamp.com" rel="noopener" style="color:var(--volt)">EasyChamp</a>, which now
+        runs several products: league and tournament management, live standings, and eSports competitions.
+        Founder plays the game he builds for.
+      </p>
+
+      <h3 class="chapters__h" style="margin-top:38px">Sources for this page</h3>
+      <ul class="cites">
+        <li>Official career card, Association of Amateur Football Minsk, player 2125:
+          <a href="https://www.alfoot.net/tournaments/?func=showPlayer&amp;p=129&amp;pid=2125" rel="noopener">alfoot.net</a>
+          (every season row, the totals and the 3 against 50 line)</li>
+        <li>ALF Vysshaya Liga 2014 final table, silver with Exiteq: alfoot.net showResultsRank&amp;p=40</li>
+        <li>ALF 8x8 championship 2018 final table, silver with Blugrana: alfoot.net showResultsRank&amp;p=90</li>
+        <li>IT Cup final, 12 August 2021:
+          <a href="https://www.youtube.com/watch?v=DuwUJHRf00U&amp;t=2497s" rel="noopener">YouTube DuwUJHRf00U</a>,
+          goal at 2501 seconds, stream title carries &laquo;Финал&raquo;</li>
+        <li>SV Rangsdorf 28 against SV Siethen, 10 April 2022:
+          <a href="https://www.fussball.de/spiel/sv-rangsdorf-28-sv-siethen/-/spiel/02HPT56JPG000000VS5489B3VUL5IRNT" rel="noopener">fussball.de official fixture page</a>,
+          screenshot on file in case it moves</li>
+        <li>UPSL Premier box score, 13 May 2023:
+          <a href="https://premier.upsl.com/matches/mako-soccer-club-36876-vs-dade-county-fc-590978-05-13-2023/" rel="noopener">premier.upsl.com</a></li>
+        <li>UPSL Division 1 fixture, 12 September 2026:
+          <a href="https://division1.upsl.com/matches/dade-county-fc-590978-vs-river-miami-fc-405139-09-12-2026/" rel="noopener">division1.upsl.com</a></li>
+        <li>The goal against Patagonia, 17 February 2026:
+          <a href="https://www.youtube.com/watch?v=p3kv0_LCCqA&amp;t=1578s" rel="noopener">YouTube p3kv0_LCCqA</a>,
+          white number 8 at 1586 seconds, checked frame by frame</li>
+        <li>EasyChamp FC 8v8, games, attendance and the July 2025 title season:
+          PS23 season pages C83 to C108, audited in research/easychamp-8v8-stats.md</li>
+        <li>First football coach, Чурилов Евгений Владимирович:
+          <a href="https://tmpc.barsu.by/index.php/o-sektsii/sotrudniki-sektsii/churilov-evgenij-vladimirovich" rel="noopener">tmpc.barsu.by</a>,
+          page and portrait saved locally</li>
+        <li>Everything else, in one list, with archive notes: <a href="/football.antonabyzov.com/records/">/records/</a></li>
+      </ul>
+
+      <nav class="pager" aria-label="Adjacent sections">
+        <a href="/football.antonabyzov.com/futsal/"><em>Previous</em><b>Futsal</b></a>
+        <a href="/football.antonabyzov.com/coaching/"><em>Next</em><b>Coaching</b></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER (docs/_partials/footer.html) ════════════════════════════════════ -->
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <p class="foot__name">Anton Abyzov</p>
+      <p class="foot__role">Utility player &middot; Playmaker &middot; Coach &middot; Miami, Florida</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="Elsewhere">
+      <a href="https://antonabyzov.com" rel="noopener">antonabyzov.com <em>Software engineering</em></a>
+      <a href="https://easychamp.com" rel="noopener">EasyChamp <em>The company</em></a>
+      <a href="https://www.youtube.com/@antonabyzov" rel="noopener">AI Power <em>YouTube</em></a>
+      <a href="https://www.youtube.com/@aabyzov" rel="noopener">My YouTube channel <em>youtube.com/@aabyzov</em></a>
+      <a href="https://www.instagram.com/aabyzov/" rel="noopener">Instagram <em>@aabyzov</em></a>
+      <a href="/football.antonabyzov.com/records/">Records <em>Every number, sourced</em></a>
+    </nav>
+
+    <p class="foot__fine">
+      Numbers on this site trace to the sources listed on <a href="/football.antonabyzov.com/records/">/records/</a>.
+      Recorded figures are recorded, not career totals: plenty of games were never filmed or logged.
+    </p>
+  </div>
+</footer>
+
+<script src="/football.antonabyzov.com/assets/js/site.js" defer></script>
+</body>
+</html>

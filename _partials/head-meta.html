@@ -1,0 +1,48 @@
+<!--
+  head-meta.html, copy this block verbatim into every page's <head> and
+  replace the {{TOKENS}}. Nothing else goes above <body>.
+
+  {{TITLE}}        55-60 chars, "<page> | Anton Abyzov" is the house pattern
+  {{DESC}}         150-160 chars, must be true and traceable to the dossier
+  {{PATH}}         absolute path with the trailing slash, e.g. /career/
+  {{OG_IMAGE}}     file name inside /assets/og/, e.g. og-career.jpg
+  {{OG_TITLE}}     short, no site name
+  {{OG_DESC}}      one sentence, can repeat {{DESC}}
+  {{JSONLD}}       one JSON-LD object for this page (Person on /, WebPage +
+                   BreadcrumbList elsewhere). Keep it valid JSON, no comments.
+
+  Two font families only: Anton (display) and Archivo (body/UI, variable, its
+  width axis carries the condensed labels). Do not add a third.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="https://football.antonabyzov.com{{PATH}}">
+<meta name="author" content="Anton Abyzov">
+<meta name="theme-color" content="#06120e">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Anton Abyzov · Football">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESC}}">
+<meta property="og:url" content="https://football.antonabyzov.com{{PATH}}">
+<meta property="og:image" content="https://anton-abyzov.github.io/football.antonabyzov.com/assets/og/{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{OG_DESC}}">
+<meta name="twitter:image" content="https://anton-abyzov.github.io/football.antonabyzov.com/assets/og/{{OG_IMAGE}}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..700&display=swap">
+<link rel="stylesheet" href="/football.antonabyzov.com/assets/css/site.css">
+<link rel="icon" href="/football.antonabyzov.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/football.antonabyzov.com/site.webmanifest">
+
+<script type="application/ld+json">
+{{JSONLD}}
+</script>

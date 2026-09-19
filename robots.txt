@@ -1,0 +1,9 @@
+# football.antonabyzov.com
+# Images are deliberately crawlable: a scout reverse-image-searching a match
+# still should land here, not nowhere.
+User-agent: *
+Allow: /
+Allow: /assets/img/
+Allow: /assets/og/
+
+Sitemap: https://anton-abyzov.github.io/football.antonabyzov.com/sitemap.xml

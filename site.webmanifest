@@ -1,0 +1,13 @@
+{
+  "name": "Anton Abyzov · Football",
+  "short_name": "Abyzov",
+  "description": "Utility player, playmaker and coach. Miami, Florida.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#06120e",
+  "theme_color": "#06120e",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
