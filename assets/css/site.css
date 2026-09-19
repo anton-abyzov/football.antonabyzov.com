@@ -18,6 +18,7 @@
      3  themes          8  video facade      13 gallery
      4  furniture       9  chapters          14 cta band + footer
      5  score bug      10  honours board     15 motion
+     16 clip rail      17  layered home (scroll-driven)
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /* ═══ 1. TOKENS ═══════════════════════════════════════════════════════════ */
@@ -430,6 +431,43 @@ section[id]{ scroll-margin-top:118px; }
   letter-spacing:.13em; text-transform:uppercase; color:var(--chalk-dim);
 }
 
+/* The home hero carries a SECOND photograph: Nantes airport, 5 July 2009, the
+   morning after the European Championship final. The Patagonia portrait keeps
+   the hero slot because it is the only 3:4 frame in the archive and the column
+   is 3:4; the cup frame is 3:2 and reads as a document, so it is the card laid
+   over the portrait's left edge rather than the bed under the type. It only
+   goes absolute from 1180px up: between 920 and 1180 the two hero columns are
+   close enough in width that a card protruding left lands on the end of the
+   role line, so there it simply follows the portrait in normal flow, the same
+   way it does on a phone. Home page only for now.
+   SHARED FIX: fold into a .hero--pair modifier if a second page wants it. */
+.hero__stack{ position:relative; align-self:end; }
+/* the bottom margin keeps the caption clear of the best-goals rail, which
+   the home page pulls up over the hero's floor */
+.hero__cup{ position:relative; margin:20px 0 40px; }
+.hero__cup picture{ display:block; overflow:hidden; }
+.hero__cup img{
+  display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover;
+  filter:grayscale(.12) contrast(1.14) brightness(1.03) saturate(.96);
+}
+.hero__cup figcaption{ display:flex; flex-direction:column; gap:3px; margin-top:9px; }
+.hero__cup figcaption b{
+  font:400 clamp(15px,1.6vw,19px)/1.12 var(--display);
+  letter-spacing:.035em; text-transform:uppercase; color:var(--volt);
+}
+.hero__cup figcaption span{
+  font:600 var(--t-micro)/1.35 var(--body);
+  letter-spacing:.12em; text-transform:uppercase; color:var(--chalk-dim);
+}
+@media (min-width:1180px){
+  .hero__cup{
+    position:absolute; left:-38%; top:10%; width:58%; margin:0; z-index:4;
+    padding:10px 10px 12px; background:rgba(5,15,11,.94);
+    border:1px solid rgba(200,255,46,.24);
+    box-shadow:0 26px 54px rgba(0,0,0,.58);
+  }
+}
+
 /* ═══ 7. STAT TILES ══════════════════════════════════════════════════════ */
 .numbers{ padding:0 var(--gut); margin-top:clamp(-68px,-7vw,-50px); position:relative; z-index:3; }
 .tiles{
@@ -796,6 +834,198 @@ section[id]{ scroll-margin-top:118px; }
   .rise,.reveal > *{ opacity:1!important; transform:none!important; }
   .dot{ animation:none; }
 }
+
+/* ═══ 16. CLIP RAIL (self-hosted goals) ══════════════════════════════════
+   The goals that exist as files on this domain, not as YouTube embeds. A
+   horizontal scroll-snap rail so a series reads as a series; it is a plain
+   overflow scroller, so keyboard, touch and a no-JS browser all work, and
+   the progress line under it is driven by the rail's own scroll timeline.  */
+.rail{
+  position:relative;
+  padding:clamp(30px,4.4vw,58px) var(--gut) clamp(34px,4.6vw,62px);
+  background:
+    radial-gradient(90% 60% at 12% 0%, rgba(200,255,46,.07), transparent 58%),
+    linear-gradient(180deg,#081812 0%,#061310 62%,#050f0b 100%);
+  color:var(--chalk);
+}
+.rail__in{ max-width:var(--max); margin-inline:auto; }
+/* Same idiom as .sec-head everywhere else on the site: kicker, then the
+   heading, then the lede under it. That also means the thing that peeks above
+   the fold on the home page is a section title, not half a sentence. */
+.rail__head{ margin:0 0 clamp(18px,2.4vw,28px); }
+.rail__head .lede{ margin-top:clamp(12px,1.4vw,18px); max-width:66ch; }
+.rail__head h2{
+  margin:0; font-size:clamp(28px,4.4vw,52px); line-height:.92;
+  letter-spacing:-.005em; color:var(--chalk);
+}
+.rail__head h2 .muted{ color:var(--chalk-fade); }
+.rail__head .lede{ color:var(--chalk-dim); }
+
+/* the rail itself */
+.clips{
+  list-style:none; margin:0; padding:0 0 4px;
+  display:grid; grid-auto-flow:column; grid-auto-columns:minmax(268px,78vw);
+  gap:clamp(14px,1.8vw,22px);
+  overflow-x:auto; overscroll-behavior-x:contain;
+  scroll-snap-type:x proximity;
+  scrollbar-width:thin; scrollbar-color:var(--line-volt) transparent;
+  scroll-timeline-name:--rail; scroll-timeline-axis:inline;
+}
+@media (min-width:700px){ .clips{ grid-auto-columns:minmax(300px,42vw); } }
+@media (min-width:1080px){ .clips{ grid-auto-columns:minmax(320px,31%); } }
+.clips::-webkit-scrollbar{ height:6px; }
+.clips::-webkit-scrollbar-thumb{ background:var(--line-volt); }
+.clip{ scroll-snap-align:start; min-width:0; }
+.clip__fig{ margin:0; }
+
+/* the <video> keeps its own controls: it is a file, not a facade */
+.clip__v{
+  display:block; width:100%; height:auto; aspect-ratio:16/9;
+  background:#08130f; object-fit:cover;
+  border:1px solid var(--line-volt);
+  box-shadow:0 34px 70px -50px #000;
+}
+.clip__v--tall{ object-fit:contain; }
+
+.clip__cap{ display:block; margin-top:11px; }
+.clip__t{
+  display:block; font:400 clamp(15px,1.7vw,19px)/1.12 var(--display);
+  letter-spacing:.035em; text-transform:uppercase; color:var(--chalk);
+}
+.clip__m{
+  display:block; margin-top:6px;
+  font:600 10.5px/1.45 var(--body); letter-spacing:.09em;
+  text-transform:uppercase; color:var(--chalk-fade);
+}
+.clip__n{
+  display:block; margin-top:7px; max-width:44ch;
+  font:400 12px/1.5 var(--body); color:var(--chalk-dim);
+}
+.clip__tag{
+  display:inline-block; margin-top:9px; padding:4px 9px 3px;
+  border:1px solid currentColor; border-radius:1px;
+  font:700 9.5px/1 var(--body); letter-spacing:.16em; text-transform:uppercase;
+}
+.clip__tag--on{ color:var(--volt); }
+.clip__tag--off{ color:var(--chalk-fade); }
+
+/* the honest slot for a cut that does not exist yet */
+.clip__pending{
+  display:grid; align-content:center; gap:9px; height:100%;
+  padding:24px 20px; text-align:left;
+  border:1px dashed rgba(200,255,46,.42);
+  background:repeating-linear-gradient(45deg, rgba(200,255,46,.05) 0 9px, transparent 9px 18px), #0b1d16;
+}
+.clip__pending b{
+  font:400 clamp(17px,2.2vw,22px)/1.1 var(--display);
+  letter-spacing:.06em; text-transform:uppercase; color:var(--volt);
+}
+.clip__pending span{ font:400 12px/1.55 var(--body); color:var(--chalk-dim); }
+
+/* the progress line under the rail */
+.rail__line{
+  position:relative; height:2px; margin-top:clamp(16px,2vw,24px);
+  background:var(--line-soft);
+}
+.rail__line i{
+  position:absolute; inset:0 auto 0 0; width:100%;
+  transform-origin:0 50%; transform:scaleX(1);
+  background:var(--volt);
+}
+.rail__hint{
+  margin:10px 0 0; font:600 9.5px/1.5 var(--body);
+  letter-spacing:.18em; text-transform:uppercase; color:var(--chalk-fade);
+}
+
+/* one clip on its own, inside a prose column: no rail chrome */
+.clips--single{
+  display:block; overflow:visible; scroll-snap-type:none;
+  max-width:520px; margin-top:22px; scroll-timeline-name:none;
+}
+.clips--single .clip__v{ border-color:var(--hair); }
+.clips--single .clip__t,
+.sec--paper .clips--single .clip__t{ color:var(--fg); }
+.sec--paper .clips--single .clip__m,
+.sec--paper .clips--single .clip__tag--off{ color:var(--fg-fade); }
+.sec--paper .clips--single .clip__n{ color:var(--fg-dim); }
+.sec--paper .clips--single .clip__tag--on{ color:var(--accent); }
+
+/* ═══ 17. LAYERED HOME (scroll-driven) ═══════════════════════════════════
+   Three hero planes at three rates, a slow scroll-linked zoom on the
+   portrait, per-row reveals on the honours board and the ledger, and the
+   rail's progress line tied to the rail's own inline scroll.
+
+   Every rule is inside @supports (animation-timeline) AND
+   (prefers-reduced-motion: no-preference), and every animation ends on the
+   element's own resting state, so a print, a PDF, a no-JS render and a
+   headless capture all show the finished page.                          */
+@supports (animation-timeline: scroll()){
+  @media (prefers-reduced-motion:no-preference){
+
+    /* plane 1, the chalked field: drifts up slower than the page */
+    .hero__pitch{
+      animation:plane-slow linear both, soak .5s var(--ease) both;
+      animation-timeline:scroll(root block), auto;
+      animation-range:0 92vh, normal;
+    }
+    /* plane 2, the portrait: a slow scroll-linked zoom over most of a screen */
+    .hero__shot img{
+      animation:hero-zoom linear both;
+      animation-timeline:scroll(root block);
+      animation-range:0 96vh;
+    }
+    /* plane 3, the foreground word: travels furthest, the fastest layer */
+    .hero__ghost{
+      animation:plane-fast linear both, soak .5s var(--ease) both;
+      animation-timeline:scroll(root block), auto;
+      animation-range:0 88vh, normal;
+    }
+    /* the floodlight cone widens as the page leaves the hero */
+    .hero__flood{
+      animation:flood-open linear both, soak .5s var(--ease) both;
+      animation-timeline:scroll(root block), auto;
+      animation-range:0 92vh, normal;
+    }
+
+    /* the honours board and the ledger arrive a row at a time, over most of
+       a screen of scroll each, which is the point: slow enough to read */
+    #honours .hon > li,
+    #ledger .ledger > li,
+    .rail .clip{
+      animation:row-in linear both;
+      animation-timeline:view();
+      animation-range:entry 4% cover 26%;
+    }
+    #honours .hon--gold::before{
+      transform-origin:50% 0;
+      animation:rule-draw linear both;
+      animation-timeline:view();
+      animation-range:entry 6% cover 30%;
+    }
+
+    /* the rail's progress line follows the rail's own horizontal scroll */
+    .rail__in{ timeline-scope:--rail; }
+    .rail__line i{
+      animation:rail-progress linear both;
+      animation-timeline:--rail;
+    }
+  }
+}
+
+@keyframes plane-slow{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(0,-7vh,0); } }
+@keyframes plane-fast{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(0,-22vh,0); } }
+@keyframes hero-zoom{ from{ transform:scale(1); } to{ transform:scale(1.13) translate3d(0,-2.5%,0); } }
+@keyframes flood-open{ from{ transform:translate3d(0,0,0) scale(1); } to{ transform:translate3d(0,6vh,0) scale(1.35); } }
+@keyframes row-in{ from{ transform:translate3d(0,26px,0); } to{ transform:none; } }
+@keyframes rule-draw{ from{ transform:scaleY(0); } to{ transform:scaleY(1); } }
+/* the line starts full and is CUT BACK as the rail scrolls, so the resting
+   state (a full line) is what a capture with no scrolling shows */
+@keyframes rail-progress{ from{ transform:scaleX(.16); } to{ transform:scaleX(1); } }
+
+/* the hero portrait must not spill past its frame while it zooms; the mask
+   travels with the image, so the soft bottom edge zooms with it */
+.hero__shot picture{ display:block; overflow:hidden; }
+
 
 @media print{
   .bug,.fx,.player__play,.skip{ display:none!important; }

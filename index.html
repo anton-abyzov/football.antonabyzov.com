@@ -54,7 +54,7 @@
     "Master of Sport of the Republic of Belarus, futsal for the visually impaired, 18 November 2009",
     "Commendation of the President of the Republic of Belarus, 16 December 2009",
     "Minsk city futsal championship, Itransition",
-    "Gold medal with the Belarus squad, IBSA B2/B3 European Championship, Kayseri 2012",
+    "European champion 2012, IBSA B2/B3 European Championship, Kayseri, Turkey",
     "Miami Superliga 8v8 champion 2025, EasyChamp FC",
     "Championship Clubs League 5x5 title, North Miami, Team Patagonia"
   ],
@@ -88,6 +88,26 @@
   border:1px solid rgba(234,243,238,.14);
 }
 #gallery .shot--native:hover img{ transform:none; }
+
+/* PAGE-SCOPED. The best-goals rail now takes the slot that used to belong to
+   the stat tiles: it is pulled up into the floodlit base of the hero so the
+   first thing under the name is a goal, and the tiles fall back to normal
+   flow underneath it. Only the home page stacks these two this way.
+   SHARED FIX: fold into site.css section 16 if a second page wants it. */
+/* The home hero gives back a little of its floor so the top of the rail is
+   already on screen at first paint: the first thing under the name is a goal.
+   Only the home page does this; the other pages keep the full hero footer. */
+.hero{ padding-bottom:clamp(64px,7.6vw,92px); }
+#best-goals{ margin-top:clamp(-94px,-9vw,-72px); z-index:3; }
+#best-goals + .numbers{ margin-top:clamp(34px,4.6vw,58px); }
+/* PAGE-SCOPED. The home rail carries three cuts and all three fit from 1080px
+   up, so there is nothing to scroll and nothing for the progress line or the
+   sideways hint to report. Below 1080 the rail really does scroll and both
+   come back. The eight-cut rail on /highlights/ always scrolls, so it keeps
+   them at every width. */
+@media (min-width:1080px){
+  #best-goals .rail__line, #best-goals .rail__hint{ display:none; }
+}
 </style>
 </head>
 <body>
@@ -168,14 +188,96 @@
         </p>
       </div>
 
+      <div class="hero__stack rise" style="--i:3">
       <!-- src: Google Photos Miami album; his own Facebook post on the Patagonia title; research/gallery-curation.md hero candidate 2 -->
-      <figure class="hero__shot rise" style="--i:3">
+      <figure class="hero__shot">
         <picture><source srcset="/football.antonabyzov.com/assets/img/hero-patagonia-cup.webp" type="image/webp"><img src="/football.antonabyzov.com/assets/img/hero-patagonia-cup.jpg" width="901" height="1201" alt="Anton Abyzov in the red Patagonia FC shirt holding the 5v5 champions cup in one hand and a winner&rsquo;s medal in the other." loading="eager" decoding="async" fetchpriority="high" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBi052ukjlGFLYJzTtS08W9zshyVI79q6IwRQyeZKPlAz+NQOsc84lYAg9Rmoc0tTZUm4cxz32N/b86K6b7Jb/ANz9aKfOjEbfSK8WGznNVrGRPOYtnA6CiisPsnetMMXvOHtRRRU3ZwH/2Q==);background-size:cover;background-position:center"></picture>
         <figcaption class="third">
           <span class="third__bar">Anton Abyzov</span>
           <span class="third__sub">Championship Clubs League 5v5 champions, North Miami</span>
         </figcaption>
       </figure>
+
+      <!-- src: Google Photos album Нант 2009, IMG_1978, EXIF 5 July 2009 09:43, Nantes airport; the album's own face tag names me in this frame; research/anton-additions-2026-09-19.md, Google Photos round 3 -->
+      <figure class="hero__cup">
+        <picture>
+          <source srcset="/football.antonabyzov.com/assets/img/nantes-2009-european-cup-card.webp" type="image/webp">
+          <img src="/football.antonabyzov.com/assets/img/nantes-2009-european-cup-card.jpg" width="900" height="600" alt="Anton Abyzov in a Belarus tracksuit beside the European Championship cup on an airport counter in Nantes, one arm raised." loading="eager" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwAudQa4VopAirjPAqpPelIDAqpwudwHJ+taVzpsf2WRoYmebGBg81g38U1ssSyxGNmBB3dTSHFK/vD21CVLYIkhIKgn2IorobfRbR7dCysTtHeigFJrY//Z);background-size:cover;background-position:center">
+        </picture>
+        <figcaption>
+          <b>European champion, 2009</b>
+          <span>Nantes airport, 5 July 2009</span>
+        </figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BEST GOALS · self-hosted clips, first thing under the hero ═════════ -->
+  <section class="rail" id="best-goals" aria-labelledby="h-best">
+    <div class="rail__in">
+      <div class="rail__head">
+        <div>
+          <p class="sec-kick"><span class="pill pill--out">On this domain</span>Three cuts, not three embeds</p>
+          <h2 id="h-best">Best goals first.<br><span class="muted">Files on this site, press play.</span></h2>
+        </div>
+        <p class="lede">
+          Every clip here is a copy that lives on this domain, cut from the tape and captioned with
+          what the frames actually show. Where the ball crossing the line is off camera, the card
+          says so. <a href="/football.antonabyzov.com/highlights/#best-goals">All eight cuts are on the highlights page</a>.
+        </p>
+      </div>
+      <ul class="clips">
+        <!-- BEGIN:best-goals -->
+        <li class="clip" id="clip-gulfstream-2025-11-14">
+          <!-- src: youtube dP7uCHUt-VQ in 2412.7s out 2424.6s, 16.17s cut. strike at 2414.37 visible; crossing occluded by six players; Gulfstream walk back, restart from the middle at ~2432 -->
+          <!-- note: stream uploaded 15 Nov as Fecha 9; Anton dates the game 14 Nov; live 2412.7-2424.6 + 1.8x replay 2413.9-2416.3 -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/football.antonabyzov.com/assets/video/gulfstream-2025-11-14.jpg" preload="metadata" controls playsinline data-clip="gulfstream-2025-11-14">
+              <source src="/football.antonabyzov.com/assets/video/gulfstream-2025-11-14.mp4" type="video/mp4"><a href="/football.antonabyzov.com/assets/video/gulfstream-2025-11-14.mp4">Download the clip (gulfstream-2025-11-14.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal, Liga Evolution 8v8</b>
+              <span class="clip__m">Liga Evolution 8v8, Felafu, Miami &middot; 14 November 2025</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The strike is on the frames at 2414.37; the ball crossing the line is behind six players. Gulfstream walk back and restart from the middle.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-patagonia-goal2">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/p3kv0_LCCqA.mp4 in 1579.5s out 1590.5s, 16.87s cut. Frame-by-frame at 0.2 s on a 1280x720 goalmouth crop (x 640-1920, y 0-720). 1584.2-1585.2 white shirt / purple shorts number 8 runs in from the right while the ball is worked across the six yard box. 1585.4 he strikes, blue keeper commits to his left. 1585.6-1585.8 keeper is beaten and goes to ground. 1586.2 and 1586.4 the ball is clearly inside the net behind the goal line while the keeper lies flat. 1586.0-1587.5 number 8 peels away past the right post with an arm raised. Contact sheets: video/_clips/patagonia-goal2/zoomsheet_00.png and zoomsheet_01.png. -->
+          <!-- note: Second half. Slow replay tail is 1584.0-1587.2 at 1.8x on the tight goalmouth crop. Live segment uses a native 1280x720 window at x=130 so nothing is upscaled. Lower left chip carries competition and date only, no other burned in text. This is the goal the earlier build recorded as verified_goal_seconds_p3kv0 1585.8. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/football.antonabyzov.com/assets/video/patagonia-goal2.jpg" preload="metadata" controls playsinline data-clip="patagonia-goal2">
+              <source src="/football.antonabyzov.com/assets/video/patagonia-goal2.mp4" type="video/mp4"><a href="/football.antonabyzov.com/assets/video/patagonia-goal2.mp4">Download the clip (patagonia-goal2.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Anton #8 finishes the goalmouth scramble vs Patagonia</b>
+              <span class="clip__m">PS23 Superliga 8v8 (Miami) &middot; 17 February 2026</span>
+              <span class="clip__tag clip__tag--on">verified on tape</span>
+              <span class="clip__n">Frame by frame: the strike, the keeper beaten, the ball inside the net behind the line, the run away with an arm up.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-a">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1034.0s out 1047.0s, 13.1s cut. Inside the tape's own beat 'ANTON ABYZOV . #10 - COMBINATION TO GOAL' (card on screen from src 1023). The live scorebug burned into the broadcast changes from EasyChamp 1 / KAPITAN 0 to EasyChamp 2 / KAPITAN 0 between clip 10 s and 11 s, which is objective evidence that EasyChamp scored inside this window; confirmed independently by a per-second scorebug diff over all 1599 s of the tape (stable runs 1021-1044 at 1-0, 1045-1071 at 2-0). What is visible on the floor: EasyChamp white shirts work the ball into the KAPITAN half and finish the move at the far goal. The ball crossing the line is NOT resolvable at this camera distance and the scorer is not identifiable, so verified is false. Review sheet: video/_clips/summer-cup-2026-goal-a_contact.png -->
+          <!-- note: Phone footage shot from the stands, so the goalmouth is small in frame and no slow replay is added (the rule is replay only when the goalmouth is in frame). Cards in this compilation name Anton for goals AND assists, so the card text is not proof that he scored this one. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/football.antonabyzov.com/assets/video/summer-cup-2026-goal-a.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-a">
+              <source src="/football.antonabyzov.com/assets/video/summer-cup-2026-goal-a.mp4" type="video/mp4"><a href="/football.antonabyzov.com/assets/video/summer-cup-2026-goal-a.mp4">Download the clip (summer-cup-2026-goal-a.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">EasyChamp go 2-0 up against KAPITAN</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The burned-in scorebug goes from 1-0 to 2-0 inside this clip. From the stands the goal line is not resolvable and the scorer is not identifiable.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <!-- END:best-goals -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+      <p class="rail__hint">Scroll the rail sideways</p>
     </div>
   </section>
 
@@ -350,12 +452,12 @@
           </div>
           <p class="ledger__tag">Belarus</p>
         </li>
-        <!-- src: research/gws-evidence.md Itransition-BGUFK section, Drive season files and the 8 August 2011 BGUFK cooperation agreement signed with rector Kobrinsky; devby.io interview, 22 October 2012 -->
+        <!-- src: research/gws-evidence.md Itransition-BGUFK section: top-division debut 11 September 2010 (1:2), first win 25 September 2010 5-3 against Lidselmash, 5th place 2011-12, Drive season files and the 8 August 2011 BGUFK cooperation agreement signed with rector Kobrinsky; devby.io interview, 22 October 2012 -->
         <li class="is-key">
           <p class="ledger__yr">2011</p>
           <div>
-            <h3 class="ledger__h">Into the national top division</h3>
-            <p class="ledger__p">Itransition-BGUFK in the Belarus national top futsal division, after winning the Minsk city championship. I founded the club, captained it and ran it. The first top-division win was 5-3 against Lidselmash on 25 September 2010.</p>
+            <h3 class="ledger__h">Corporate league to the national top division</h3>
+            <p class="ledger__p">The team I founded and captained at Itransition started in a corporate IT league, won the Minsk city futsal championship, and that title took it into the Belarus national top futsal division, the Vysshaya Liga, in <strong>2010</strong>. Top-division debut 11 September 2010, lost 1-2; first win a fortnight later, 5-3 against Lidselmash on 25 September. As Itransition-BGUFK it finished <strong>fifth in 2011-12</strong>, its best season.</p>
           </div>
           <p class="ledger__tag">Minsk</p>
         </li>
@@ -377,12 +479,12 @@
           </div>
           <p class="ledger__tag">Vysshaya Liga</p>
         </li>
-        <!-- src: club owner's Fall 2024 message to the squad; coach announcement instagram.com/p/C3GMTYDul6f/; Google Photos USSL 2024 album, EXIF 30 June 2024 20:56, published as miami-ussl-2024-trophy-hold -->
+        <!-- src: club owner's Fall 2024 message to the squad; coach announcement instagram.com/p/C3GMTYDul6f/; Google Photos USSL 2024 album, EXIF 30 June 2024 20:56, published as miami-ussl-2024-trophy-hold; coaching pair per Anton, content/LATE-ADDITIONS.md «Anton's answers, round 2» («coached Dade County FC together and won USSL 2024»); Artem Baranovskyi, instagram @artem_baranovskyi -->
         <li class="is-key is-gold">
           <p class="ledger__yr">2024</p>
           <div>
             <h3 class="ledger__h">USSL won, from the touchline</h3>
-            <p class="ledger__p">Dade County FC won the USSL as announced Assistant Coach. No post-season was played. I am photographed with the trophy on the pitch at Traz Powell that night, 30 June 2024.</p>
+            <p class="ledger__p">Dade County FC won the USSL. Artem Baranovskyi and I coached the side together that season. No post-season was played. I am photographed with the trophy on the pitch at Traz Powell that night, 30 June 2024.</p>
           </div>
           <p class="ledger__tag">Miami</p>
         </li>
@@ -438,11 +540,11 @@
               <span class="hon__t">Minsk city futsal championship, Itransition</span>
               <p class="hon__d">The title that got us invited into the national Higher League.</p>
             </li>
-            <!-- src: club owner's Fall 2024 message to the squad; instagram.com/p/C3GMTYDul6f/; Google Photos USSL 2024 album, EXIF 30 June 2024 20:56, published as miami-ussl-2024-trophy-hold -->
+            <!-- src: club owner's Fall 2024 message to the squad; instagram.com/p/C3GMTYDul6f/; Google Photos USSL 2024 album, EXIF 30 June 2024 20:56, published as miami-ussl-2024-trophy-hold; coaching pair per Anton, content/LATE-ADDITIONS.md «Anton's answers, round 2» («coached Dade County FC together and won USSL 2024»); Artem Baranovskyi, instagram @artem_baranovskyi -->
             <li class="hon--gold">
               <span class="hon__y">2024 &middot; League won</span>
               <span class="hon__t">USSL, Dade County FC</span>
-              <p class="hon__d">League won with Dade County FC as announced Assistant Coach. No post-season was played. I am photographed with the trophy at Traz Powell Stadium on 30 June 2024.</p>
+              <p class="hon__d">League won with Dade County FC. Artem Baranovskyi and I coached the side together that season. No post-season was played. I am photographed with the trophy at Traz Powell Stadium on 30 June 2024.</p>
             </li>
             <!-- src: own championship note; instagram.com/reel/DYZrl5ckQN5/; research/easychamp-8v8-stats.md production audit of PS23 seasons C83 to C108, live PS23 pages and the audit JSON in agreement -->
             <li class="hon--gold">
@@ -614,7 +716,8 @@
         <div>
           <!-- src: instagram.com/p/C3GMTYDul6f/; owner's Fall 2024 message; owner's message 2026-08-17 -->
           <p class="prose">
-            I was announced as a coach of Dade County FC in spring 2024, assisting Artem Baranovskyi.
+            I was announced as a coach of Dade County FC in spring 2024. Artem Baranovskyi and I
+            took the side together.
             That season the club won the USSL, and the owner put it plainly to the squad: we were well
             above the level. No post-season was played, so there was no final. Artem and I are coaching
             there again since August 2026.
@@ -675,10 +778,10 @@
           </figure>
         </li>
         <li>
-          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012; DOSSIER 2012 Kayseri row; content/LATE-ADDITIONS.md gallery curation evidence -->
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012; DOSSIER 2012 Kayseri row; content/LATE-ADDITIONS.md gallery curation evidence; playing is my own account, content/LATE-ADDITIONS.md «Anton's answers, round 2» -->
           <figure class="shot shot--32">
             <picture><source srcset="/football.antonabyzov.com/assets/img/gallery/national-team-kayseri-2012-medal-800.webp 800w, /football.antonabyzov.com/assets/img/gallery/national-team-kayseri-2012-medal-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/football.antonabyzov.com/assets/img/gallery/national-team-kayseri-2012-medal-800.jpg" width="800" height="600" alt="Anton Abyzov in the white Belarus national shirt holding a gold medal on a European Champions ribbon." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB0aN5e5RwDyaj1CIM0ROOn5VPbzoIQrZBq4628se6QA7ecmpaKi0tyhMq4oqO5lB5GB9KKLElVCdvWrKO2xfmPT1ooqkBSmJyeT1NFFFJiP//Z);background-size:cover;background-position:center"></picture>
-            <figcaption>Gold medal, Kayseri, 9 June 2012<em>I travelled with the Belarus squad that won the 2012 European Championship and I was given a medal with them. That is a squad title, not a personal one, and it is not filed as one anywhere here.</em></figcaption>
+            <figcaption>Gold medal, Kayseri, 9 June 2012<em>Kayseri, 9 June 2012, the final day. I played at the 2012 European Championship and this is the gold medal from it, on a European Champions ribbon. The medal is in the frame; the playing is my own account, because the squad list was never published.</em></figcaption>
           </figure>
         </li>
         <li>
