@@ -135,6 +135,23 @@
 .sec--paper .cap{ color:var(--fg); }
 .sec--paper .cap em{ color:var(--fg-fade); }
 
+/* PAGE-SCOPED, fold into site.css section 16 if a second page groups its rail.
+   The best-goals rail is now five rails, one per competition, so each group
+   gets its own heading and its own progress line. Each group keeps its own
+   .rail__in wrapper because that element carries timeline-scope:--rail, and
+   the line under a rail has to follow that rail's scroll, not another one's. */
+.rail__grp{ margin-top:clamp(30px,3.6vw,46px); }
+.rail__grp-h{
+  margin:0 0 clamp(12px,1.5vw,18px);
+  font:400 clamp(19px,2.3vw,26px)/1.1 var(--display);
+  letter-spacing:.05em; text-transform:uppercase; color:var(--chalk);
+}
+.rail__grp-h span{
+  display:block; margin-top:6px;
+  font:600 10.5px/1.5 var(--body); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--chalk-fade);
+}
+
 /* fixture table */
 .ptable{ width:100%; border-collapse:collapse; margin:22px 0 0; font-size:13px; }
 .ptable caption{
@@ -258,7 +275,7 @@
         <nav aria-labelledby="toc-h">
           <h2 class="chapters__h" id="toc-h">On this page</h2>
           <ol class="chapters__list">
-            <li><a href="#best-goals"><span class="ts">00</span><span class="cap">Best goals, hosted on this site<em>Eight cuts, plus the Lidselmash slot</em></span></a></li>
+            <li><a href="#best-goals"><span class="ts">00</span><span class="cap">Best goals, hosted on this site<em>Twenty-nine cuts in five rails, plus the Lidselmash slot</em></span></a></li>
             <li><a href="#patagonia"><span class="ts">01</span><span class="cap">A goal against Patagonia<em>Miami, PS23 Superliga 8v8, February 2026</em></span></a></li>
             <li><a href="#champion"><span class="ts">02</span><span class="cap">Scoring against the reigning Belarus champion<em>Vysshaya Liga RB futsal, February 2019</em></span></a></li>
             <li><a href="#itcup"><span class="ts">03</span><span class="cap">The IT Cup final equaliser<em>ISsoft 3-2 Luch, Minsk, August 2021</em></span></a></li>
@@ -273,37 +290,27 @@
     </div>
   </section>
 
-  <!-- ══ BEST GOALS · self-hosted clips, above every YouTube facade ═════════ -->
+  <!-- ══ BEST GOALS · self-hosted clips, grouped by competition ═══════════ -->
   <section class="rail" id="best-goals" aria-labelledby="h-best">
     <div class="rail__in">
       <div class="rail__head">
         <div>
-          <p class="sec-kick"><span class="pill pill--out">On this domain</span>Eight cuts, hosted here</p>
-          <h2 id="h-best">Best goals.<br><span class="muted">Files, not embeds.</span></h2>
+          <p class="sec-kick"><span class="pill pill--out">On this domain</span>Twenty-nine cuts, hosted here</p>
+          <h2 id="h-best">Best goals first.<br><span class="muted">Files, not embeds.</span></h2>
         </div>
         <p class="lede">
           These are copies cut from the tapes and served from this site, so they play without
-          asking YouTube for anything. The tag under each one says whether the ball crossing the
-          line is visible on the frames. The full matches are further down the page.
+          asking YouTube for anything. Five rails, one per competition, and inside each rail the
+          cuts that were checked frame by frame come first. The tag under a clip says whether the
+          ball crossing the line is visible on the frames. The full matches are further down the page.
         </p>
       </div>
+    </div>
+
+    <div class="rail__in rail__grp" id="best-miami">
+      <h3 class="rail__grp-h">Miami 8v8<span>Liga Evolution and the PS23 Superliga, 2025 and 2026</span></h3>
       <ul class="clips">
         <!-- BEGIN:best-goals -->
-        <li class="clip" id="clip-gulfstream-2025-11-14">
-          <!-- src: youtube dP7uCHUt-VQ in 2412.7s out 2424.6s, 16.17s cut. strike at 2414.37 visible; crossing occluded by six players; Gulfstream walk back, restart from the middle at ~2432 -->
-          <!-- note: stream uploaded 15 Nov as Fecha 9; Anton dates the game 14 Nov; live 2412.7-2424.6 + 1.8x replay 2413.9-2416.3 -->
-          <figure class="clip__fig">
-            <video class="clip__v" width="1280" height="720" poster="/assets/video/gulfstream-2025-11-14.jpg" preload="metadata" controls playsinline data-clip="gulfstream-2025-11-14">
-              <source src="/assets/video/gulfstream-2025-11-14.mp4" type="video/mp4"><a href="/assets/video/gulfstream-2025-11-14.mp4">Download the clip (gulfstream-2025-11-14.mp4)</a>
-            </video>
-            <figcaption class="clip__cap">
-              <b class="clip__t">Goal, Liga Evolution 8v8</b>
-              <span class="clip__m">Liga Evolution 8v8, Felafu, Miami &middot; 14 November 2025</span>
-              <span class="clip__tag clip__tag--off">finish off camera</span>
-              <span class="clip__n">The strike is on the frames at 2414.37; the ball crossing the line is behind six players. Gulfstream walk back and restart from the middle.</span>
-            </figcaption>
-          </figure>
-        </li>
         <li class="clip" id="clip-patagonia-goal2">
           <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/p3kv0_LCCqA.mp4 in 1579.5s out 1590.5s, 16.87s cut. Frame-by-frame at 0.2 s on a 1280x720 goalmouth crop (x 640-1920, y 0-720). 1584.2-1585.2 white shirt / purple shorts number 8 runs in from the right while the ball is worked across the six yard box. 1585.4 he strikes, blue keeper commits to his left. 1585.6-1585.8 keeper is beaten and goes to ground. 1586.2 and 1586.4 the ball is clearly inside the net behind the goal line while the keeper lies flat. 1586.0-1587.5 number 8 peels away past the right post with an arm raised. Contact sheets: video/_clips/patagonia-goal2/zoomsheet_00.png and zoomsheet_01.png. -->
           <!-- note: Second half. Slow replay tail is 1584.0-1587.2 at 1.8x on the tight goalmouth crop. Live segment uses a native 1280x720 window at x=130 so nothing is upscaled. Lower left chip carries competition and date only, no other burned in text. This is the goal the earlier build recorded as verified_goal_seconds_p3kv0 1585.8. -->
@@ -319,13 +326,179 @@
             </figcaption>
           </figure>
         </li>
-        <li class="clip" id="clip-lidselmash-2019-pending">
-          <!-- src: no source file. YouTube 9ptWpZWiv3A is set to private, so no frame can be published from it; the public facade MyMOJP1nuic covers the same match. -->
-          <!-- note: Anton's round-2 answer: the full match is private and he asked why it should change. -->
-          <div class="clip__pending" role="note">
-            <b>Lidselmash goal, clip pending</b>
-            <span>Full match is private; clip pending. The tape of Territory-Maxline against the reigning Belarus champion is on a private upload, so the cut is not on the site yet. The chaptered facade lower down this page still opens the moment.</span>
-          </div>
+        <li class="clip" id="clip-gulfstream-2025-11-14">
+          <!-- src: youtube dP7uCHUt-VQ in 2412.7s out 2424.6s, 16.17s cut. strike at 2414.37 visible; crossing occluded by six players; Gulfstream walk back, restart from the middle at ~2432 -->
+          <!-- note: stream uploaded 15 Nov as Fecha 9; Anton dates the game 14 Nov; live 2412.7-2424.6 + 1.8x replay 2413.9-2416.3 -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/gulfstream-2025-11-14.jpg" preload="metadata" controls playsinline data-clip="gulfstream-2025-11-14">
+              <source src="/assets/video/gulfstream-2025-11-14.mp4" type="video/mp4"><a href="/assets/video/gulfstream-2025-11-14.mp4">Download the clip (gulfstream-2025-11-14.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal, Liga Evolution 8v8</b>
+              <span class="clip__m">Liga Evolution 8v8, Felafu, Miami &middot; 14 November 2025</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The strike is on the frames at 2414.37; the ball crossing the line is behind six players. Gulfstream walk back and restart from the middle.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <!-- END:best-goals -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="rail__in rail__grp" id="best-summer">
+      <h3 class="rail__grp-h">Summer Cup 2026<span>Premier League 5x5, Minsk, June to August 2026</span></h3>
+      <ul class="clips">
+        <!-- BEGIN:summer-cup-clips -->
+        <li class="clip" id="clip-summer-cup-2026-t157">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 158.4s out 175.4s, 17.0s cut. This is the beat Anton's t=157 link points at. Ground truth taken from a 1 fps frame set extracted with no seek (video/_clips/scanB/f_*.jpg): the previous beat runs to src 158 with the scorebug on bam-servis.by 2 / EasyChamp 1, Taym 1st; the hard cut is at src 158.5-159.0 and the tape's own card 'ANTON ABYZOV . #10 - FIGHT FOR EVERY BALL - 09.07 . BAM-SERVIS.BY' is on screen src 159-161 with the bug now 4-4, Taym 2nd. The next card ('WIN IT. DRIVE. ASSIST.') starts at src 176, so 158.4-175.4 is the whole beat, uncut. Verified on the final clip at 1 fps: video/_clips/summer-cup-2026-t157_contact.png -->
+          <!-- note: verified refers to this being the correct moment and the correct fixture, both read off the tape's own burned-in card and live scorebug. It is a pressing and ball-winning phase, NOT a goal, and nothing here claims one. Anton is EasyChamp number 10 in white; the compilation names him on every card. Source is his own upload (YouTube U-lw9dmTQyY) downloaded locally at 1080p and cut from the local file. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-t157.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-t157">
+              <source src="/assets/video/summer-cup-2026-t157.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-t157.mp4">Download the clip (summer-cup-2026-t157.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Fight for every ball, bam-servis.by vs EasyChamp</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 2026</span>
+              <span class="clip__tag clip__tag--on">verified on tape</span>
+              <span class="clip__n">Verified as the right moment and the right fixture, off the tape's own card and scorebug. It is a pressing phase, not a goal.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-minsk-2026-first3-assist">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/zjnTwFIKEVc.mp4 in 733.0s out 750.0s, 17.1s cut. This is the tape's own closing beat, card 'ANTON ABYZOV . MATCH 03 / 4V5 DEFENSE TO MATCH-SEALING ASSIST / VS FC PON'S | BUTIKAVTO . 30 JUN 2026', on screen for the first 2.5 s. Verified on the final clip at 1 fps (video/_clips/minsk-2026-first3-assist_contact.png): clip 0-5 s EasyChamp defend a 4v5 with the opponent in black pressing, 6-11 s the ball is won and driven the length of the floor, 12-14 s two white shirts arrive at the far goal and the ball is worked across the six yard box, and 15-16.5 s the camera is close on three EasyChamp players celebrating in front of that goal with the opponent keeper standing in it. The burned-in scorebug reads EasyChamp 2 / FC PON'S | BUTIKAVTO 1 through the beat. verified refers to this being the correct moment and the correct fixture, both read off the tape's own card and bug, and to the celebration at the goal being on screen. -->
+          <!-- note: Anton's own upload zjnTwFIKEVc, downloaded locally and cut from the local file. This is an assist, not a goal, and nothing here claims Anton scored it. The tape's title card counts 3 goals and 3 assists across the three games. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/minsk-2026-first3-assist.jpg" preload="metadata" controls playsinline data-clip="minsk-2026-first3-assist">
+              <source src="/assets/video/minsk-2026-first3-assist.mp4" type="video/mp4"><a href="/assets/video/minsk-2026-first3-assist.mp4">Download the clip (minsk-2026-first3-assist.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">4v5 defence into the match-sealing assist</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 30 June 2026</span>
+              <span class="clip__tag clip__tag--on">verified on tape</span>
+              <span class="clip__n">Verified as the right moment and the right fixture off the tape's own card, and the celebration at the goal is on screen. It is an assist, not a goal.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-minsk-2026-first3-goal-a">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/zjnTwFIKEVc.mp4 in 288.8s out 304.0s, 15.3s cut. From Anton's own upload '3 Goals + 3 Assists: My First 3 Futsal Games in Minsk' (YouTube zjnTwFIKEVc), downloaded locally and cut from the local file. The tape's own beat card 'ANTON ABYZOV . MATCH 02 / MY GOAL - COMBINATION / VS KAPITAN . 25 JUN 2026' is on screen for the first 2 s of the clip, and the burned-in scorebug reads KAPITAN 0 / EasyChamp 2 across the whole window (it read 1 a second before the beat started). What is visible frame by frame at 0.25 s: white EasyChamp shirts work the ball into the KAPITAN half from clip 2 s, the move reaches the far goal at clip 7-8.5 s and the keeper goes to ground there, then the camera pans back and Anton jogs to the near side and is met by a team mate at clip 12-15 s. The ball crossing the line is not resolvable at this camera distance, so verified is false. Review sheet: video/_clips/minsk-2026-first3-goal-a_contact.png -->
+          <!-- note: Whole tape is cut into 17 s beats, each opened by a card that names the moment; the card is the tape's own claim, not independent proof. Wide phone shot from the stands, no slow replay added. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/minsk-2026-first3-goal-a.jpg" preload="metadata" controls playsinline data-clip="minsk-2026-first3-goal-a">
+              <source src="/assets/video/minsk-2026-first3-goal-a.mp4" type="video/mp4"><a href="/assets/video/minsk-2026-first3-goal-a.mp4">Download the clip (minsk-2026-first3-goal-a.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">My goal, combination, against KAPITAN</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 25 June 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The tape's own card calls this 'my goal, combination' and the bug reads 2-0 through the clip. The goal line is not resolvable from the stands.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-minsk-2026-first3-goal-b">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/zjnTwFIKEVc.mp4 in 406.5s out 423.0s, 16.6s cut. The tape's own beat card 'ANTON ABYZOV . MATCH 02 / MY GOAL / VS KAPITAN . 25 JUN 2026' is on screen from clip 0.5 s to 3 s. The burned-in scorebug reads KAPITAN 0 / EasyChamp 7, second period, and does not change inside the window. What is visible: an extremely wide shot of the whole floor from the far corner of the stand, EasyChamp in white attacking the goal at the left of frame with KAPITAN in light blue; individual players are small and the ball is at the limit of resolution. No frame in this window shows the ball over the line, so verified is false. Review sheet: video/_clips/minsk-2026-first3-goal-b_contact.png -->
+          <!-- note: This is the widest beat in the tape; published because the tape names it as a goal, but it is the weakest of the three for visibility. Wide phone shot from the stands, no slow replay. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/minsk-2026-first3-goal-b.jpg" preload="metadata" controls playsinline data-clip="minsk-2026-first3-goal-b">
+              <source src="/assets/video/minsk-2026-first3-goal-b.mp4" type="video/mp4"><a href="/assets/video/minsk-2026-first3-goal-b.mp4">Download the clip (minsk-2026-first3-goal-b.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">My goal, second half against KAPITAN</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 25 June 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Named as a goal by the tape's own card. The camera is a long way out, so nothing at the goalmouth is resolvable.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-minsk-2026-first3-goal-c">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/zjnTwFIKEVc.mp4 in 457.5s out 474.0s, 16.6s cut. The tape's own beat card 'ANTON ABYZOV . MATCH 02 / MY GOAL - POWER PLAY / VS KAPITAN . 25 JUN 2026' is on screen from clip 0.5 s to 3 s. The burned-in scorebug reads KAPITAN 0 / EasyChamp 10, second period, throughout. What is visible: EasyChamp in white keep the ball through a power play against KAPITAN in light blue; for the first 11 s a spectator in a black shirt stands in the near foreground and blocks part of the near court, and from 12 s the view clears and the play runs on the far side. No frame shows the ball over the line, so verified is false. Review sheet: video/_clips/minsk-2026-first3-goal-c_contact.png -->
+          <!-- note: Kept whole rather than trimmed past the spectator so the tape's own card stays in the cut. Wide phone shot from the stands, no slow replay. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/minsk-2026-first3-goal-c.jpg" preload="metadata" controls playsinline data-clip="minsk-2026-first3-goal-c">
+              <source src="/assets/video/minsk-2026-first3-goal-c.mp4" type="video/mp4"><a href="/assets/video/minsk-2026-first3-goal-c.mp4">Download the clip (minsk-2026-first3-goal-c.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">My goal, power play, against KAPITAN</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 25 June 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Named 'my goal, power play' by the tape's own card. A spectator blocks part of the near court for the first half of the clip and the goal line is not resolvable.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-bam-goal">
+          <!-- src: youtube 7X6OhyJTTL4 in 139.5s out 152.6s, 13.1s cut. Cut from Anton's own edit, inside its chapter 'My Goal' (2:19-2:44). The reel's caption 'MY GOAL' comes on at source 139.75 and its ticker line reads '2nd half . 16' . 5-4'; the scorebug reads EasyChamp 5 / bam-servis.by 4, Period 2nd, and the reel's closing card states '1 goal . 1 assist' for this match. What is visible on the final clip at 1 fps: 0-7 s the wide hall camera at SK MAPID, EasyChamp in white against bam-servis.by in purple, the ball worked out of defence and forward; 8 s the move reaches the far goal; 9-12 s the reel cuts to its close side camera and EasyChamp white shirts walk back past the purple team, one with an arm raised. The far goal is at the other end of the hall from the camera, so the ball crossing the line is not resolvable and verified is false. Review sheet: video/_clips/summer-cup-2026-bam-goal_contact.png -->
+          <!-- note: Source is Anton's own reel 'Anton Abyzov - Highlights | EasyChamp 6-6 bam-servis.by' (YouTube 7X6OhyJTTL4, 3:01, 15 chapters), downloaded locally and cut from the file. The reel's own REPLAY of this goal runs from 2:35 and is not inside the cut. Same fixture as the existing summer-cup-2026-t157 clip. Lower-left chip added with competition and fixture. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-bam-goal.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-bam-goal">
+              <source src="/assets/video/summer-cup-2026-bam-goal.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-bam-goal.mp4">Download the clip (summer-cup-2026-bam-goal.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal against bam-servis.by, Summer Cup 5x5</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, SK MAPID, Minsk &middot; 30 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Anton's reel labels this beat 'My Goal' and its end card counts 1 goal and 1 assist in this match; the strike is at the far end of the hall.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-bam-assist">
+          <!-- src: youtube 7X6OhyJTTL4 in 101.0s out 111.6s, 10.6s cut. Cut from Anton's own edit, inside its chapter 'My Assist -> Goal' (1:27-1:56). The reel's caption reads 'MY ASSIST -> GOAL' for the whole clip, its ticker line reads '2nd half . 1' . 3-2' and the scorebug reads EasyChamp 3 / bam-servis.by 2, Period 2nd. What is visible on the final clip at 1 fps: 0-1 s the wide hall camera; 2-7 s a close side camera at floor level, EasyChamp white shirts and blue shorts carrying the ball out through a purple bam-servis.by press, one white player taking it past a purple defender at 4-5 s and releasing it; 8-10 s the ball is played long down the empty half toward the far goal. The finish is outside this beat and off camera, so verified is false. Review sheet: video/_clips/summer-cup-2026-bam-assist_contact.png -->
+          <!-- note: Same source reel (7X6OhyJTTL4). Cut trimmed to start at source 101.0 because the first four seconds of the chapter are an empty wide hall. The reel's closing card states '1 goal . 1 assist' for this match and '9 games . 8 goals . 9 assists' for the Summer Cup so far. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-bam-assist.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-bam-assist">
+              <source src="/assets/video/summer-cup-2026-bam-assist.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-bam-assist.mp4">Download the clip (summer-cup-2026-bam-assist.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Assist against bam-servis.by, Summer Cup 5x5</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, SK MAPID, Minsk &middot; 30 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">An assist, not a goal: the reel's chapter is 'My Assist -> Goal' and the finish falls outside the beat.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-c">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 63.8s out 77.0s, 13.3s cut. Taken from the opening montage of Anton's own Summer Cup 2026 reel (YouTube U-lw9dmTQyY, downloaded locally). The tape's own beat card reads 'ANTON ABYZOV . #10 - GOAL FOUR. LEFT FOOT. - 06.08 . KAPITAN' and sits on screen from src 61 to 63, just before this window. What is visible on the floor: white EasyChamp shirts work the ball out of their own half, Anton in white number 10 drives at the KAPITAN half from clip 4 s to 6 s, and the move finishes at the far goal around clip 6-8 s. The burned-in scorebug reads EasyChamp 7 / KAPITAN 0 for the whole window and does not change inside it, because this beat sits in the pre-cut opening montage rather than in the match section, so there is no scorebug step to corroborate the strike. The ball crossing the line is not resolvable from the stands. Review sheet: video/_clips/summer-cup-2026-goal-c_contact.png -->
+          <!-- note: Phone footage from the stands, so the goalmouth is small in frame and no slow replay is added. Anton is EasyChamp number 10 in white. Lower-left chip carries competition and date only. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-goal-c.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-c">
+              <source src="/assets/video/summer-cup-2026-goal-c.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-goal-c.mp4">Download the clip (summer-cup-2026-goal-c.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal four, left foot, against KAPITAN</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 6 August 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The tape's own card names this 'goal four, left foot'. From the stands the goal line is not resolvable, and this beat is inside the reel's opening montage so the scorebug does not step inside the clip.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-d">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1362.5s out 1377.0s, 14.6s cut. Inside the tape's own beat 'ANTON ABYZOV . #10 - COUNTERATTACK TO GOAL - 06.08 . KAPITAN' (card on screen from src 1359 to 1363). The live scorebug burned into the broadcast steps from EasyChamp 5 / KAPITAN 0 to EasyChamp 6 / KAPITAN 0 between src 1375.25 and 1375.50, read off a 4 fps crop of the two score boxes (sheet kept at /tmp/BUGA_00.jpg during the cut); that lands at clip 12.8 s, which is objective evidence that EasyChamp scored inside this window. What is visible on the floor: EasyChamp break out of their own half, carry through the middle and finish at the far goal. The ball crossing the line is NOT resolvable at this camera distance and the scorer is not identifiable, so verified is false. Review sheet: video/_clips/summer-cup-2026-goal-d_contact.png -->
+          <!-- note: Same camera and caveats as summer-cup-2026-goal-a and -goal-b: phone footage from the stands, no slow replay. Cards in this compilation name Anton for goals AND assists, so the card text alone is not proof that he scored this one. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-goal-d.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-d">
+              <source src="/assets/video/summer-cup-2026-goal-d.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-goal-d.mp4">Download the clip (summer-cup-2026-goal-d.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Counterattack to goal, EasyChamp go 6-0 up</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 6 August 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The burned-in scorebug goes from 5-0 to 6-0 at 12.8 s of this clip. From the stands the goal line is not resolvable and the scorer is not identifiable.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-e">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1514.0s out 1528.5s, 14.6s cut. The live scorebug steps from EasyChamp 9 / KAPITAN 0 to EasyChamp 10 / KAPITAN 0 between src 1525.75 and 1526.00, read off a 4 fps crop of the two score boxes; that lands at clip 11.9 s. Immediately after the step the tape's own beat card 'ANTON ABYZOV . #10 - GOAL FIVE - 06.08 . KAPITAN' comes on screen and is visible for the last 2.5 s of the clip, so the scorebug step and the card that names the goal are both inside the cut. What is visible on the floor: EasyChamp attack the far goal, then the restart. The ball crossing the line is NOT resolvable at this camera distance, so verified is false. Review sheet: video/_clips/summer-cup-2026-goal-e_contact.png -->
+          <!-- note: 'Goal five' is the tape's count of Anton's goals in that match, not the team score; the team score on the bug goes 9 to 10. Phone footage from the stands, no slow replay. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-goal-e.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-e">
+              <source src="/assets/video/summer-cup-2026-goal-e.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-goal-e.mp4">Download the clip (summer-cup-2026-goal-e.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal five against KAPITAN, EasyChamp go 10-0 up</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 6 August 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The scorebug goes from 9-0 to 10-0 at 11.9 s and the tape's own 'GOAL FIVE' card follows immediately. The goal line itself is not resolvable from the stands.</span>
+            </figcaption>
+          </figure>
         </li>
         <li class="clip" id="clip-summer-cup-2026-goal-a">
           <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1034.0s out 1047.0s, 13.1s cut. Inside the tape's own beat 'ANTON ABYZOV . #10 - COMBINATION TO GOAL' (card on screen from src 1023). The live scorebug burned into the broadcast changes from EasyChamp 1 / KAPITAN 0 to EasyChamp 2 / KAPITAN 0 between clip 10 s and 11 s, which is objective evidence that EasyChamp scored inside this window; confirmed independently by a per-second scorebug diff over all 1599 s of the tape (stable runs 1021-1044 at 1-0, 1045-1071 at 2-0). What is visible on the floor: EasyChamp white shirts work the ball into the KAPITAN half and finish the move at the far goal. The ball crossing the line is NOT resolvable at this camera distance and the scorer is not identifiable, so verified is false. Review sheet: video/_clips/summer-cup-2026-goal-a_contact.png -->
@@ -357,33 +530,141 @@
             </figcaption>
           </figure>
         </li>
-        <li class="clip" id="clip-summer-cup-2026-t157">
-          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 158.4s out 175.4s, 17.0s cut. This is the beat Anton's t=157 link points at. Ground truth taken from a 1 fps frame set extracted with no seek (video/_clips/scanB/f_*.jpg): the previous beat runs to src 158 with the scorebug on bam-servis.by 2 / EasyChamp 1, Taym 1st; the hard cut is at src 158.5-159.0 and the tape's own card 'ANTON ABYZOV . #10 - FIGHT FOR EVERY BALL - 09.07 . BAM-SERVIS.BY' is on screen src 159-161 with the bug now 4-4, Taym 2nd. The next card ('WIN IT. DRIVE. ASSIST.') starts at src 176, so 158.4-175.4 is the whole beat, uncut. Verified on the final clip at 1 fps: video/_clips/summer-cup-2026-t157_contact.png -->
-          <!-- note: verified refers to this being the correct moment and the correct fixture, both read off the tape's own burned-in card and live scorebug. It is a pressing and ball-winning phase, NOT a goal, and nothing here claims one. Anton is EasyChamp number 10 in white; the compilation names him on every card. Source is his own upload (YouTube U-lw9dmTQyY) downloaded locally at 1080p and cut from the local file. -->
+        <!-- END:summer-cup-clips -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="rail__in rail__grp" id="best-outdoor">
+      <h3 class="rail__grp-h">Minsk 2026, outdoor<span>LFL 7x7 and Premierliga 8x8, July and August 2026</span></h3>
+      <ul class="clips">
+        <!-- BEGIN:minsk-clips -->
+        <li class="clip" id="clip-lfl-7x7-2026-backheel-goal">
+          <!-- src: youtube 3zbbJ5dihno in 58.5s out 69.1s, 10.6s cut. Cut from Anton's own reel around its burned-in caption 'BACKHEEL GOAL', which is on screen from source 60.0 to 69.0 and is the moment named in the video title. What is visible on the final clip at 1 fps: 0-1 s the tail of the previous caption 'BACKHEEL PASS' shot through a perimeter net, scorebug Vektor 0 / Blugrana 4; 2-10 s a hand-held phone shot from the far touchline into low evening sun, Blugrana in dark shirts and orange against Vektor's lime bibs, a carrier driving the orange ball toward the goal at the left of frame from about 3 s, scorebug Vektor 1 / Blugrana 8, Taym 2nd. No goal frame, keeper or net movement is resolvable in this window: the shot is distant, back-lit and flared, so verified is false and no claim is made from the frames beyond what the reel's own caption says. -->
+          <!-- note: Source is Anton's own reel '7x7 Football Highlights - Backheel Goal, Dummy & Heel Finish' (YouTube 3zbbJ5dihno, 1:36, uploaded 18 July 2026), downloaded locally and cut from the file. The reel has no YouTube chapters; the beat boundaries come from its burned-in captions. The reel's end card is the EasyChamp Summer Cup 5x5 table with EasyChamp in 1st place. Lower-left chip added with competition and date. -->
           <figure class="clip__fig">
-            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-t157.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-t157">
-              <source src="/assets/video/summer-cup-2026-t157.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-t157.mp4">Download the clip (summer-cup-2026-t157.mp4)</a>
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/lfl-7x7-2026-backheel-goal.jpg" preload="metadata" controls playsinline data-clip="lfl-7x7-2026-backheel-goal">
+              <source src="/assets/video/lfl-7x7-2026-backheel-goal.mp4" type="video/mp4"><a href="/assets/video/lfl-7x7-2026-backheel-goal.mp4">Download the clip (lfl-7x7-2026-backheel-goal.mp4)</a>
             </video>
             <figcaption class="clip__cap">
-              <b class="clip__t">Fight for every ball, bam-servis.by vs EasyChamp</b>
-              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 2026</span>
-              <span class="clip__tag clip__tag--on">verified on tape</span>
-              <span class="clip__n">Verified as the right moment and the right fixture, off the tape's own card and scorebug. It is a pressing phase, not a goal.</span>
+              <b class="clip__t">Backheel goal, LFL 7x7 Minsk</b>
+              <span class="clip__m">LFL 7x7, Minsk &middot; 17 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Anton's own caption calls this the backheel goal; the phone camera is far away and into the sun, so nothing at the net is legible.</span>
             </figcaption>
           </figure>
         </li>
-        <li class="clip" id="clip-futsal-2014-15-goal-a">
-          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 151.6s out 163.4s, 11.9s cut. Verified frame by frame at 0.2 s over src 158.0-165.0 (video/_clips/scanA/dense/w158.0_sheet.jpg) and at 0.5 s over the whole 459 s tape (video/_clips/scanA/sheet_00..05.jpg, it/it_00..08.jpg, ar/ar_00..03.jpg). What is on screen: green Itransition shirts against a yellow-shirted side; from clip 8 s the green carrier takes the ball the length of the floor through two yellow players and is challenged as he reaches the final third. Shirt number 4 on the green carrier is legible at src 161.4-162.4, which is the identification basis for Anton. NO goal is visible: no frame in this window or anywhere in the tape shows the ball over the line, net movement or a celebration. -->
-          <!-- note: Source is Anton's own 'Futsal Season 2014-2015' compilation (YouTube e1Rb1zbKYuM), downloaded locally; the clip is cut from the local file, not hot-linked. The tape is a best-moments reel of carries and duels, not a goals reel, so this entry is published as an action clip and verified is false. The window contains one shot change from the source tape at about 6 s. Lower-left chip only, no other burned-in text added. Review sheet: video/_clips/futsal-2014-15-goal-a_contact.png -->
+        <li class="clip" id="clip-lfl-7x7-2026-heel-finish">
+          <!-- src: youtube 3zbbJ5dihno in 80.0s out 89.0s, 9.0s cut. Cut from Anton's own reel around its burned-in caption 'HEEL FINISH', which is on screen from 1 s of the clip to the end of the action. What is visible on the final clip at 1 fps: 0 s the last frame of the previous caption 'DUMMY'; 1-8 s the same hand-held phone shot from the far touchline into low evening sun, Blugrana in orange and dark shirts against Vektor's lime bibs, a duel in the middle at 1-3 s, the carrier breaking away to the right at 4-6 s and the players resetting at 7-8 s; scorebug Vektor 1 / Blugrana 10, Taym 2nd throughout. No goal frame, keeper or net is in shot at any point, so verified is false. Review sheet: video/_clips/lfl-7x7-2026-heel-finish_contact.png -->
+          <!-- note: Same source reel (3zbbJ5dihno). Cut trimmed to start at source 80.0 so the 'HEEL FINISH' caption is on screen for the whole clip. Lower-left chip only. -->
           <figure class="clip__fig">
-            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-a.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-a">
-              <source src="/assets/video/futsal-2014-15-goal-a.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-a.mp4">Download the clip (futsal-2014-15-goal-a.mp4)</a>
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/lfl-7x7-2026-heel-finish.jpg" preload="metadata" controls playsinline data-clip="lfl-7x7-2026-heel-finish">
+              <source src="/assets/video/lfl-7x7-2026-heel-finish.mp4" type="video/mp4"><a href="/assets/video/lfl-7x7-2026-heel-finish.mp4">Download the clip (lfl-7x7-2026-heel-finish.mp4)</a>
             </video>
             <figcaption class="clip__cap">
-              <b class="clip__t">Solo run through the middle, Itransition futsal</b>
+              <b class="clip__t">Heel finish, LFL 7x7 Minsk</b>
+              <span class="clip__m">LFL 7x7, Minsk &middot; 17 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Anton's own caption calls this the heel finish; the ball into the net is outside the phone camera's frame.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-outdoor-2026-goal-a">
+          <!-- src: youtube VKLUxHV11BM in 44.0s out 57.1s, 13.1s cut. Cut from Anton's own edit, inside its chapter 'My Goal - Combination' (0:42-1:15). Read off the reel's own burned-in graphics: the scorebug reads Valknut 2 / Blugrana 4, Period 1st, and the beat's ticker line reads '1st half . 2-4 . makes it 2-5'. The next chapter in the same reel ('Nutmeg', from 1:15) carries Valknut 2 / Blugrana 5, so the reel's own scoreboard moves by one Blugrana goal across this beat. What is visible on the final clip at 1 fps: 0-2 s a tall bald Blugrana player in red shirt and dark shorts, number 3, takes the ball on the left and carries it; 3-5 s he releases it and the move goes right toward the Valknut goal; 6-9 s a goalmouth scramble at the far post with the lime-bibbed keeper; 10-12 s red shirts come together and one is embraced. The ball crossing the line is NOT resolvable at this camera distance, so verified is false. Review sheet: video/_clips/outdoor-2026-goal-a_contact.png -->
+          <!-- note: Source is Anton's reel 'Anton Abyzov | Summer 2026 in Belarus | LFL 7x7 + Premierliga 8x8, Minsk' (YouTube VKLUxHV11BM, 6:23, 30 chapters), downloaded locally and cut from the file. Game 1 of three; the reel's own fixture card at 0:12 reads 'Valknut - Blugrana 4-11, 26.07.2026' and identifies Anton as red / grey. The end card reads '3 games . 3 wins . 4 goals . 1 assist'. Lower-left chip added with competition and date; the reel's own captions and scorebug are the tape's, not ours. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/outdoor-2026-goal-a.jpg" preload="metadata" controls playsinline data-clip="outdoor-2026-goal-a">
+              <source src="/assets/video/outdoor-2026-goal-a.mp4" type="video/mp4"><a href="/assets/video/outdoor-2026-goal-a.mp4">Download the clip (outdoor-2026-goal-a.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Combination goal against Valknut, LFL 7x7</b>
+              <span class="clip__m">LFL 7x7, Minsk &middot; 26 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The reel's own scoreboard goes Blugrana 4 to Blugrana 5 across this beat; the ball crossing the line is behind a crowded six yard box.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-outdoor-2026-goal-b">
+          <!-- src: youtube VKLUxHV11BM in 89.5s out 102.6s, 13.1s cut. Cut from Anton's own edit, inside its chapter 'Solo Run - My Goal' (1:27-1:59). The reel's scorebug reads Valknut 2 / Blugrana 5 through this beat, and the following chapter 'On The Dribble' (from 1:59) reads Valknut 2 / Blugrana 6, so the reel's own scoreboard moves by one Blugrana goal across this beat. What is visible on the final clip at 1 fps: 0-5 s wide play, red Blugrana against lime-bibbed Valknut, the camera panning left; 6-8 s Blugrana push toward the left-hand goal; 9 s a red carrier drives at the goal; 10-12 s the camera is zoomed tight on the goalmouth, the Valknut keeper is on the floor by the right post and the ball is on the ground inside the six yard box with red shirts standing over it. No frame shows the ball behind the line, so verified is false. Review sheet: video/_clips/outdoor-2026-goal-b_contact.png -->
+          <!-- note: Same source reel as outdoor-2026-goal-a (VKLUxHV11BM). The reel's replay of this beat starts at 1:44 and is not inside the cut; the cut ends where the live camera does. Lower-left chip only, no other burned-in text added by us. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/outdoor-2026-goal-b.jpg" preload="metadata" controls playsinline data-clip="outdoor-2026-goal-b">
+              <source src="/assets/video/outdoor-2026-goal-b.mp4" type="video/mp4"><a href="/assets/video/outdoor-2026-goal-b.mp4">Download the clip (outdoor-2026-goal-b.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Solo run and finish against Valknut, LFL 7x7</b>
+              <span class="clip__m">LFL 7x7, Minsk &middot; 26 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The reel's own scoreboard goes Blugrana 5 to Blugrana 6 across this beat; the finish itself is behind the keeper and a wall of players.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-outdoor-2026-assist">
+          <!-- src: youtube VKLUxHV11BM in 17.0s out 30.1s, 13.1s cut. Cut from Anton's own edit, inside its chapter 'My Assist' (0:15-0:32), the one assist the reel's end card counts. The reel's scorebug reads Valknut 2 / Blugrana 3 through this beat and the next goal chapter ('My Goal - Combination', from 0:42) reads Valknut 2 / Blugrana 4, so the reel's own scoreboard moves by one Blugrana goal across the pass and its finish. What is visible on the final clip at 1 fps: 0-5 s wide play, red Blugrana against lime Valknut, the ball worked forward on the right; 6-8 s the camera zooms in as Blugrana arrive in the box; 9-10 s the goalmouth, the Valknut keeper committed and the ball on the floor in front of the net; 11-12 s a close foreground shot of a Valknut bib and red shirts walking back. The finish itself is behind the keeper, so verified is false. Review sheet: video/_clips/outdoor-2026-assist_contact.png -->
+          <!-- note: Same source reel (VKLUxHV11BM), game 1. This is the reel's only assist chapter, so it is the assist behind the end card's '4 goals . 1 assist'. Lower-left chip only. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/outdoor-2026-assist.jpg" preload="metadata" controls playsinline data-clip="outdoor-2026-assist">
+              <source src="/assets/video/outdoor-2026-assist.mp4" type="video/mp4"><a href="/assets/video/outdoor-2026-assist.mp4">Download the clip (outdoor-2026-assist.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Assist against Valknut, LFL 7x7</b>
+              <span class="clip__m">LFL 7x7, Minsk &middot; 26 July 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">An assist, not a goal: the reel's own scoreboard goes Blugrana 3 to Blugrana 4 around this pass.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-outdoor-2026-goal-c">
+          <!-- src: youtube VKLUxHV11BM in 266.5s out 280.1s, 13.6s cut. Cut from Anton's own edit, inside its chapter 'My Goal - Long Range' (4:18-4:54), the goal he calls his favourite in the video description. Read off the reel's own graphics: the beat's ticker line reads '1st half . 13:16 . 1-0 to 1-1' and the live scorebug flips from TEAM FOX 1 / BEZGRIMA 0 to TEAM FOX 1 / BEZGRIMA 1 between clip 9 s and 10 s (source 275.75 to 275.88, match clock 13:33), which is objective evidence that Bezgrima scored inside this window. What is visible on the final clip at 1 fps: 0-11 s the elevated wide camera at SK Grugany, yellow Bezgrima shirts against white Team Fox, the match clock running 13:23 to 13:35, the scoreboard turning 1-1 at 9-10 s; 12-13 s the reel cuts to its own REPLAY on the close pitch-side camera. The strike and the ball crossing the line are NOT resolvable at that camera distance, so verified is false. Review sheet: video/_clips/outdoor-2026-goal-c_contact.png -->
+          <!-- note: Same source reel (VKLUxHV11BM), game 3 of three; the reel's fixture card at 3:39 reads 'Team Fox - Bezgrima 2-6, 03.08.2026, SK Grugany'. The reel's cold open (0:00-0:12) is this same goal seen on the close pitch-side camera, which is why no separate fourth goal clip exists: the reel carries three 'My Goal' chapters plus that cold open, while the end card counts four goals across the three games. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/outdoor-2026-goal-c.jpg" preload="metadata" controls playsinline data-clip="outdoor-2026-goal-c">
+              <source src="/assets/video/outdoor-2026-goal-c.mp4" type="video/mp4"><a href="/assets/video/outdoor-2026-goal-c.mp4">Download the clip (outdoor-2026-goal-c.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Long range goal against Team Fox, Premierliga 8x8</b>
+              <span class="clip__m">Premierliga 8x8, SK Grugany, Minsk &middot; 3 August 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The reel's scoreboard turns 1-1 inside the clip; the strike itself is a long way from the camera.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <!-- END:minsk-clips -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="rail__in rail__grp" id="best-archive">
+      <h3 class="rail__grp-h">Futsal 2014/15<span>Itransition, Minsk, off my own season tape, and the 2019 cut still to come</span></h3>
+      <ul class="clips">
+        <!-- BEGIN:archive-clips -->
+        <li class="clip" id="clip-futsal-2014-15-best">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 128.8s out 437.5s, 36.1s cut. A montage built here from six windows of Anton's own 'Futsal Season 2014-2015' tape, joined with 0.4 s dips (0.2 s out, 0.2 s in) and one lower left chip per segment naming that segment's fixture and date. Segments in order: src 158.0-164.5 (the number 4 solo run through the middle, the same move as futsal-2014-15-goal-a), 128.8-135.3 (Itransition 13-0 Сосны, 31.01.2015), 193.8-200.3 (Itransition 5-1 Sellwin, 29.11.2014), 209.2-215.2 (Itransition 5-5 Shate-M, 07.02.2015), 431.0-437.5 (Itransition 4-0 Sellwin, 17.01.2015) and 418.8-422.8 (Itransition 6-2 Scorpion, 11.01.2015). Every fixture and date is read off the tape's own burned-in captions. Checked end to end on the final render at 1 fps: video/_clips/futsal-2014-15-best_contact.png. NO goal is visible in any of the six segments, so verified is false. -->
+          <!-- note: Built for the highlights page as the long-form cut of the 2014/15 season. Ambient audio only, loudnorm I=-16 TP=-1.5 per segment then mastered at I=-14. Last segment carries the source tape's own caption graphic; that is the tape, not an overlay added here. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-best.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-best">
+              <source src="/assets/video/futsal-2014-15-best.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-best.mp4">Download the clip (futsal-2014-15-best.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Season 2014/15, six best moments back to back</b>
               <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 2015</span>
               <span class="clip__tag clip__tag--off">finish off camera</span>
-              <span class="clip__n">An action clip off my own season tape. No goal is visible anywhere in this window.</span>
+              <span class="clip__n">Six moments off my own 2014/15 season tape, each labelled with the fixture its own caption gives. It is a carries-and-duels reel; no goal is visible in it.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-futsal-2014-15-goal-d">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 193.0s out 201.3s, 8.5s cut. Fixture and date are read off the tape's own burned-in caption 'Itransition 5 : 1 Sellwin 29.11.2014', on screen at src 174-178 at the head of this run of shots. Verified frame by frame at 0.33 s over src 193.0-201.7 (video/_clips/scanA2/Q193_00.jpg). What is on screen: green Itransition against Sellwin in teal, play worked round the Sellwin goal at the left of frame with the keeper in a dark top, a green carrier arriving from deep at clip 5-7 s and a shot away at clip 7-8 s. NO goal is visible; the ball is never seen crossing a line and there is no celebration. The segment ends in a wipe to the next fixture at src 201.4, so the out point is 201.3. -->
+          <!-- note: Same source tape and same caveats as futsal-2014-15-goal-a to -goal-c. Review sheet: video/_clips/futsal-2014-15-goal-d_contact.png -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-d.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-d">
+              <source src="/assets/video/futsal-2014-15-goal-d.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-d.mp4">Download the clip (futsal-2014-15-goal-d.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Working the ball round the Sellwin goal, Itransition futsal</b>
+              <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 29 November 2014</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Fixture and date are read off the tape's own caption, Itransition 5-1 Sellwin, 29.11.2014. No goal is visible in the window.</span>
             </figcaption>
           </figure>
         </li>
@@ -402,25 +683,120 @@
             </figcaption>
           </figure>
         </li>
-        <li class="clip" id="clip-artem-dribble-score">
-          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/01-EVENTS/2026-05-24-soccer-training-with-artem-baranovskyi/source-vertical/IMG_6956.MOV in 2.0s out 13.9s, 12.0s cut. Verified frame by frame at 3, 5 and 10 fps across the candidate 1v1 takes (IMG_6949, 6950, 6951, 6953, 6956) in video/_clips/scanC/ and on the final clip at 1 fps in video/_clips/artem-dribble-score_contact.png. What is on screen: two players contest the ball, the man in the light heather tee and navy shorts holds the other off, the defender lunges and misses at clip 5 s, and the carrier takes the ball away and drives clear at clip 6-8 s; at clip 9-11 s they reset beside the rebounder nets. There is NO finish after the dribble: nothing in this take, and nothing in the 65-clip event, shows a ball in a net, in a bin or on a target. This matches the earlier sweep logged in video/artem-training/final/cutlist.json. -->
-          <!-- note: Vertical source, so the output is 720x1280, not 1280x720; the poster is a 1280x720 letterbox with a blurred backdrop. Framing uses a 680x1209 source crop that pans down over the clip because the players start far away and finish close to the lens. IDENTITY IS UNCONFIRMED: no name or number appears on screen, and the event log's kit key ('Anton = grey/teal tee, navy shorts, white boots; Artem = white tee, blue boots') does not cleanly separate these two players, who both wear navy shorts and neither a plain white tee. The carrier who wins the duel is the taller, heavier-built adult in the light heather tee. Anton should confirm before this is captioned with names. -->
+        <li class="clip" id="clip-futsal-2014-15-goal-f">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 431.0s out 440.0s, 9.1s cut. Fixture and date are read off the tape's own burned-in caption 'Itransition 4 : 0 Sellwin 17.01.2015', which is on screen inside the clip itself for the first second. Verified frame by frame at 0.33 s over src 431.0-439.7 (video/_clips/scanA2/Q431_00.jpg). What is on screen: green Itransition number 11 carries at the Sellwin line, gets into the area at clip 0-2 s with the keeper coming out, then the ball is worked back and forth in front of that goal for the rest of the window. NO goal is visible; the ball is never seen crossing a line and there is no celebration. The segment ends in a wipe to the next fixture caption at src 440.2. -->
+          <!-- note: The tape's own fixture caption is part of the source frame, not something added here; the only overlay added is the lower left chip. Review sheet: video/_clips/futsal-2014-15-goal-f_contact.png -->
           <figure class="clip__fig">
-            <video class="clip__v clip__v--tall" width="1280" height="720" poster="/assets/video/artem-dribble-score.jpg" preload="metadata" controls playsinline data-clip="artem-dribble-score">
-              <source src="/assets/video/artem-dribble-score.mp4" type="video/mp4"><a href="/assets/video/artem-dribble-score.mp4">Download the clip (artem-dribble-score.mp4)</a>
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-f.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-f">
+              <source src="/assets/video/futsal-2014-15-goal-f.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-f.mp4">Download the clip (futsal-2014-15-goal-f.mp4)</a>
             </video>
             <figcaption class="clip__cap">
-              <b class="clip__t">1v1 with Artem Baranovskyi, beats him and drives away</b>
-              <span class="clip__m">Private training session &middot; 24 May 2026</span>
+              <b class="clip__t">Running at Sellwin from deep, Itransition futsal</b>
+              <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 17 January 2015</span>
               <span class="clip__tag clip__tag--off">finish off camera</span>
-              <span class="clip__n">That this is me against Artem is my own account: nothing on screen names either player. The take ends as the carrier drives clear, with no finish on it.</span>
+              <span class="clip__n">Fixture and date are read off the tape's own caption, Itransition 4-0 Sellwin, 17.01.2015. No goal is visible in the window.</span>
             </figcaption>
           </figure>
         </li>
-        <!-- END:best-goals -->
+        <li class="clip" id="clip-futsal-2014-15-goal-c">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 126.9s out 136.0s, 9.2s cut. Fixture and date are read off the tape's own burned-in caption 'Itransition 13 : 0 Сосны 31.01.2015', on screen at src 103-106 at the head of this segment. Verified frame by frame at 0.25 s over src 126.5-132.2 (video/_clips/scanA2/D_w126_00.jpg) and at 0.33 s over 104-113 and 431-440, plus a 0.5 s sweep of the whole first 3 minutes (video/_clips/scanA2/H_00..H_07.jpg) and a 1 s sweep of the rest (T_00..T_05.jpg). What is on screen: green Itransition shirts against light blue Sosny, a green carrier takes the ball at the defence and into the six yard box, a Sosny defender ends up on the floor and green number 5 follows the ball in at clip 4-8 s. NO goal is visible: no frame in this window shows the ball over the line, net movement or a celebration. -->
+          <!-- note: Source is Anton's own 'Futsal Season 2014-2015' compilation (YouTube e1Rb1zbKYuM), downloaded locally; the clip is cut from the local file, not hot-linked. The tape is a best-moments reel of carries and duels, so this entry is published as an action clip and verified is false. Review sheet: video/_clips/futsal-2014-15-goal-c_contact.png -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-c.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-c">
+              <source src="/assets/video/futsal-2014-15-goal-c.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-c.mp4">Download the clip (futsal-2014-15-goal-c.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Driving into the Sosny six yard box, Itransition futsal</b>
+              <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 31 January 2015</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">An action clip off my own season tape, fixture read from its own caption. No goal is visible in this window.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-futsal-2014-15-goal-e">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 205.0s out 214.5s, 9.6s cut. Fixture and date are read off the tape's own burned-in caption 'Itransition 5 : 5 Shate-M 07.02.2015', on screen at src 202-203 at the head of this segment. Verified frame by frame at 0.33 s over src 205.0-213.7 (video/_clips/scanA2/Q205_00.jpg). What is on screen: green Itransition against Shate-M in blue, a scramble at the blue goal at clip 0-1 s, then the camera follows the ball up the floor and at clip 6-9 s a green carrier is taken down by two blue defenders and stays on the floor while play runs on. NO goal is visible in this window. -->
+          <!-- note: Published as a duel and ball-carrying clip, not a goal. Same source tape and caveats as the other futsal-2014-15 entries. Review sheet: video/_clips/futsal-2014-15-goal-e_contact.png -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-e.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-e">
+              <source src="/assets/video/futsal-2014-15-goal-e.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-e.mp4">Download the clip (futsal-2014-15-goal-e.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Taking the contact against Shate-M, Itransition futsal</b>
+              <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 7 February 2015</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Fixture and date are read off the tape's own caption, Itransition 5-5 Shate-M, 07.02.2015. It is a duel, not a goal.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-futsal-2014-15-goal-a">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/e1Rb1zbKYuM.mp4 in 151.6s out 163.4s, 11.9s cut. Verified frame by frame at 0.2 s over src 158.0-165.0 (video/_clips/scanA/dense/w158.0_sheet.jpg) and at 0.5 s over the whole 459 s tape (video/_clips/scanA/sheet_00..05.jpg, it/it_00..08.jpg, ar/ar_00..03.jpg). What is on screen: green Itransition shirts against a yellow-shirted side; from clip 8 s the green carrier takes the ball the length of the floor through two yellow players and is challenged as he reaches the final third. Shirt number 4 on the green carrier is legible at src 161.4-162.4, which is the identification basis for Anton. NO goal is visible: no frame in this window or anywhere in the tape shows the ball over the line, net movement or a celebration. -->
+          <!-- note: Source is Anton's own 'Futsal Season 2014-2015' compilation (YouTube e1Rb1zbKYuM), downloaded locally; the clip is cut from the local file, not hot-linked. The tape is a best-moments reel of carries and duels, not a goals reel, so this entry is published as an action clip and verified is false. The window contains one shot change from the source tape at about 6 s. Lower-left chip only, no other burned-in text added. Review sheet: video/_clips/futsal-2014-15-goal-a_contact.png -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/futsal-2014-15-goal-a.jpg" preload="metadata" controls playsinline data-clip="futsal-2014-15-goal-a">
+              <source src="/assets/video/futsal-2014-15-goal-a.mp4" type="video/mp4"><a href="/assets/video/futsal-2014-15-goal-a.mp4">Download the clip (futsal-2014-15-goal-a.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Solo run through the middle, Itransition futsal</b>
+              <span class="clip__m">Minsk amateur futsal league, season 2014/15 &middot; 2015</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">An action clip off my own season tape. No goal is visible anywhere in this window.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-lidselmash-2019-pending">
+          <!-- src: no source file. YouTube 9ptWpZWiv3A is set to private, so no frame can be published from it; the public facade MyMOJP1nuic covers the same match. -->
+          <!-- note: Anton's round-2 answer: the full match is private and he asked why it should change. -->
+          <div class="clip__pending" role="note">
+            <b>Lidselmash goal, clip pending</b>
+            <span>Full match is private; clip pending. The tape of Territory-Maxline against the reigning Belarus champion is on a private upload, so the cut is not on the site yet. The chaptered facade lower down this page still opens the moment.</span>
+          </div>
+        </li>
+        <!-- END:archive-clips -->
       </ul>
       <div class="rail__line" aria-hidden="true"><i></i></div>
-      <p class="rail__hint">Scroll the rail sideways &middot; full matches below</p>
+    </div>
+
+    <div class="rail__in rail__grp" id="best-training">
+      <h3 class="rail__grp-h">Training<span>One against one with Artem Baranovskyi, Sunny Isles, 24 May 2026</span></h3>
+      <ul class="clips">
+        <!-- BEGIN:training-clips -->
+        <li class="clip" id="clip-artem-dribble-score">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/01-EVENTS/2026-05-24-soccer-training-with-artem-baranovskyi/source-vertical/IMG_6949.MOV in 0.0s out 7.6s, 11.83s cut. Anton's own correction this round sets the kit key: he is the player in the GREEN heather tee with navy shorts, Artem Baranovskyi is in the plain WHITE tee. Read that way, this take was verified frame by frame on the source at 1, 3, 6, 15 and 20 fps (sheets in video/_clips/scan-artem-2026-09-19/) and on the finished clip at 1 fps (video/_clips/artem-dribble-score_contact.png). What is on screen: src 0.0-0.8 the green tee has the ball on his own; 0.8-3.3 the white tee closes and they contest it with shoulder contact; src 3.4-4.3 the green tee knocks it past the white tee's outstretched leg and comes away with it while the white tee is left behind; src 4.3-7.6 the green tee drives the ball right, past the red pop-up rebounder by the fence, and keeps it under control. The finish is NOT a goal: at src 4.40-4.87, read at 30 fps on a 380x240 crop of the rebounder, the ball rolls ACROSS THE FRONT of the rebounder and out the far side, it never enters it. The same was checked on every other 1v1 take of the day (IMG_6945, 6950, 6951, 6953, 6954, 6955, 6956, 6960) and on all 54 source files at 3 frames each: no frame in the whole event shows a ball entering a net, a bin or a target. So verified stays false. -->
+          <!-- note: Replaces the earlier cut, which used IMG_6956 and described the winner of the duel as the light heather tee. This is the FIRST take of the 1v1 dribbling block (IMG_6949, camera time 23:03:36; the next one, IMG_6950, is 24 s later), which is the clip Anton asked for. Vertical source, so the output is 720x1280 and the poster is a 1280x720 letterbox on a blurred backdrop. Framing is a static 840x1493 source crop at x=120 y=330 scaled to 720x1280, which is tighter than the old pan and keeps both players in frame for the whole cut. The last 4.2 s are a 0.45x replay of src 3.0-4.9, the beat where he goes past Artem; the source is 120 fps so the replay is real frames, not interpolation, and the ambient audio is slowed with it rather than muted. Lower-left chip only, no other burned-in text. OPEN QUESTION FOR ANTON: he says he scores in this one. Nothing in the 54 files of 19 and 24 May shows a ball going into a goal, so if the finish he remembers exists it is on footage that is not in this folder. -->
+          <figure class="clip__fig">
+            <video class="clip__v clip__v--tall" width="720" height="1280" poster="/assets/video/artem-dribble-score.jpg" preload="metadata" controls playsinline data-clip="artem-dribble-score">
+              <source src="/assets/video/artem-dribble-score.mp4" type="video/mp4"><a href="/assets/video/artem-dribble-score.mp4">Download the clip (artem-dribble-score.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">1v1 vs Artem Baranovskyi, takes him on and comes away with it</b>
+              <span class="clip__m">Private training session &middot; 24 May 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">The green tee is me, the white tee is Artem. I take the ball past him and drive clear. No finish is on the tape: the ball runs across the front of the rebounder, not into it.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-artem-second-take">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/01-EVENTS/2026-05-24-soccer-training-with-artem-baranovskyi/source-vertical/IMG_6956.MOV in 1.5s out 13.5s, 12.1s cut. Same kit key, same method: source read at 1 and 3 fps (video/_clips/scan-artem-2026-09-19/) and the finished clip at 1 fps (video/_clips/artem-second-take_contact.png). What is on screen: src 1.5-4.5 the green tee brings the ball up and the white tee steps in to meet him; src 4.5-7.3 they go shoulder to shoulder over it, the green tee shields, rolls it behind his standing leg and turns away with it; src 7.3-11.5 they contest it again across the middle and the white tee comes out with it at the end. No goal, no net and no target is in frame at any point in this take. -->
+          <!-- note: This is the take the earlier build published as artem-dribble-score, kept as a second angle on the same 1v1 block and re-captioned with Anton's corrected kit key (IMG_6956, camera time 23:06:57, about four minutes after IMG_6949). Same 840x1493 static crop at x=120 y=330 scaled to 720x1280, same lower-left chip, no replay tail. Vertical source, so the poster is a 1280x720 letterbox on a blurred backdrop. -->
+          <figure class="clip__fig">
+            <video class="clip__v clip__v--tall" width="720" height="1280" poster="/assets/video/artem-second-take.jpg" preload="metadata" controls playsinline data-clip="artem-second-take">
+              <source src="/assets/video/artem-second-take.mp4" type="video/mp4"><a href="/assets/video/artem-second-take.mp4">Download the clip (artem-second-take.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Second 1v1 vs Artem Baranovskyi, shields it and turns away</b>
+              <span class="clip__m">Private training session &middot; 24 May 2026</span>
+              <span class="clip__tag clip__tag--off">finish off camera</span>
+              <span class="clip__n">Second 1v1 off the same session. Shielding and turning, not a finish: no goal is in frame in this take.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <!-- END:training-clips -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="rail__in">
+      <p class="rail__hint">Each rail scrolls sideways &middot; the full matches are below</p>
     </div>
   </section>
 
