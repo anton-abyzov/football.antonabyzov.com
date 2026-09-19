@@ -6,4 +6,4 @@ Allow: /
 Allow: /assets/img/
 Allow: /assets/og/
 
-Sitemap: https://anton-abyzov.github.io/sitemap.xml
+Sitemap: https://anton-abyzov.github.io/football.antonabyzov.com/sitemap.xml
