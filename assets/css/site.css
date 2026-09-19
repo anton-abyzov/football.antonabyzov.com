@@ -950,6 +950,40 @@ section[id]{ scroll-margin-top:118px; }
 .sec--paper .clips--single .clip__n{ color:var(--fg-dim); }
 .sec--paper .clips--single .clip__tag--on{ color:var(--accent); }
 
+/* ═══ 16b. CONDITIONING BLOCK (home, one screen) ══════════════════════════
+   A lead frame with a square inset beside it and two lines of copy. Deliberately
+   short: it is an interlude between the playing profile and the coaching
+   section, not a section of its own. Stacks at narrow widths, where the lead
+   runs full width and the inset sits under it.                            */
+.fit{ display:grid; gap:clamp(26px,3.6vw,52px); align-items:center; }
+@media (min-width:900px){
+  /* the frames column is sized to the frames, not to half the page, so the
+     copy sits beside the photographs instead of across a dead gap */
+  .fit{ grid-template-columns:minmax(0,620px) minmax(0,1fr); gap:clamp(32px,4.4vw,64px); }
+}
+.fit__frames{ display:grid; gap:12px; max-width:620px; }
+@media (min-width:620px){
+  .fit__frames{ grid-template-columns:minmax(0,1.62fr) minmax(0,1fr); align-items:end; }
+}
+.fit__lead, .fit__inset{ margin:0; min-width:0; }
+.fit__inset{ max-width:62%; }
+@media (min-width:620px){ .fit__inset{ max-width:none; } }
+.fit picture{ display:block; overflow:hidden; border:1px solid var(--hair); background:var(--pitch-800); }
+.fit img{
+  display:block; width:100%; height:auto; object-fit:cover;
+  background-size:cover; background-position:center;
+  transition:transform .5s var(--ease);
+}
+.fit__lead img{ aspect-ratio:4/5; }
+.fit__inset img{ aspect-ratio:1/1; }
+.fit figure:hover img{ transform:scale(1.03); }
+.fit figcaption{
+  padding:9px 0 0; font-size:11.5px; line-height:1.5; color:var(--fg-fade);
+}
+.fit figcaption b{ display:block; color:var(--fg); font-weight:700; }
+.fit__copy .lede{ max-width:44ch; }
+.fit__copy .prose{ max-width:44ch; }
+
 /* ═══ 17. LAYERED HOME (scroll-driven) ═══════════════════════════════════
    Three hero planes at three rates, a slow scroll-linked zoom on the
    portrait, per-row reveals on the honours board and the ledger, and the
