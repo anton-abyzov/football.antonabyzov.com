@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Why 6v6 Indoor | Anton Abyzov</title>
-<meta name="description" content="Fifty of my fifty-three official goals came on a small pitch. Thirteen in ten games at 41. Four of my own players reached the Baller League USA final four.">
+<meta name="description" content="Futsal player, 50 of the 53 goals on my Minsk league card small-sided, 13 in 10 games at 41, four of my own players in the Baller League USA final four.">
 <link rel="canonical" href="https://football.antonabyzov.com/baller-league/">
 <meta name="author" content="Anton Abyzov">
 <meta name="theme-color" content="#06120e">
@@ -39,9 +39,9 @@
       "@id": "https://football.antonabyzov.com/baller-league/",
       "url": "https://football.antonabyzov.com/baller-league/",
       "name": "Anton Abyzov: why 6v6 indoor fits his game",
-      "description": "Fifty of Anton Abyzov's fifty-three official goals came on a small pitch. Thirteen in ten games at 41. Four of his own players reached the Baller League USA final four.",
+      "description": "Futsal player, 50 of the 53 goals on his Minsk league card small-sided, 13 in 10 games at 41, four of his own players in the Baller League USA final four.",
       "inLanguage": "en",
-      "dateModified": "2026-09-19",
+      "dateModified": "2026-09-20",
       "isPartOf": { "@type": "WebSite", "name": "Anton Abyzov · Football", "url": "https://football.antonabyzov.com/" },
       "primaryImageOfPage": "https://football.antonabyzov.com/assets/og/og-baller-league.jpg",
       "mainEntity": {
@@ -61,7 +61,7 @@
           "Master of Sport of the Republic of Belarus (futsal, visually impaired), 18 November 2009",
           "Commendation of the President of the Republic of Belarus, 16 December 2009",
           "Minsk city futsal championship, Itransition",
-          "European champion 2012, IBSA B2/B3 European Championship, Kayseri, Turkey",
+          "European Championship 2012, IBSA B2/B3, Kayseri, Turkey: gold medal with the Belarus squad",
           "Miami Superliga 8v8 champion 2025, EasyChamp FC",
           "Gol Gala champions, Miami, 23 June 2024, 3,000 dollar team prize"
         ]
@@ -78,66 +78,9 @@
 }
 </script>
 
-<!-- Page-scoped CSS. Three components site.css does not carry yet: the two
-     column field table (.fld), the copy-ready answer block (.ans) and the
-     prev/next pager (.pager). Fold into site.css when a second page needs
-     them; nothing here hard-codes a colour, every rule reads the theme
-     tokens so both .sec--pitch and .sec--paper work unchanged. -->
+<!-- Page-scoped CSS. One component site.css does not carry yet: the prev/next
+     pager (.pager). Fold into site.css when a second page needs it. -->
 <style>
-/* ── QA fix: WCAG AA contrast on .sec--paper fade text ──────────────────────
-   site.css:43 sets --ink-fade:#726c59, which .sec--paper (site.css:157) hands
-   to --fg-fade. #726c59 clears 4.5:1 only against the PURE --paper token
-   (#f2eee3). The .sec--paper::before newsprint grain (site.css:162, multiply
-   at .45) darkens the composited paper to about rgb(239,235,225), which drops
-   every --fg-fade style on paper to 4.36-4.40:1 measured from rendered pixels:
-   .fld thead th, .fld caption, .cites li, figcaption, .sec-kick, .note.
-   #6b6553 measures 4.9:1 on the grained composite and 5.0:1 on pure #f2eee3,
-   so it clears AA with margin under both. Only the paper token moves; the
-   chalk tokens on the dark sections are untouched.
-   SHARED FIX: change site.css line 43 to --ink-fade:#6b6553; and delete this
-   block. Every .sec--paper section on every page inherits the same failure. */
-:root{ --ink-fade:#6b6553; }
-
-.fld{ width:100%; border-collapse:collapse; margin:0; font-size:13.5px; }
-.fld caption{
-  text-align:left; padding:0 0 12px;
-  font:600 11px/1.4 var(--body); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-fade);
-}
-.fld th,.fld td{ text-align:left; vertical-align:top; padding:12px 14px 11px 0; border-bottom:1px solid var(--hair); }
-.fld th:last-child,.fld td:last-child{ padding-right:0; }
-.fld thead th{
-  font:600 10px/1.3 var(--body); letter-spacing:.15em; text-transform:uppercase;
-  color:var(--fg-fade); border-bottom:1.5px solid var(--fg); padding-bottom:9px;
-}
-.fld tbody th{
-  width:34%; font:400 clamp(14px,1.9vw,18px)/1.16 var(--display);
-  letter-spacing:.03em; text-transform:uppercase; color:var(--fg);
-}
-.fld td{ color:var(--fg-dim); line-height:1.55; }
-.fld td b,.fld td strong{ color:var(--fg); font-weight:700; }
-.fld a{ color:var(--accent); text-underline-offset:3px; }
-
-.q{ margin:clamp(30px,3.6vw,46px) 0 0; max-width:74ch; }
-.q__h{ margin:0 0 4px; font-size:clamp(18px,2.2vw,23px); }
-.q__k{ margin:0 0 12px; font:600 10px/1.4 var(--body); letter-spacing:.15em; text-transform:uppercase; color:var(--fg-fade); }
-.ans{
-  border:1px solid var(--hair); border-left:3px solid var(--accent);
-  background:color-mix(in srgb, var(--fg) 4%, transparent);
-  padding:16px 16px 15px;
-}
-.ans p{ margin:0 0 .9em; font-size:14px; line-height:1.64; color:var(--fg); overflow-wrap:break-word; }
-.ans p:last-child{ margin-bottom:0; }
-.ans--url p{ font-size:13.5px; letter-spacing:.012em; }
-.ans__bar{ display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:13px; }
-/* site.css gap: .btn--ghost sets a border and a colour but no background, so a
-   <button> keeps the UA buttonface and the chalk label disappears on a dark
-   section. Fold this line into site.css §4 next to .btn--ghost. */
-button.btn--ghost{ background:transparent; -webkit-appearance:none; appearance:none; }
-.ans__ct{ font:600 10px/1.5 var(--body); letter-spacing:.14em; text-transform:uppercase; color:var(--fg-fade); }
-.steps{ margin:0 0 14px; padding-left:20px; font-size:var(--t-body); line-height:1.6; color:var(--fg-dim); }
-.steps li{ margin-bottom:6px; }
-.steps li strong,.steps li b{ color:var(--fg); }
-
 .pager{
   display:grid; gap:1px; background:var(--line-soft);
   border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft);
@@ -212,485 +155,406 @@ button.btn--ghost{ background:transparent; -webkit-appearance:none; appearance:n
     <ol><li><a href="/">Home</a></li><li aria-current="page">Baller League</li></ol>
   </nav>
 
-  <!-- ══ OPENER ═════════════════════════════════════════════════════════════ -->
-  <section class="sec sec--pitch" id="pitch" aria-labelledby="h-why">
-    <div class="sec__in">
-      <div class="sec-head">
-        <p class="sec-kick"><span class="pill">Pitch</span>Baller League USA &middot; 6v6 indoor</p>
-        <h1 id="h-why">Why 6v6 indoor</h1>
+  <!-- ══ HERO · two photographs, four lines of type ═════════════════════════ -->
+  <section class="hero" aria-labelledby="h-why">
+    <div class="hero__pitch" aria-hidden="true"></div>
+    <div class="hero__flood" aria-hidden="true"></div>
+    <p class="hero__ghost" aria-hidden="true">INDOOR</p>
+
+    <div class="hero__in">
+      <div>
+        <p class="kicker rise" style="--i:0">
+          <span>Baller League USA</span><span>6v6 indoor</span><span>Miami</span>
+        </p>
+        <h1 id="h-why" class="rise" style="--i:1">
+          <span class="n1">Small pitch,</span> <span class="n2">fast brain.</span>
+        </h1>
+        <!-- src: alfoot.net pid=2125, season table: 3 goals in 59 appearances of 11-a-side, 50 in 8v8/5v5/futsal -->
+        <p class="hero__role rise" style="--i:2">Futsal player. 50 of the 53 goals on my Minsk league card came small-sided.</p>
+        <!-- src: ballerleague.us/en/post/super-ninos-crowned-baller-league-usa-champions; ballerleague.us/en/player/artem-baranovskyi -->
+        <p class="hero__sub rise" style="--i:3">
+          The goals first, files on this site, then the argument in four pictures. Four people off my
+          own Miami roster were in your final four in May 2026.
+        </p>
+        <p class="cta-row rise" style="--i:4">
+          <a class="btn btn--volt" href="#best-goals"><span class="btn__ico" aria-hidden="true">&#9654;</span>Press play</a>
+          <a class="btn btn--ghost" href="/highlights/">The full tape</a>
+        </p>
       </div>
 
-      <p class="lede">
-        Short version: I am a futsal player who has spent twenty years learning what a small pitch
-        rewards, my goal record proves it, and four people off my own Miami roster were in the Baller
-        League USA final four in May 2026.
-      </p>
+      <div class="hero__stack rise" style="--i:3">
+        <!-- src: own photo album, 28 to 30 April 2026, IMG_6556.DNG; research/gallery-curation.md hero candidate 1 -->
+        <figure class="hero__shot">
+          <picture><source srcset="/assets/img/hero-baller-league.webp" type="image/webp"><img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600" alt="Anton Abyzov pitchside at the Baller League USA arena in Miami, league boards and floodlights behind him." loading="eager" decoding="async" fetchpriority="high" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center"></picture>
+          <figcaption class="third">
+            <span class="third__bar">Anton Abyzov</span>
+            <span class="third__sub">Baller League Arena, Miami, April 2026</span>
+          </figcaption>
+        </figure>
 
-      <p class="cta-row">
-        <a class="btn btn--volt" href="#answers"><span class="btn__ico" aria-hidden="true">&#9654;</span>The application answers</a>
-        <a class="btn btn--ghost" href="/highlights/">Watch the highlight tape</a>
-      </p>
+        <!-- src: Google Photos album Нант 2009, IMG_1978, EXIF 5 July 2009 09:43, Nantes airport; the album's own face tag names me in this frame -->
+        <figure class="hero__cup">
+          <picture><source srcset="/assets/img/nantes-2009-european-cup-card.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup-card.jpg" width="900" height="600" alt="Anton Abyzov in a Belarus tracksuit beside the European Championship cup on an airport counter in Nantes, one arm raised." loading="eager" decoding="async" fetchpriority="high" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwAudQa4VopAirjPAqpPelIDAqpwudwHJ+taVzpsf2WRoYmebGBg81g38U1ssSyxGNmBB3dTSHFK/vD21CVLYIkhIKgn2IorobfRbR7dCysTtHeigFJrY//Z);background-size:cover;background-position:center"></picture>
+          <figcaption>
+            <b>European champion, 2009</b>
+            <span>Nantes airport, 5 July 2009</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-      <ul class="tiles reveal" style="margin-top:clamp(34px,4.4vw,52px)">
+  <!-- ══ NINE CUTS · self-hosted clips, first thing under the hero ══════════ -->
+  <section class="rail" id="best-goals" aria-labelledby="h-best">
+    <div class="rail__in">
+      <div class="rail__head">
+        <div>
+          <p class="sec-kick"><span class="pill pill--out">On this domain</span>Self-hosted cuts, not embeds</p>
+          <h2 id="h-best">Best moments, small pitch.<br><span class="muted">Press play.</span></h2>
+        </div>
+        <p class="lede">
+          Futsal in the Belarus top division, 8v8 in Miami, 5x5 and 7x7 in Minsk this summer. Each card
+          says what the frames actually show. <a href="/highlights/">The rest of the tape is on the highlights page.</a>
+        </p>
+      </div>
+      <ul class="clips">
+        <!-- BEGIN:best-goals -->
+        <li class="clip" id="clip-lidselmash-2019-cameo">
+          <!-- src: youtube MyMOJP1nuic in 79.6s out 93.02s, 20.29s cut. Frame-stepped at 0.25 s across 60-95 s of the 6-minute upload, then at 1/15 s and 1/30 s around the action. Cut is source 79.60-93.02 s (first-half clock 12:34 to 12:47), plus a 1.6x replay of 81.2-85.4 s. On the frames: Anton, #3 in light green, holds the near touchline while Lidselmash keep the ball; at about 81.4 s Territory win it back off blue #20 and Anton breaks clear; he takes the ball on the right wing at about 81.9 s, carries it at speed with #20 chasing, then drives infield and plays it into the centre of the box at 83.6-84.0 s, where blue #18 and blue #20 converge and the move is smothered. Lidselmash restart, #8 carries it out, Territory press high, and from 92.3 s Anton is back on the far touchline in the press. The last live frame is 92.993 s. The upload then hard-splices at 93.02 s: the frame before the cut reads TER 1-3 LID at 12:47, the frame after reads TER 2-3 LID at 12:50, and the clock stays frozen at 12:50 for the next ten seconds. That score flip is Abyzov's goal, the protocol's 2:3 at 13', and it falls inside the roughly three seconds the upload removes. The goal frames themselves are not in this footage. -->
+          <!-- note: Lidselmash had played the Elite Round, the last 16, of the 2018-19 UEFA Futsal Champions League three months earlier and had faced Inter Movistar in the 2015/16 competition. The goal frames sit in the private full match video; the public 6-minute upload splices across them. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/lidselmash-2019-cameo.jpg" preload="metadata" controls playsinline data-clip="lidselmash-2019-cameo">
+              <source src="/assets/video/lidselmash-2019-cameo.mp4" type="video/mp4"><a href="/assets/video/lidselmash-2019-cameo.mp4">Download the clip (lidselmash-2019-cameo.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">The combination vs Lidselmash: on the wing, pass to the centre</b>
+              <span class="clip__m">Belarus national top futsal division (Vysshaya Liga) &middot; 17 February 2019</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Official protocol: 2:3 Abyzov 13'. Scoreboard flips 1-3 to 2-3 across the upload's splice at 12:47 to 12:50; the goal frames themselves were cut out of the upload.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-patagonia-goal4">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/p3kv0_LCCqA.mp4 in 1981.0s out 1997.5s, 25.52s cut. Strike at 1987.58 (ball leaves the boot at 1987.60), the ball clears the advanced keeper and crosses the line at about 1988.2 under the bar, runs along the inside of the net to the far top corner and sits in the net from 1989.0 to 1989.9; the keeper throws his arms up at 1989.9; Patagonia #6 carries the ball in his hands to the centre from 1996.3 and the restart touch is at about 2001.9. Shirt number 8 legible in the replay. -->
+          <!-- note: Live 1981.0 to 1997.5 (full frame), then a 1.8x replay of 1984.58 to 1989.58 on a 1040x585 far-goal crop. YouTube link Anton gave: https://youtu.be/p3kv0_LCCqA?t=1984. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/patagonia-goal4.jpg" preload="metadata" controls playsinline data-clip="patagonia-goal4">
+              <source src="/assets/video/patagonia-goal4.mp4" type="video/mp4"><a href="/assets/video/patagonia-goal4.mp4">Download the clip (patagonia-goal4.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Anton #8 lifts it into the top corner vs Patagonia, 33rd minute</b>
+              <span class="clip__m">PS23 Superliga 8v8 (Miami) &middot; 17 February 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">ball in the net on frame; keeper beaten high; Patagonia restart from the centre spot</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-gulfstream-2025-11-14">
+          <!-- src: youtube dP7uCHUt-VQ in 2412.7s out 2424.6s, 16.17s cut. Strike on frame at 2414.37; Gulfstream walk back together; play restarts from the middle at about 2432; Anton confirms the goal. The ball crossing is hidden by six players on this camera. -->
+          <!-- note: stream uploaded 15 Nov as Fecha 9; Anton dates the game 14 Nov; live 2412.7-2424.6 + 1.8x replay 2413.9-2416.3 -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/gulfstream-2025-11-14.jpg" preload="metadata" controls playsinline data-clip="gulfstream-2025-11-14">
+              <source src="/assets/video/gulfstream-2025-11-14.mp4" type="video/mp4"><a href="/assets/video/gulfstream-2025-11-14.mp4">Download the clip (gulfstream-2025-11-14.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal, Liga Evolution 8v8</b>
+              <span class="clip__m">Liga Evolution 8v8, Felafu, Miami &middot; 14 November 2025</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Centre restart by 8 Machos about 18 s after the strike, and Anton confirms the moment.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-outdoor-2026-goal-c">
+          <!-- src: youtube VKLUxHV11BM in 266.5s out 280.1s, 13.6s cut. Cut from Anton's own edit, inside its chapter 'My Goal - Long Range' (4:18-4:54), the goal he calls his favourite in the video description. Read off the reel's own graphics: the beat's ticker line reads '1st half . 13:16 . 1-0 to 1-1' and the live scorebug flips from TEAM FOX 1 / BEZGRIMA 0 to TEAM FOX 1 / BEZGRIMA 1 between clip 9 s and 10 s (source 275.75 to 275.88, match clock 13:33), which is objective evidence that Bezgrima scored inside this window. What is visible on the final clip at 1 fps: 0-11 s the elevated wide camera at SK Grugany, yellow Bezgrima shirts against white Team Fox, the match clock running 13:23 to 13:35, the scoreboard turning 1-1 at 9-10 s; 12-13 s the reel cuts to its own REPLAY on the close pitch-side camera. The strike and the ball crossing the line are NOT resolvable at that camera distance, so the frames alone do not settle it. Verified under the rule adopted on 20 September 2026 (the ball seen at the goal, a scoreboard flip, a centre restart, or my own reel's caption naming the moment): Scoreboard flip 1-0 to 1-1 at +9 s, inside my own reel's My Goal - Long Range chapter. Review sheet: video/_clips/outdoor-2026-goal-c_contact.png -->
+          <!-- note: Same source reel (VKLUxHV11BM), game 3 of three; the reel's fixture card at 3:39 reads 'Team Fox - Bezgrima 2-6, 03.08.2026, SK Grugany'. The reel's cold open (0:00-0:12) is this same goal seen on the close pitch-side camera, which is why no separate fourth goal clip exists: the reel carries three 'My Goal' chapters plus that cold open, while the end card counts four goals across the three games. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/outdoor-2026-goal-c.jpg" preload="metadata" controls playsinline data-clip="outdoor-2026-goal-c">
+              <source src="/assets/video/outdoor-2026-goal-c.mp4" type="video/mp4"><a href="/assets/video/outdoor-2026-goal-c.mp4">Download the clip (outdoor-2026-goal-c.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Long range goal against Team Fox, Premierliga 8x8</b>
+              <span class="clip__m">Premierliga 8x8, SK Grugany, Minsk &middot; 3 August 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Scoreboard flip 1-0 to 1-1 at +9 s, inside my own reel's My Goal - Long Range chapter.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-first-top-league-goal-2013">
+          <!-- src: 0B9p2uxM1dln-X3gtNWtINHZ6elk in 68.15s out 79.85s, 13.8s cut. Round-21 report 'Zavershilis matchi 21-go tura chempionata Belarusi po mini-futbolu (vysshaya liga)', media-polesye.by (the outlet whose camera shot this reel; the domain is offline in 2026, the report survives in the search index): MFK Bazar (Luninets) 5-5 MFK Rudakovo (Vitebsk district), 23 March, halves 2:2 and 3:3, opening goal '0:1 - Anton Abyzov (10)'. The reel is chronological (the on-screen tag flips 1 taym to 2 taym, the scoreboard clock runs down 09:0x at 176 s, 06:0x at 236 s, 03:26 at 298 s) and this is its first goal celebration; the scoreboard insert appended at the end of the clip reads 1st half, 10:00, Bazar 0 Rudakovo 1. Anton's own video index names this exact video 'Bazar - Rudakovo (moy perviy gol v vysshey lige)'. Rudakovo in white, Bazar in blue with surnames on the shirts (Yuraga, Kolos), both named as Bazar players in the same report. -->
+          <!-- note: Cut runs from the end of the broadcaster sting at 68.0 s to the next sting at 80.0 s, one complete highlight block: Rudakovo working the ball at the Bazar goal, the break down the right, the finish, then the celebration run with Anton's number 3 in shot; two seconds of the 10:00 scoreboard insert close it. The camera loses the ball at the moment it crosses, so the net itself is never on frame. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="640" height="360" poster="/assets/video/first-top-league-goal-2013.jpg" preload="metadata" controls playsinline data-clip="first-top-league-goal-2013">
+              <source src="/assets/video/first-top-league-goal-2013.mp4" type="video/mp4"><a href="/assets/video/first-top-league-goal-2013.mp4">Download the clip (first-top-league-goal-2013.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">My first goal in the Belarus top division, away at Bazar</b>
+              <span class="clip__m">Belarus national top futsal division (Vysshaya Liga), round 21 &middot; 23 March 2013</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">official protocol + own video index + scoreboard insert on tape</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-e">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1514.0s out 1528.5s, 14.6s cut. The live scorebug steps from EasyChamp 9 / KAPITAN 0 to EasyChamp 10 / KAPITAN 0 between src 1525.75 and 1526.00, read off a 4 fps crop of the two score boxes; that lands at clip 11.9 s. Immediately after the step the tape's own beat card 'ANTON ABYZOV . #10 - GOAL FIVE - 06.08 . KAPITAN' comes on screen and is visible for the last 2.5 s of the clip, so the scorebug step and the card that names the goal are both inside the cut. What is visible on the floor: EasyChamp attack the far goal, then the restart. The ball crossing the line is NOT resolvable at this camera distance, so the frames alone do not settle it. Verified under the rule adopted on 20 September 2026 (the ball seen at the goal, a scoreboard flip, a centre restart, or my own reel's caption naming the moment): Scoreboard flip 9-0 to 10-0 at +11.9 s, with my own reel's GOAL FIVE card straight after. Review sheet: video/_clips/summer-cup-2026-goal-e_contact.png -->
+          <!-- note: 'Goal five' is the tape's count of Anton's goals in that match, not the team score; the team score on the bug goes 9 to 10. Phone footage from the stands, no slow replay. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-goal-e.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-e">
+              <source src="/assets/video/summer-cup-2026-goal-e.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-goal-e.mp4">Download the clip (summer-cup-2026-goal-e.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Goal five against KAPITAN, EasyChamp go 10-0 up</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 6 August 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Scoreboard flip 9-0 to 10-0 at +11.9 s, with my own reel's GOAL FIVE card straight after.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-summer-cup-2026-goal-d">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/U-lw9dmTQyY.mp4 in 1362.5s out 1377.0s, 14.6s cut. Inside the tape's own beat 'ANTON ABYZOV . #10 - COUNTERATTACK TO GOAL - 06.08 . KAPITAN' (card on screen from src 1359 to 1363). The live scorebug burned into the broadcast steps from EasyChamp 5 / KAPITAN 0 to EasyChamp 6 / KAPITAN 0 between src 1375.25 and 1375.50, read off a 4 fps crop of the two score boxes (sheet kept at /tmp/BUGA_00.jpg during the cut); that lands at clip 12.8 s, which is objective evidence that EasyChamp scored inside this window. What is visible on the floor: EasyChamp break out of their own half, carry through the middle and finish at the far goal. The ball crossing the line is NOT resolvable at this camera distance and the scorer is not identifiable, so the frames alone do not settle it. Verified under the rule adopted on 20 September 2026 (the ball seen at the goal, a scoreboard flip, a centre restart, or my own reel's caption naming the moment): Scoreboard flip 5-0 to 6-0 at +12.8 s, inside my own reel's COUNTERATTACK TO GOAL beat. Review sheet: video/_clips/summer-cup-2026-goal-d_contact.png -->
+          <!-- note: Same camera and caveats as summer-cup-2026-goal-a and -goal-b: phone footage from the stands, no slow replay. Cards in this compilation name Anton for goals AND assists, so the card text alone is not proof that he scored this one. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/summer-cup-2026-goal-d.jpg" preload="metadata" controls playsinline data-clip="summer-cup-2026-goal-d">
+              <source src="/assets/video/summer-cup-2026-goal-d.mp4" type="video/mp4"><a href="/assets/video/summer-cup-2026-goal-d.mp4">Download the clip (summer-cup-2026-goal-d.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Counterattack to goal, EasyChamp go 6-0 up</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 6 August 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Scoreboard flip 5-0 to 6-0 at +12.8 s, inside my own reel's COUNTERATTACK TO GOAL beat.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-minsk-2026-first3-assist">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/zjnTwFIKEVc.mp4 in 733.0s out 750.0s, 17.1s cut. This is the tape's own closing beat, card 'ANTON ABYZOV . MATCH 03 / 4V5 DEFENSE TO MATCH-SEALING ASSIST / VS FC PON'S | BUTIKAVTO . 30 JUN 2026', on screen for the first 2.5 s. Verified on the final clip at 1 fps (video/_clips/minsk-2026-first3-assist_contact.png): clip 0-5 s EasyChamp defend a 4v5 with the opponent in black pressing, 6-11 s the ball is won and driven the length of the floor, 12-14 s two white shirts arrive at the far goal and the ball is worked across the six yard box, and 15-16.5 s the camera is close on three EasyChamp players celebrating in front of that goal with the opponent keeper standing in it. The burned-in scorebug reads EasyChamp 2 / FC PON'S | BUTIKAVTO 1 through the beat. verified refers to this being the correct moment and the correct fixture, both read off the tape's own card and bug, and to the celebration at the goal being on screen. -->
+          <!-- note: Anton's own upload zjnTwFIKEVc, downloaded locally and cut from the local file. This is an assist, not a goal, and nothing here claims Anton scored it. The tape's title card counts 3 goals and 3 assists across the three games. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/minsk-2026-first3-assist.jpg" preload="metadata" controls playsinline data-clip="minsk-2026-first3-assist">
+              <source src="/assets/video/minsk-2026-first3-assist.mp4" type="video/mp4"><a href="/assets/video/minsk-2026-first3-assist.mp4">Download the clip (minsk-2026-first3-assist.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">4v5 defence into the match-sealing assist</b>
+              <span class="clip__m">Premier League 5x5, Summer Cup 2026, Minsk &middot; 30 June 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">My own reel's card: MATCH 03, 4V5 DEFENSE TO MATCH-SEALING ASSIST, and the celebration at the goal is on frame. An assist, not a goal.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="clip" id="clip-patagonia-goal2">
+          <!-- src: /Volumes/SanDisk APFS/MediaLibrary/00-INBOX/yt-football-sources-2026-09-19/p3kv0_LCCqA.mp4 in 1579.5s out 1590.5s, 16.87s cut. Frame-by-frame at 0.2 s on a 1280x720 goalmouth crop (x 640-1920, y 0-720). 1584.2-1585.2 white shirt / purple shorts number 8 runs in from the right while the ball is worked across the six yard box. 1585.4 he strikes, blue keeper commits to his left. 1585.6-1585.8 keeper is beaten and goes to ground. 1586.2 and 1586.4 the ball is clearly inside the net behind the goal line while the keeper lies flat. 1586.0-1587.5 number 8 peels away past the right post with an arm raised. Contact sheets: video/_clips/patagonia-goal2/zoomsheet_00.png and zoomsheet_01.png. -->
+          <!-- note: Second half. Slow replay tail is 1584.0-1587.2 at 1.8x on the tight goalmouth crop. Live segment uses a native 1280x720 window at x=130 so nothing is upscaled. Lower left chip carries competition and date only, no other burned in text. This is the goal the earlier build recorded as verified_goal_seconds_p3kv0 1585.8. -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/patagonia-goal2.jpg" preload="metadata" controls playsinline data-clip="patagonia-goal2">
+              <source src="/assets/video/patagonia-goal2.mp4" type="video/mp4"><a href="/assets/video/patagonia-goal2.mp4">Download the clip (patagonia-goal2.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <b class="clip__t">Anton #8 finishes the goalmouth scramble vs Patagonia</b>
+              <span class="clip__m">PS23 Superliga 8v8 (Miami) &middot; 17 February 2026</span>
+              <span class="clip__tag clip__tag--on">&#10003; verified on tape</span>
+              <span class="clip__n">Ball inside the net behind the line on frame at 1586.2 s, the keeper beaten and flat.</span>
+            </figcaption>
+          </figure>
+        </li>
+        <!-- END:best-goals -->
+      </ul>
+      <div class="rail__line" aria-hidden="true"><i></i></div>
+      <p class="rail__hint">Scroll the rail sideways</p>
+    </div>
+  </section>
+
+  <!-- ══ THREE REELS · finished cuts hosted here ═════════════════════════════ -->
+  <section class="sec sec--pitch sec--pitch-deep" id="reels" aria-labelledby="h-reels">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Reels</span>Three finished cuts, hosted here</p>
+        <h2 id="h-reels">The longer cuts.</h2>
+      </div>
+      <ul class="reels">
+        <!-- BEGIN:reels -->
+        <li class="reel">
+          <!-- src: video/patagonia-4-goals/final/patagonia-4-goals_full_16x9.mp4, re-encoded to 1280x720 crf 28 for docs/assets/video/reels/; caption and chapter list in that folder's caption_draft.md -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/reels/patagonia-4-goals-reel.jpg" preload="metadata" controls playsinline data-clip="patagonia-4-goals-reel">
+              <source src="/assets/video/reels/patagonia-4-goals-reel.mp4" type="video/mp4"><a href="/assets/video/reels/patagonia-4-goals-reel.mp4">Download the reel (patagonia-4-goals-reel.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <span class="clip__m">2:18 &middot; PS23 Superliga 8v8, Miami, 17 February 2026</span>
+              <span class="clip__tag clip__tag--reel">reel</span>
+            </figcaption>
+          </figure>
+          <p class="reel__cap"><b>EasyChamp FC against Patagonia, the full cut</b> White number 8. Carries, press, shots and the goal, every beat read off the broadcast first.</p>
+        </li>
+        <li class="reel">
+          <!-- src: video/lidselmash-goal/final/lidselmash_goal_abyzov_1080p.mp4, re-encoded to 1280x720 crf 28; protocol line on lidanews.by, 2:3 Abyzov 13', assist Popovich -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/reels/lidselmash-goal-reel.jpg" preload="metadata" controls playsinline data-clip="lidselmash-goal-reel">
+              <source src="/assets/video/reels/lidselmash-goal-reel.mp4" type="video/mp4"><a href="/assets/video/reels/lidselmash-goal-reel.mp4">Download the reel (lidselmash-goal-reel.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <span class="clip__m">0:20 &middot; Vysshaya Liga RB futsal, 17 February 2019</span>
+              <span class="clip__tag clip__tag--reel">reel</span>
+            </figcaption>
+          </figure>
+          <p class="reel__cap"><b>Against Lidselmash, the reigning champions</b> Number 3. The passage into the goal and the board turning over to 2-3; the upload jumps the clock across the strike itself.</p>
+        </li>
+        <li class="reel">
+          <!-- src: video/it-cup-final-freekick/final/it_cup_final_2021_abyzov_16x9.mp4, re-encoded to 1280x720 crf 28; identification note in that folder's caption_draft.md -->
+          <figure class="clip__fig">
+            <video class="clip__v" width="1280" height="720" poster="/assets/video/reels/it-cup-final-2021-reel.jpg" preload="metadata" controls playsinline data-clip="it-cup-final-2021-reel">
+              <source src="/assets/video/reels/it-cup-final-2021-reel.mp4" type="video/mp4"><a href="/assets/video/reels/it-cup-final-2021-reel.mp4">Download the reel (it-cup-final-2021-reel.mp4)</a>
+            </video>
+            <figcaption class="clip__cap">
+              <span class="clip__m">0:38 &middot; IT Cup final, ISsoft 3-2 Luch, Minsk, 12 August 2021</span>
+              <span class="clip__tag clip__tag--reel">reel</span>
+            </figcaption>
+          </figure>
+          <p class="reel__cap"><b>The IT Cup final equaliser</b> First-time strike into the top corner, white 23, and the commentator asks for the surname on air.</p>
+        </li>
+        <!-- END:reels -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ SIX NUMBERS ═════════════════════════════════════════════════════════ -->
+  <section class="sec sec--paper" id="numbers" aria-labelledby="h-numbers">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Record</span>Six numbers, each sourced</p>
+        <h2 id="h-numbers">The record, in six numbers.</h2>
+      </div>
+      <div class="reveal">
+      <ul class="tiles">
         <!-- BEGIN:stats -->
         <!-- src: alfoot.net pid=2125, season table: 3 goals in 59 appearances of 11-a-side, 50 in 8v8/5v5/futsal -->
-        <li class="tile"><span class="tile__n" data-count="50">50</span><span class="tile__l">Of my 53 official goals came small-sided<em>8v8, 5v5 or futsal, one ALF card, fifteen seasons</em></span></li>
+        <li class="tile"><span class="tile__n" data-count="50">50</span><span class="tile__l">Of the 53 goals on my Minsk league card came small-sided<em>8v8, 5v5 or futsal, one ALF card, fifteen seasons</em></span></li>
         <!-- src: premierliga.pro team 1540034, tournament 1065365 -->
         <li class="tile"><span class="tile__n" data-count="13">13</span><span class="tile__l">Goals in 10 games at 41<em>Summer Cup 5x5, Minsk 2026. 2nd top scorer</em></span></li>
-        <!-- src: slmf.by/tournaments/comeback-2018.html -->
-        <li class="tile"><span class="tile__n" data-count="18">18</span><span class="tile__l">Goals in one five-a-side season<em>7th top scorer of the league, 2018</em></span></li>
         <!-- src: ballerleague.us/en/player/artem-baranovskyi; ballerleague.us/en/post/super-ninos-crowned-baller-league-usa-champions -->
         <li class="tile"><span class="tile__n" data-count="4">4</span><span class="tile__l">People off my roster in your final four<em>Baller League USA, 16 May 2026</em></span></li>
         <!-- src: own championship note, Miami Superliga 8v8 final, July 2025 -->
         <li class="tile tile--gold"><span class="tile__n">2025</span><span class="tile__l">Miami Superliga 8v8 champion<em>EasyChamp FC. Owner, coach, number 8</em></span></li>
+        <!-- src: slmf.by/tournaments/comeback-2018.html -->
+        <li class="tile"><span class="tile__n" data-count="18">18</span><span class="tile__l">Goals in one five-a-side season<em>7th top scorer of the league, 2018</em></span></li>
         <!-- src: alfoot.net pid=2125 -->
         <li class="tile"><span class="tile__n" data-count="0">0</span><span class="tile__l">Red cards<em>In fifteen recorded seasons. Three yellows</em></span></li>
         <!-- END:stats -->
       </ul>
-
-      <p class="note">
-        Recorded is recorded. These figures come off league pages and off the match archive I have kept
-        myself since 2012, so they are a floor, not a career total. Plenty of games were never filmed or
-        logged. Every number on this page is sourced on <a href="/records/">/records/</a>.
+      </div>
+      <p class="note" style="margin-top:18px">
+        Recorded is recorded: league pages and the match archive I have kept since 2012, so a floor,
+        not a career total. Every figure is sourced on <a href="/records/">/records/</a>.
       </p>
     </div>
   </section>
 
-  <!-- ══ THE ARGUMENT ═══════════════════════════════════════════════════════ -->
-  <section class="sec sec--paper" id="pitch-size" aria-labelledby="h-size">
+  <!-- ══ THE ARGUMENT · four photographs ═════════════════════════════════════ -->
+  <section class="sec sec--pitch" id="case" aria-labelledby="h-case">
     <div class="sec__in">
       <div class="sec-head">
-        <p class="sec-kick"><span class="pill pill--out">Evidence</span>One card, two formats</p>
-        <h2 id="h-size">The pitch size is the whole argument.</h2>
+        <p class="sec-kick"><span class="pill pill--out">The argument</span>Four pictures, one direction</p>
+        <h2 id="h-case">Futsal pedigree, small-pitch goals, Miami titles, a foot already in your league.</h2>
       </div>
 
-      <!-- src: alfoot.net pid=2125 (public player card, Amateur League of Football, Minsk) -->
-      <p class="prose" style="max-width:66ch">
-        On my official ALF Minsk card, which anyone can open, the split is
-        <strong>3 goals in 59 appearances of 11-a-side and 50 goals in 8v8, 5v5 and futsal</strong>.
-        Same player, same page, fifteen seasons. That is not an opinion about my game. It is the shape of
-        my record.
+      <ul class="case">
+        <li class="case--gold"><figure>
+          <!-- src: sb.by 29 July 2009 «Максимальный результат» names Anton in the Nantes squad; en.wikipedia.org IBSA Blind Football European Championships; Commendation of the President of the Republic of Belarus, order of 16 December 2009; Master of Sport certificate no. 12608, 18 November 2009; Kayseri 2012 gold medal photo, EXIF 9 June 2012 -->
+          <picture><source srcset="/assets/img/nantes-2009-european-cup.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup.jpg" width="1200" height="800" alt="Anton Abyzov in a Belarus tracksuit standing beside the European Championship cup in Nantes, July 2009." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKO6it7iQrEjcZBJ6VDLcRjzG8tXZzkE9q3DbW6TMREg/CsrW9O8mFpo5QfMkHygAYouCSvqZ0l2zQxqIw34UV00EdqunxuUjHyDkj2opFKTWiP//Z);background-size:cover;background-position:center"></picture>
+          <figcaption>
+            <b class="case__k">Nantes, 2009</b>
+            <span class="case__t">European champion</span>
+            <span class="case__d">Belarus national futsal team, IBSA B2/B3. Presidential commendation, Master of Sport. Squad gold again in Kayseri, 2012.</span>
+          </figcaption>
+        </figure></li>
+
+        <li><figure>
+          <!-- src: lidanews.by/news/sport/16136news.html, protocol 2:3 Abyzov 13'; football.by/news/39897; media-polesye.by round-21 report, 23 March 2013, 0:1 Abyzov (10) -->
+          <picture><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Futsal match at SK MAPID in Minsk, a player in the light green Territory-Maxline kit on the ball against Lidselmash, 17 February 2019." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture>
+          <figcaption>
+            <b class="case__k">Belarus top division</b>
+            <span class="case__t">Scored on the champions</span>
+            <span class="case__d">Lidselmash, 17 February 2019, three months after their UEFA Futsal Champions League Elite Round.</span>
+          </figcaption>
+        </figure></li>
+
+        <li class="case--gold"><figure>
+          <!-- src: own championship note, Miami Superliga 8v8 final, July 2025; research/easychamp-8v8-stats.md: 11 wins, 1 draw, 4 defeats, 96-61; Gol Gala champions cheque photo, 23 June 2024; USSL 2024 trophy photo, EXIF 30 June 2024 -->
+          <picture><source srcset="/assets/img/easychamp-champions.webp" type="image/webp"><img src="/assets/img/easychamp-champions.jpg" width="800" height="1067" alt="EasyChamp FC celebrating the Miami Superliga 8v8 title in July 2025." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxe3UMyEvHn6cVkxzmGT91lR7itBJt8SusYCd9xqLyTLKkuY9rclc9KHIFEeNQbH3/ANKKrs0O48Ec+tFL2gWIGkY5XOBjHFCvjA/SiisAuL8tFFFAz//Z);background-size:cover;background-position:center"></picture>
+          <figcaption>
+            <b class="case__k">Miami, 2025</b>
+            <span class="case__t">Superliga 8v8 champion</span>
+            <span class="case__d">EasyChamp FC: owner, captain, number 8. Gol Gala champions 2024. USSL 2024 as Dade County FC staff.</span>
+          </figcaption>
+        </figure></li>
+
+        <li><figure>
+          <!-- src: ballerleague.us/en/player/artem-baranovskyi; ballerleague.us/en/post/super-ninos-crowned-baller-league-usa-champions; still from the private training session of 24 May 2026, kit identification in data/clips.json artem-dribble-score -->
+          <picture><source srcset="/assets/img/still-1v1.webp" type="image/webp"><img src="/assets/img/still-1v1.jpg" width="595" height="744" alt="Anton Abyzov shielding the ball in a one-on-one drill with Artem Baranovskyi on a Miami turf pitch, May 2026." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCzLKy5IXdUEMzNKROyxL2Bolacoy7DychgRVJ1uGdS8JfA9aLkl5pQrEGVTjviissR3WOEcD0x0opXA1fMpQ4oorEBfMFFFFAz/9k=);background-size:cover;background-position:center"></picture>
+          <figcaption>
+            <b class="case__k">16 May 2026</b>
+            <span class="case__t">Four of mine in your final four</span>
+            <span class="case__d">Starikov, top scorer with 10. Pinheiro, head coach. Chiarella. Baranovskyi, champion centre-back, pictured here in our one-on-ones.</span>
+          </figcaption>
+        </figure></li>
+      </ul>
+
+      <!-- src: own photo album, 74 items, 28 to 30 April 2026; Fever ticket transfer from Artem Baranovskyi, 30 April 2026 -->
+      <p class="note" style="margin-top:22px">
+        I have not played a Baller League game and I am not going to imply otherwise. I was in the arena
+        for a matchday in April and for the finals in May. I know the floor, and four of the people who played your final four on it, one of them a champion.
       </p>
 
-      <table class="fld" style="margin-top:clamp(24px,3vw,34px)">
-        <caption>Format by format, with the receipt behind each line</caption>
-        <thead><tr><th scope="col">Format</th><th scope="col">What I did there</th></tr></thead>
-        <tbody>
-          <tr>
-            <!-- src: lidanews.by/news/sport/16136news.html; football.by/news/39897 -->
-            <th scope="row">Futsal, Belarus national top division</th>
-            <td>Scored against Lidselmash, the reigning national champion, on <b>17 February 2019</b>. Two goals in a Belarus Cup last-32 tie. First top-flight goal for Rudakovo: the opener at Bazar on <b>23 March 2013</b>, 5-5.</td>
-          </tr>
-          <tr>
-            <!-- src: en.wikipedia.org IBSA Blind Football European Championships -->
-            <th scope="row">Futsal, national team</th>
-            <td><b>European champion 2009, Nantes</b> (IBSA B2/B3), and the Commendation of the President of the Republic of Belarus for it. Full international against France in 2015.</td>
-          </tr>
-          <tr>
-            <!-- src: slmf.by comeback-2018 and comeback-2025; own season summary plus 20 match notes -->
-            <th scope="row">Five-a-side league seasons</th>
-            <td><b>18 goals in 2018</b>, 7th top scorer of the league. <b>17 goals in 2025</b>. <b>26 goals in 20 games</b> in 2019/20.</td>
-          </tr>
-          <tr>
-            <!-- src: premierliga.pro team 1540034, tournament 1065365 -->
-            <th scope="row">5x5, current</th>
-            <td><b>13 goals in 10 games in 2026, at 41.</b> 2nd top scorer, 1st for goals plus assists, twice best player of the match.</td>
-          </tr>
-          <tr>
-            <!-- src: alfoot.net showResultsRank&p=90; own championship note; research/easychamp-8v8-stats.md production audit -->
-            <th scope="row">8x8</th>
-            <td>Silver in the ALF 8x8 championship 2018 with 4 goals and 3 assists. <b>Miami Superliga 8v8 champion 2025</b>, 11 wins, 1 draw, 4 defeats, 96-61. About 88 games for my own 8v8 club with 100 per cent attendance, as captain.</td>
-          </tr>
-          <tr>
-            <!-- src: streams Ug8xz0pgpmk, WvjSQYcwtqs, H8DPaEk5ZEk -->
-            <th scope="row">7x7 and 8x8, outdoor, most recent</th>
-            <td>Three games, three wins, <b>four goals, one assist</b>, summer 2026.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <ul class="cites" style="margin-top:20px">
-        <li><a href="https://www.alfoot.net/tournaments/?func=showPlayer&amp;p=129&amp;pid=2125" rel="noopener">alfoot.net</a> &middot; the ALF Minsk player card, 2011 to 2025</li>
-        <li><a href="https://premierliga.pro/" rel="noopener">premierliga.pro</a> &middot; Summer Cup 5x5 2026, team 1540034, tournament 1065365</li>
-        <li><a href="https://lidanews.by/news/sport/16136news.html" rel="noopener">lidanews.by</a> &middot; the Lidselmash match report, February 2019</li>
-        <li><a href="/records/">/records/</a> &middot; every citation on this site, with the archive copies</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ══ WHAT I DO IN A SIX-A-SIDE GAME ═════════════════════════════════════ -->
-  <section class="sec sec--pitch sec--pitch-deep" id="game" aria-labelledby="h-game">
-    <div class="sec__in">
-      <div class="sec-head">
-        <p class="sec-kick"><span class="pill pill--out">Traits</span>With receipts, not adjectives</p>
-        <h2 id="h-game">What I actually do in a six-a-side game.</h2>
-      </div>
-
-      <div class="honours__grid">
-      <ul class="hon">
+      <ul class="grid" style="margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
         <li>
-          <!-- src: own weekly training log, 6 to 16 March 2008 -->
-          <span class="hon__y">Receipt &middot; 2008 notebook</span>
-          <span class="hon__t">Pivot</span>
-          <p class="hon__d">Hold it with the sole, shield it, turn, restart. I graded pivot play as one of my two strengths in my own notebook in 2008 and it has not changed.</p>
-        </li>
-        <li>
-          <!-- src: own self-scouting note, 24 July 2008 -->
-          <span class="hon__y">Receipt &middot; self-scouting note, 24 July 2008</span>
-          <span class="hon__t">Pass through lines</span>
-          <p class="hon__d">"Penetrating passes" is the phrase I used about my own game in 2008, before anyone asked me to describe it.</p>
-        </li>
-        <li>
-          <!-- src: stream sjiFQYLE5A0 at 7449s, goal 4 on 6 August 2026 -->
-          <span class="hon__y">Receipt &middot; stream, 6 August 2026</span>
-          <span class="hon__t">Both feet</span>
-          <p class="hon__d">Goal 4 on 6 August 2026 went in with my left. In futsal you have no choice.</p>
-        </li>
-        <li>
-          <!-- src: personal match archive; stream Tj9lu99s0t0 at 910s and 1773s -->
-          <span class="hon__y">Receipt &middot; three 2026 games on stream</span>
-          <span class="hon__t">Set pieces, designed as well as struck</span>
-          <p class="hon__d">Free-kick goals in Minsk and Miami, and three separate 2026 games where I called a corner routine and we scored it first time.</p>
-        </li>
-        <li>
-          <!-- src: own Dade County FC match note -->
-          <span class="hon__y">Receipt &middot; own DCFC match sheet</span>
-          <span class="hon__t">Defending that is measured, not claimed</span>
-          <p class="hon__d">From my own Dade County FC match sheet: 86% pass accuracy, 3 interceptions, 2 clearances.</p>
-        </li>
-        <li>
-          <!-- src: own match notes, 27 February 2021 and 16 October 2021 -->
-          <span class="hon__y">Receipt &middot; match notes, 2021</span>
-          <span class="hon__t">Goalkeeper when the team needs one</span>
-          <p class="hon__d">A whole second half as flying keeper on 27 February 2021, in goal outright on 16 October 2021, and I still scored that day.</p>
-        </li>
-        <li>
-          <!-- src: own CrossFit logs citing games.crossfit.com, Opens 21.1, 21.2, 22.1 -->
-          <span class="hon__y">Receipt &middot; three logged CrossFit Opens</span>
-          <span class="hon__t">Fitness that is on the record, not in a bio</span>
-          <p class="hon__d">Three CrossFit Opens logged, 21.2 at 17:19 on a 60 cm box inside the cap, a 140 kg deadlift and an 83 kg deep front squat.</p>
-        </li>
-        <li>
-          <!-- src: alfoot.net pid=2125 -->
-          <span class="hon__y">Receipt &middot; alfoot.net card</span>
-          <span class="hon__t">No red cards in fifteen seasons</span>
-          <p class="hon__d">Three yellows on the card, and nothing worse. I am 41 and I still finish games.</p>
-        </li>
-      </ul>
-
-      <aside>
-        <blockquote class="quote">
-          <p>Fifty of my fifty-three official goals came on a small pitch.</p>
-          <footer><b>Anton Abyzov</b>From the Football Journey answer further down this page.</footer>
-        </blockquote>
-        <p class="note" style="margin-top:26px">
-          Every line on the left has something behind it: a league page, a stream with a timestamp, a
-          match sheet or a notebook I was keeping long before any of this was going on a website. Nothing
-          here is a self-description without a receipt.
-        </p>
-        <p class="cta-row">
-          <a class="btn btn--ghost" href="/futsal/">The futsal years</a>
-        </p>
-      </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ ALREADY SUPPLIED THIS LEAGUE ═══════════════════════════════════════ -->
-  <section class="sec sec--paper" id="supplied" aria-labelledby="h-supplied">
-    <div class="sec__in">
-      <div class="sec-head">
-        <p class="sec-kick"><span class="pill pill--out">Final four</span>16 May 2026</p>
-        <h2 id="h-supplied">I have already supplied this league.</h2>
-      </div>
-
-      <div class="honours__grid">
-        <div>
-          <!-- src: ballerleague.us/en/player/artem-baranovskyi; ballerleague.us/en/post/super-ninos-crowned-baller-league-usa-champions; instagram.com/reel/DYZrl5ckQN5/ -->
-          <p class="prose">
-            On <strong>16 May 2026</strong>, four people from my EasyChamp FC roster were in the Baller
-            League USA final four. Super Ninos won the final 6-2.
-          </p>
-
-          <ul class="hon">
-            <li>
-              <span class="hon__y">Midnight Wizards</span>
-              <span class="hon__t">Eugene Starikov</span>
-              <p class="hon__d">10 goals, top scorer of the tournament.</p>
-            </li>
-            <li>
-              <span class="hon__y">Midnight Wizards</span>
-              <span class="hon__t">Pedro Pinheiro</span>
-              <p class="hon__d">Head coach.</p>
-            </li>
-            <li>
-              <span class="hon__y">Midnight Wizards</span>
-              <span class="hon__t">Rapha Chiarella</span>
-              <p class="hon__d">4 goals.</p>
-            </li>
-            <li>
-              <span class="hon__y">Super Ninos &middot; champions</span>
-              <span class="hon__t">Artem Baranovskyi</span>
-              <p class="hon__d">Centre-back. 9 appearances, 14 tackles, 10 clearances, 95 passes, 22 duels won. We coach Dade County FC together.</p>
-            </li>
-          </ul>
-
-          <!-- src: own photo album, 74 items, 28 to 30 April 2026; media-drive-inventory §5.1 -->
-          <p class="prose" style="margin-top:22px">
-            I was in the arena for the finals and for a matchday in April 2026. <strong>I have not played a
-            Baller League game and I am not going to imply otherwise.</strong>
-          </p>
-
-          <ul class="cites">
-            <li><a href="https://ballerleague.us/en/player/artem-baranovskyi" rel="noopener">ballerleague.us</a> &middot; Artem Baranovskyi's player page</li>
-            <li><a href="https://ballerleague.us/en/post/super-ninos-crowned-baller-league-usa-champions" rel="noopener">ballerleague.us</a> &middot; Super Ninos crowned champions, 16 May 2026</li>
-          </ul>
-        </div>
-
-        <aside class="honours__aside">
-          <figure>
-            <picture>
-  <source srcset="/assets/img/hero-baller-league.webp" type="image/webp">
-  <img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600"
-       alt="Anton Abyzov pitchside at the Baller League USA arena in Miami, league boards and floodlights behind him." loading="lazy" decoding="async"
-       style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center">
-</picture>
-            <figcaption><b>Baller League arena, Miami</b>
-              April 2026, the matchday I went to. I know the building, the floor and four of the people
-              who won on it.
-            </figcaption>
+          <figure class="shot shot--32">
+            <!-- src: own photo album, 28 to 30 April 2026, Baller League Arena, Tropical Park, Miami -->
+            <picture><source srcset="/assets/img/baller-arena.webp" type="image/webp"><img src="/assets/img/baller-arena.jpg" width="1100" height="733" alt="Anton Abyzov in the Baller League Miami arena, arm raised toward the BL and Miami 305 container wall above rows of empty seating." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC60XlW5PVuMmqkl2YwQE5BwSxwBULXRmjyx5B+YVFqImihAB3CT5mx29Kjla3KuiR2eUYku0AP8K0VlrOV+9xRTsI//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>In the arena, April 2026<em>Baller League Arena, Tropical Park, Miami</em></figcaption>
           </figure>
-        </aside>
-      </div>
+        </li>
+        <li>
+          <figure class="shot shot--32">
+            <!-- src: own photo album, 28 to 30 April 2026, Baller League Arena, Tropical Park, Miami -->
+            <picture><source srcset="/assets/img/baller-kit-wall.webp" type="image/webp"><img src="/assets/img/baller-kit-wall.jpg" width="1100" height="733" alt="Numbered football shirts hanging in wooden lockers under a lit Baller League sign." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDK0phFdklc/KeKtTqkk8TrHt3ZJAPWq1jCpvjGH4yQD0zWqbBzsIyxUEEColKzKUbktuE2BjG5X/eopI42WMR7tuDnDCipVVrcrkTP/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>The kit wall<em>Same visit, the players' tunnel</em></figcaption>
+          </figure>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ══ THE APPLICATION ANSWERS ════════════════════════════════════════════ -->
-  <section class="sec sec--pitch" id="answers" aria-labelledby="h-answers">
+  <!-- ══ ON THE FLOOR · traits as chips, availability ═════════════════════════ -->
+  <section class="sec sec--paper" id="game" aria-labelledby="h-game">
     <div class="sec__in">
       <div class="sec-head">
-        <p class="sec-kick"><span class="pill">Form</span>Application answers</p>
-        <h2 id="h-answers">Copy these in as they stand.</h2>
+        <p class="sec-kick"><span class="pill pill--out">On the floor</span>Receipts, not adjectives</p>
+        <h2 id="h-game">What you get in a six-a-side game.</h2>
       </div>
 
-      <p class="lede">
-        Every answer below is written to go straight into the Baller League USA form. Character counts are
-        inclusive of spaces and were measured on the exact text in the box, so what you copy is what was
-        counted.
-      </p>
+      <ul class="traits">
+        <!-- src: own weekly training log, 6 to 16 March 2008 -->
+        <li>Pivot<em>Own notebook, 2008</em></li>
+        <!-- src: own self-scouting note, 24 July 2008 -->
+        <li>Passes through lines<em>Self-scouting note, 2008</em></li>
+        <!-- src: stream sjiFQYLE5A0 at 7449s, goal 4 on 6 August 2026 -->
+        <li>Both feet<em>Left-foot goal on stream, 6 August 2026</em></li>
+        <!-- src: personal match archive; stream Tj9lu99s0t0 at 910s and 1773s -->
+        <li>Set pieces, called and struck<em>Three corner routines scored first time, 2026</em></li>
+        <!-- src: own Dade County FC match sheet -->
+        <li>Defends<em>86% passing, 3 interceptions, DCFC sheet</em></li>
+        <!-- src: own match notes, 27 February 2021 and 16 October 2021 -->
+        <li>Goes in goal when needed<em>Two games in 2021, scored in one of them</em></li>
+        <!-- src: alfoot.net pid=2125 -->
+        <li>0 red cards<em>Fifteen seasons, three yellows</em></li>
+      </ul>
 
-      <table class="fld" style="margin-top:clamp(26px,3.2vw,38px)">
-        <caption>Form field to answer, at a glance</caption>
-        <thead><tr><th scope="col">Form field</th><th scope="col">What goes in it</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Highlight Tape (URL)</th><td><a href="#a-tape">youtu.be/p3kv0_LCCqA?t=1578</a>, swap for the cut reel the moment it is up</td></tr>
-          <tr><th scope="row">Link To More Info</th><td><a href="#a-info">football.antonabyzov.com</a>, this site</td></tr>
-          <tr><th scope="row">Currently Playing</th><td><a href="#a-playing">UPSL - Dade County FC</a></td></tr>
-          <tr><th scope="row">Highest Level Played</th><td><a href="#a-level">National team</a> if the option exists, otherwise the national top division wording</td></tr>
-          <tr><th scope="row">Position</th><td><a href="#a-position">Utility / playmaker</a>, Midfielder if the form forces one</td></tr>
-          <tr><th scope="row">Foot</th><td>Right. Scores with both</td></tr>
-          <tr><th scope="row">Height</th><td><a href="#a-position">6ft 2in</a>, Anton's own figure, no league record carries it</td></tr>
-          <tr><th scope="row">Achievements And Accolades</th><td><a href="#a-achievements">1,195 characters</a>, inside the 1,200 limit</td></tr>
-          <tr><th scope="row">Football Journey</th><td><a href="#a-journey">1,458 characters</a>, inside the 1,500 limit</td></tr>
-        </tbody>
-      </table>
-
-      <!-- Highlight tape -->
-      <div class="q" id="a-tape">
-        <p class="q__k">Field 1</p>
-        <h3 class="q__h">Highlight Tape (URL)</h3>
-        <div class="ans ans--url" id="answer-tape">
-          <p>https://youtu.be/p3kv0_LCCqA?t=1578</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-tape">Copy answer</button>
-          <span class="ans__ct">35 characters</span>
-        </p>
-        <!-- src: YouTube p3kv0_LCCqA, goal by white number 8 at 1586 s, verified frame by frame -->
-        <p class="note">
-          That is the PS23 Superliga 8v8 stream of 17 February 2026. The goal I can prove sits at
-          <b>1586 seconds</b>, so <b>?t=1578 starts eight seconds before it</b>. Replace the whole URL
-          with the dedicated cut reel the moment it goes up.
-        </p>
-      </div>
-
-      <!-- Link to more info -->
-      <div class="q" id="a-info">
-        <p class="q__k">Field 2</p>
-        <h3 class="q__h">Link To More Info</h3>
-        <div class="ans ans--url" id="answer-info">
-          <p>https://football.antonabyzov.com</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-info">Copy answer</button>
-          <span class="ans__ct">32 characters</span>
-        </p>
-      </div>
-
-      <!-- Currently playing -->
-      <div class="q" id="a-playing">
-        <p class="q__k">Field 3</p>
-        <h3 class="q__h">Currently Playing</h3>
-        <div class="ans ans--url" id="answer-playing">
-          <p>UPSL - Dade County FC</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-playing">Copy answer</button>
-          <span class="ans__ct">21 characters</span>
-        </p>
-        <!-- src: UPSL registration dashboard, roster row 230103-049614, 19 September 2026 -->
-        <p class="note">
-          Pick the UPSL option if the field is a dropdown. Team name to type: <b>Dade County FC</b>.
-          Registered as Defense, player id 230103-049614.
-        </p>
-      </div>
-
-      <!-- Highest level played -->
-      <div class="q" id="a-level">
-        <p class="q__k">Field 4</p>
-        <h3 class="q__h">Highest Level Played</h3>
-        <p class="prose" style="max-width:74ch">
-          The form's option list was not visible when this page was written, so pick in this order and use
-          the first one that exists.
-        </p>
-        <ol class="steps">
-          <li><strong>National team</strong> if that option is offered.</li>
-          <li>Otherwise the highest option that means a <strong>national top division</strong>, wording like "Professional" or "Top national division".</li>
-          <li>Otherwise <strong>Semi-professional</strong>.</li>
-        </ol>
-        <p class="prose" style="max-width:74ch">
-          Do not pick anything that implies a professional club contract, because there is no contract
-          document on record. Team field, type exactly this.
-        </p>
-        <div class="ans" id="answer-level">
-          <p>Belarus national futsal team (visually impaired) - European champion 2009, Nantes; and MFK Territory Futbola-Maxline, Vysshaya Liga RB (Belarus national top futsal division)</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-level">Copy answer</button>
-          <span class="ans__ct">173 characters</span>
-        </p>
-        <!-- src: en.wikipedia.org IBSA Blind Football European Championships; lidanews.by/news/sport/16136news.html; OPEN-QUESTIONS #16 -->
-        <p class="note">
-          The option list still needs eyes on the live form. Nothing in this answer goes beyond what the
-          two sources above carry.
-        </p>
-      </div>
-
-      <!-- Position, foot, height -->
-      <div class="q" id="a-position">
-        <p class="q__k">Fields 5 to 7</p>
-        <h3 class="q__h">Position, foot, height</h3>
-        <table class="fld" style="margin-top:14px">
-          <tbody>
-            <tr>
-              <!-- src: alfoot.net pid=2125; premierliga.pro squad row; UPSL roster 230103-049614 -->
-              <th scope="row">Position</th>
-              <td><b>Utility / playmaker.</b> If the form forces one, pick <b>Midfielder</b>. My registrations read Defender in Belarus and Defense with UPSL, and Универсал (Universal, meaning utility) in the 2026 futsal league, so midfielder is the honest middle.</td>
-            </tr>
-            <tr>
-              <!-- src: stream sjiFQYLE5A0 at 7449s, left-footed goal 6 August 2026 -->
-              <th scope="row">Foot</th>
-              <td><b>Right.</b> Scores with both, and there is a left-footed goal on stream from 6 August 2026 to prove it.</td>
-            </tr>
-            <tr>
-              <!-- src: project brief figure, carried in the score bug on every page; no league record holds a height. OPEN-QUESTIONS #10 -->
-              <th scope="row">Height</th>
-              <td><b>6ft 2in.</b> That is my own figure and it is the one in the header of every page on this site. No league page, registration or vault note records a height, so confirm the exact number in feet and centimetres before this field is filled.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Achievements -->
-      <div class="q" id="a-achievements">
-        <p class="q__k">Field 8</p>
-        <h3 class="q__h">Achievements And Accolades</h3>
-        <!-- src: en.wikipedia.org IBSA European Championships; pressball.by/news/other/61066 via Wayback; lidanews.by/news/sport/16136news.html; devby.io interview 22 October 2012; slmf.by comeback-2018 and comeback-2025; alfoot.net pid=2125; Master of Sport certificate no. 12608, conferred 18 November 2009 (research/gallery-curation.md); own championship notes -->
-        <div class="ans" id="answer-achievements">
-<p>European champion 2009 with the Belarus visually impaired national futsal team (IBSA B2/B3 European Championship, Nantes). Master of Sport of the Republic of Belarus (futsal, visually impaired), 18 November 2009. Commendation of the President of Belarus for that win, signed 16 December 2009.</p>
-<p>Belarus national top futsal division: scored against Lidselmash, the reigning champion, on 17 February 2019, three months after their UEFA Futsal Champions League Elite Round. Two goals in a Belarus Cup last-32 tie, 2012.</p>
-<p>Won the Minsk city futsal championship with Itransition, the team I co-founded and captained, then 5th in the national Higher League in 2012.</p>
-<p>Small-sided scoring: 18 goals in 2018 (7th top scorer), 17 goals in 2025, 15 goals in the ALF futsal top division in 2017/18, and 13 goals in 10 games in the 2026 Minsk Summer Cup 5x5 at 41 (2nd top scorer, 1st for goals plus assists).</p>
-<p>Official ALF Minsk card 2011-2025: 53 goals, 16 assists, 7 best-player awards, 0 red cards.</p>
-<p>Miami: Superliga 8v8 champion 2025 with EasyChamp FC; Championship Clubs League 5x5 title with Team Patagonia; 4 goals in a 5-1 win in Liga Corporativa La Red.</p>
-<p>Coach: Dade County FC, USSL 2024 league won.</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-achievements">Copy answer</button>
-          <span class="ans__ct">1,195 characters, limit 1,200</span>
-        </p>
-      </div>
-
-      <!-- Football journey -->
-      <div class="q" id="a-journey">
-        <p class="q__k">Field 9</p>
-        <h3 class="q__h">Football Journey And Why You Are A Good Fit</h3>
-        <!-- src: media/evidence/churilov/churilov-barsu-page.png (tmpc.barsu.by); devby.io interview 22 October 2012; en.wikipedia.org IBSA European Championships; lidanews.by/news/sport/16136news.html; fussball.de Spiel 02HPT56JPG000000VS5489B3VUL5IRNT; premierliga.pro tournament 1065365; ballerleague.us -->
-        <div class="ans" id="answer-journey">
-<p>I started at Lyceum No. 1 in Baranovichi, Belarus, where my PE teacher Evgeny Churilov took me to city tournaments. At university in Minsk I made the futsal team, then founded and captained the futsal side at Itransition. We won the Minsk city championship, were invited into the Belarus national top division, and finished 5th there in 2012. In 2009 I won the European Championship with the Belarus national team for the visually impaired, in Nantes. I have minus ten eyesight and had to pass a full medical qualification to be allowed to play. The President of Belarus signed a commendation for that win. In 2019 I scored against Lidselmash, the reigning national champion.</p>
-<p>Then Germany, where I scored the only goal of a district match four weeks after arriving, and since August 2022, Miami. I own, coach and play in EasyChamp FC, the 2025 Superliga 8v8 champion. I coach Dade County FC with Artem Baranovskyi and I am on their UPSL Division 1 roster.</p>
-<p>Why 6v6. Fifty of my fifty-three official goals came on a small pitch. At 41 I scored 13 in 10 games this summer and finished 2nd top scorer of the tournament. I play pivot, I pass through lines, I take the set pieces, I defend, and I have gone in goal when the team needed it.</p>
-<p>And four people from my EasyChamp FC roster were in your final four in May 2026: Eugene Starikov, top scorer with 10 goals, head coach Pedro Pinheiro, Rapha Chiarella, and Artem Baranovskyi at centre-back for Super Ninos.</p>
-        </div>
-        <p class="ans__bar">
-          <button class="btn btn--ghost" type="button" data-copy="answer-journey">Copy answer</button>
-          <span class="ans__ct">1,458 characters, limit 1,500</span>
-        </p>
-        <p class="note">
-          My first coach was <b>Evgeny Vladimirovich Churilov</b> (Чурилов Евгений Владимирович), the PE
-          teacher at Lyceum No 1 in Baranovichi who put me in the city tournaments. He has taught at
-          Baranovichi State University since 2004.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ AVAILABILITY + WHAT IS LEFT ════════════════════════════════════════ -->
-  <section class="sec sec--paper" id="availability" aria-labelledby="h-avail">
-    <div class="sec__in">
-      <div class="sec-head">
-        <p class="sec-kick"><span class="pill pill--out">Availability</span>Miami-Dade, right now</p>
-        <h2 id="h-avail">Where I am and what is left to fill in.</h2>
-      </div>
-
-      <div class="honours__grid">
-        <div>
-          <!-- src: vault bio; UPSL registration dashboard 19 September 2026; owner's message 17 August 2026 -->
-          <p class="prose" style="max-width:66ch">
-            Based in <strong>Sunny Isles Beach, Miami-Dade, Florida</strong> since August 2022.
-            <strong>US permanent resident, work authorised.</strong> Currently registered with Dade County
-            FC in UPSL Division 1, Florida South South, and coaching there with Artem Baranovskyi.
-            Available for 6v6 indoor in the Miami area.
-          </p>
-
-          <!-- src: Anton's instruction 2026-09-19, LATE-ADDITIONS line 42 -->
-          <p class="prose" style="max-width:66ch">
-            I also founded <a href="https://easychamp.com" rel="noopener">EasyChamp</a>, which now runs
-            several products: league and tournament management, live standings, and eSports competitions.
-            Founder plays the game he builds for.
-          </p>
-
-          <p class="cta-row">
-            <a class="btn btn--ink" href="/records/"><span class="btn__ico" aria-hidden="true">&#9654;</span>Check every number</a>
-            <a class="btn btn--ghost" href="/coaching/">The coaching side</a>
-          </p>
-        </div>
-
-        <aside>
-          <h3 style="font-size:var(--t-h3);margin-bottom:14px">Before this form is submitted</h3>
-          <ol class="steps">
-            <li>Confirm the height figure. It is the only field on the form with no source behind it.</li>
-            <li>The Patagonia reel and every goal clip already play on football.antonabyzov.com/highlights/, which is the Highlight Tape URL.</li>
-            <li>Look at the live option list for Highest Level Played and Currently Playing.</li>
-            <li>Nothing that fails checking goes on the form. Where a line did not survive its source, the safe version is what you see here.</li>
-          </ol>
-          <p class="note">
-            This page carries the safe version of every line. Where a claim did not survive checking it is
-            not here, and the reason is written down in the project's open questions file rather than
-            quietly dropped.
-          </p>
-        </aside>
-      </div>
+      <h3 style="margin:clamp(28px,3.4vw,40px) 0 12px;font-size:var(--t-h3)">Availability</h3>
+      <ul class="traits">
+        <!-- src: vault bio; UPSL registration dashboard, roster row 230103-049614, 19 September 2026 -->
+        <li>Miami-Dade<em>Sunny Isles Beach, since August 2022</em></li>
+        <li>US permanent resident<em>Work authorised</em></li>
+        <li>UPSL Division 1<em>Dade County FC, player and coach</em></li>
+        <!-- src: research/DOSSIER.md, venue: Baller League Arena, Tropical Park, Miami -->
+        <li class="is-live">Open to 6v6 indoor<em>Baller League Arena, Tropical Park, Miami</em></li>
+      </ul>
     </div>
   </section>
 
@@ -698,22 +562,21 @@ button.btn--ghost{ background:transparent; -webkit-appearance:none; appearance:n
   <section class="band" id="close" aria-labelledby="h-close">
     <div class="band__in">
       <p class="sec-kick" style="color:var(--chalk-fade)"><span class="pill">Open to 6v6</span>Miami</p>
-      <h2 id="h-close">Small pitch, fast brain.</h2>
+      <h2 id="h-close">Why 6v6 indoor.</h2>
       <div class="band__cols">
         <!-- src: alfoot.net pid=2125; premierliga.pro tournament 1065365 -->
         <p>
-          Twenty years of futsal, 50 of 53 official goals on a small pitch, 13 in 10 games at 41, and a
-          full match archive behind every number.
+          Twenty years of futsal, 50 of the 53 goals on my Minsk league card on a small pitch, 13 in 10 games at 41, and a
+          match archive behind every number.
         </p>
         <!-- src: ballerleague.us -->
         <p>
-          I know the arena, I know four of the people who won in it, and I am a fifteen-minute drive from
-          the floor.
+          I know the arena, and I know four of the people who played your final four in it.
         </p>
       </div>
       <p class="cta-row">
         <a class="btn btn--volt" href="/highlights/"><span class="btn__ico" aria-hidden="true">&#9654;</span>Watch the tape</a>
-        <a class="btn btn--ghost" href="/career/">The full career ledger</a>
+        <a class="btn btn--ghost" href="/records/">Check every number</a>
       </p>
     </div>
   </section>

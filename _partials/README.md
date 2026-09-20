@@ -313,3 +313,22 @@ is now on the `<dl>` in `header.html`, which is the required half. Add the affor
 `/futsal/` solves the same defect by wrapping the row under 640px instead. Both are acceptable; pick one
 and make it the shared rule, because the header comment in `header.html` still promises a row that
 "wraps" while `site.css` makes it scroll.
+
+---
+
+## 18. Case cards and trait chips (`/baller-league/`)
+
+```html
+<ul class="case">
+  <li class="case--gold"><figure>
+    <!-- src: … -->
+    {{IMG nantes-2009-european-cup | alt}}
+    <figcaption><b class="case__k">2009 · Nantes</b><span class="case__t">European champion</span><span class="case__d">one line</span></figcaption>
+  </figure></li>
+</ul>
+<ul class="traits"><li>Pivot<em>2008 notebook</em></li><li class="is-live">Open to 6v6 indoor</li></ul>
+```
+
+A `.case` card is a photograph that carries one line of an argument: kicker, display headline,
+one short line. `.case--gold` only for a title or a medal. `.traits` is a wrap of chips, one trait
+each, with the receipt as the small line; `.is-live` is the one chip that states availability.

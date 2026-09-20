@@ -382,7 +382,7 @@ section[id]{ scroll-margin-top:118px; }
   position:relative; z-index:2; max-width:var(--max); margin-inline:auto;
   display:grid; gap:clamp(26px,4vw,44px);
 }
-@media (min-width:920px){
+@media (min-width:640px){
   .hero__in{ grid-template-columns:minmax(0,1.18fr) minmax(280px,.82fr); align-items:end; }
 }
 
@@ -439,8 +439,7 @@ section[id]{ scroll-margin-top:118px; }
    goes absolute from 1180px up: between 920 and 1180 the two hero columns are
    close enough in width that a card protruding left lands on the end of the
    role line, so there it simply follows the portrait in normal flow, the same
-   way it does on a phone. Home page only for now.
-   SHARED FIX: fold into a .hero--pair modifier if a second page wants it. */
+   way it does on a phone. Used on the home page and on /baller-league/. */
 .hero__stack{ position:relative; align-self:end; }
 /* the bottom margin keeps the caption clear of the best-goals rail, which
    the home page pulls up over the hero's floor */
@@ -1076,3 +1075,55 @@ section[id]{ scroll-margin-top:118px; }
   .bug,.fx,.player__play,.skip{ display:none!important; }
   body{ background:#fff; color:#000; }
 }
+
+/* ═══ 18. CASE CARDS + TRAIT CHIPS (/baller-league/) ═════════════════════
+   Four photographs, each carrying one line of the argument. The picture is
+   the point: the type sits on a gradient at the foot of the frame so the
+   frame itself is never covered. Gold marks a title, as everywhere else.  */
+.case{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+}
+@media (min-width:600px) and (max-width:959px){ .case{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:960px){ .case{ grid-template-columns:repeat(4,minmax(0,1fr)); } }
+.case li{ position:relative; overflow:hidden; border:1px solid var(--hair); background:var(--pitch-800); }
+.case figure{ margin:0; height:100%; }
+.case picture{ display:block; height:100%; }
+.case img{
+  display:block; width:100%; height:100%; aspect-ratio:4/5; min-height:clamp(340px,26vw,400px);
+  object-fit:cover; object-position:50% 38%;
+  transition:transform .6s var(--ease);
+}
+.case li:hover img{ transform:scale(1.04); }
+.case figcaption{
+  position:absolute; left:0; right:0; bottom:0; padding:clamp(40px,16%,72px) 16px 16px;
+  background:linear-gradient(0deg,rgba(3,10,7,.97) 0%,rgba(3,10,7,.78) 46%,transparent);
+  color:var(--chalk);
+}
+.case__k{
+  display:block; font:600 var(--t-micro)/1.4 var(--body);
+  letter-spacing:.18em; text-transform:uppercase; color:var(--volt);
+}
+.case__t{
+  display:block; margin-top:6px;
+  font:400 clamp(24px,2.6vw,32px)/.96 var(--display);
+  letter-spacing:.02em; text-transform:uppercase; color:var(--chalk);
+}
+.case__d{ display:block; margin-top:8px; max-width:34ch; font:400 12.5px/1.5 var(--body); color:var(--chalk-dim); }
+.case--gold .case__k{ color:var(--gold); }
+.case--gold .case__t{ text-shadow:0 0 30px rgba(255,194,74,.28); }
+
+/* one trait per chip, and the receipt behind it as the small line under it */
+.traits{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+.traits li{
+  padding:11px 14px 10px; border:1px solid var(--hair);
+  font:400 clamp(15px,1.7vw,19px)/1 var(--display); letter-spacing:.04em; text-transform:uppercase; color:var(--fg);
+}
+.traits li em{
+  display:block; margin-top:6px; font:600 9.5px/1.3 var(--body); font-style:normal;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--fg-fade);
+}
+.traits li.is-live{ border-color:var(--volt); color:var(--volt); }
+/* on paper, volt text is invisible: invert the chip the way .btn--volt does */
+.sec--paper .traits li.is-live{ background:var(--volt); border-color:var(--volt); color:#07150f; }
+.sec--paper .traits li.is-live em{ color:#0f251c; }
