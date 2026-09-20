@@ -745,6 +745,12 @@ section[id]{ scroll-margin-top:118px; }
   display:block; margin-top:4px; font:400 9.5px/1.4 var(--body); font-style:normal;
   letter-spacing:.05em; text-transform:none; color:#a9bfb4;
 }
+/* provenance: the frame carries a hard EXIF or album date and names who took
+   it. Deliberately quiet, one shade off the caption it sits beside. */
+.shot__ok{
+  display:inline-block; margin-left:5px; white-space:nowrap;
+  font-size:9px; letter-spacing:.13em; color:var(--volt); opacity:.72;
+}
 
 /* ═══ 14. CTA BAND, CITATIONS, FOOTER ════════════════════════════════════ */
 .band{
@@ -908,6 +914,10 @@ section[id]{ scroll-margin-top:118px; }
 }
 .clip__tag--on{ color:var(--volt); }
 .clip__tag--off{ color:var(--chalk-fade); }
+/* a finished reel that is hosted here rather than on YouTube */
+.clip__tag--reel{ color:var(--chalk-dim); }
+.reel .clip__fig{ margin:0; }
+.reel .clip__cap{ margin-top:9px; }
 
 /* the honest slot for a cut that does not exist yet */
 .clip__pending{
@@ -949,6 +959,7 @@ section[id]{ scroll-margin-top:118px; }
 .sec--paper .clips--single .clip__tag--off{ color:var(--fg-fade); }
 .sec--paper .clips--single .clip__n{ color:var(--fg-dim); }
 .sec--paper .clips--single .clip__tag--on{ color:var(--accent); }
+.sec--paper .clips--single .clip__tag--reel{ color:var(--fg-fade); }
 
 /* ═══ 16b. CONDITIONING BLOCK (home, one screen) ══════════════════════════
    A lead frame with a square inset beside it and two lines of copy. Deliberately
