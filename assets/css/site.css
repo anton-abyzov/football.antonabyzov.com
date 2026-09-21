@@ -886,7 +886,7 @@ section[id]{ scroll-margin-top:118px; }
 /* the <video> keeps its own controls: it is a file, not a facade */
 .clip__v{
   display:block; width:100%; height:auto; aspect-ratio:16/9;
-  background:#08130f; object-fit:cover;
+  background:#08130f; object-fit:contain;
   border:1px solid var(--line-volt);
   box-shadow:0 34px 70px -50px #000;
 }
