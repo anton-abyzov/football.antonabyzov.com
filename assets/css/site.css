@@ -906,6 +906,8 @@ section[id]{ scroll-margin-top:118px; }
   display:block; margin-top:7px; max-width:44ch;
   font:400 12px/1.5 var(--body); color:var(--chalk-dim);
 }
+.player-identity{ display:block; color:var(--volt); font-weight:700; }
+.sec--paper .player-identity{ color:var(--accent); }
 .clip__tag{
   display:inline-block; margin-top:9px; padding:4px 9px 3px;
   border:1px solid currentColor; border-radius:1px;
