@@ -223,4 +223,134 @@
       });
     });
   }
+
+  /* ── 7. motion layer: progress bar, card tilt, the story, the moments ── */
+  /* Everything here is additive. With JS off, reduced motion or a narrow
+     screen the page is the plain stacked layout the HTML already carries. */
+  var bar = document.createElement('div');
+  bar.className = 'scrollbar'; bar.setAttribute('aria-hidden', 'true');
+  bar.appendChild(document.createElement('i'));
+  document.body.appendChild(bar);
+
+  if (!reduced && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    [].forEach.call(document.querySelectorAll('.clip__fig, .grid li > figure, .chap__fig, .reels > li'), function (el) {
+      el.classList.add('tilt');
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--rx', (((e.clientX - r.left) / r.width) - 0.5) * 6 + 'deg');
+        el.style.setProperty('--ry', (0.5 - ((e.clientY - r.top) / r.height)) * 6 + 'deg');
+      });
+      el.addEventListener('pointerleave', function () {
+        el.style.removeProperty('--rx'); el.style.removeProperty('--ry');
+      });
+    });
+  }
+
+  /* home showcase: the clip most in view plays silently as a preview; the
+     first time the visitor touches a clip, previews stop for good and that
+     clip is theirs, with sound */
+  var show = document.querySelector('.story') ? document.querySelector('#best-goals .clips') : null;
+  if (show && hasIO && !reduced) {
+    var vids = [].slice.call(show.querySelectorAll('video[data-clip]'));
+    var ratios = new Map(), previewing = true;
+    vids.forEach(function (v) {
+      v.muted = true; v.loop = true;
+      v.addEventListener('pointerdown', function stop() {
+        if (!previewing) return;
+        previewing = false;
+        vids.forEach(function (o) { o.loop = false; if (o !== v) o.pause(); o.closest('.clip').classList.remove('is-live'); });
+        v.muted = false;
+      });
+    });
+    var pick = function () {
+      if (!previewing) return;
+      var best = null, max = 0.6;
+      ratios.forEach(function (r, v) { if (r > max) { max = r; best = v; } });
+      vids.forEach(function (v) {
+        var li = v.closest('.clip');
+        if (v === best) { li.classList.add('is-live'); if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+        else { li.classList.remove('is-live'); if (!v.paused) v.pause(); }
+      });
+    };
+    var showIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { ratios.set(e.target, e.intersectionRatio); });
+      pick();
+    }, { threshold: [0, 0.25, 0.5, 0.6, 0.75, 0.9, 1] });
+    vids.forEach(function (v) { showIO.observe(v); });
+  }
+
+  /* GSAP only where a pinned sequence exists, only on wide screens with
+     motion allowed; loaded from cdnjs after the page is interactive */
+  var story = document.querySelector('.story');
+  var wide = window.matchMedia('(min-width: 1024px) and (min-height: 620px)').matches;
+  if ((story || show) && wide && !reduced) {
+    var load = function (src, cb) {
+      var s = document.createElement('script'); s.src = src; s.async = true; s.onload = cb;
+      s.crossOrigin = 'anonymous'; document.head.appendChild(s);
+    };
+    var CDN = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/';
+    load(CDN + 'gsap.min.js', function () {
+      load(CDN + 'ScrollTrigger.min.js', function () {
+        var gsap = window.gsap; gsap.registerPlugin(window.ScrollTrigger);
+        if (story) pinStory(gsap);
+        if (show) pinShow(gsap);
+        window.ScrollTrigger.refresh();
+      });
+    });
+  }
+
+  function pinStory(gsap) {
+    var chaps = [].slice.call(story.querySelectorAll('.chap'));
+    if (chaps.length < 2) return;
+    story.classList.add('story--pin');
+    chaps[0].classList.add('is-on');
+    var stage = story.querySelector('.story__stage');
+    var meter = story.querySelector('.story__meter i');
+    var parts = function (c) { return [].slice.call(c.querySelectorAll('.chap__txt > *')); };
+    chaps.slice(1).forEach(function (c) {
+      gsap.set(c.querySelector('.chap__fig'), { clipPath: 'inset(100% 0% 0% 0%)' });
+      gsap.set(parts(c), { autoAlpha: 0 });
+    });
+    var tl = gsap.timeline({
+      defaults: { ease: 'power2.out' },
+      scrollTrigger: {
+        trigger: stage, start: 'top top',
+        end: function () { return '+=' + Math.round((chaps.length - 1) * window.innerHeight * 1.15); },
+        pin: true, scrub: 0.8, anticipatePin: 1, invalidateOnRefresh: true,
+        onUpdate: function (self) {
+          if (meter) meter.style.transform = 'scaleX(' + self.progress + ')';
+          var on = Math.min(chaps.length - 1, Math.round(self.progress * (chaps.length - 1)));
+          chaps.forEach(function (c, i) { c.classList.toggle('is-on', i === on); });
+        }
+      }
+    });
+    tl.addLabel('c0').to({}, { duration: 0.6 });
+    chaps.forEach(function (c, i) {
+      if (!i) return;
+      var prev = chaps[i - 1], fig = c.querySelector('.chap__fig'), img = c.querySelector('img');
+      tl.to(parts(prev), { y: -36, autoAlpha: 0, stagger: 0.04, duration: 0.45, ease: 'power2.in' })
+        .to(prev.querySelector('.chap__fig'), { clipPath: 'inset(0% 0% 100% 0%)', duration: 0.5, ease: 'power2.in' }, '<')
+        .to(fig, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.7 }, '-=0.3')
+        .fromTo(img, { scale: 1.22 }, { scale: 1, duration: 1.1 }, '<')
+        .fromTo(c.querySelector('.chap__yr'), { xPercent: 28, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, duration: 0.6 }, '<0.1')
+        .fromTo(parts(c).filter(function (el) { return !el.classList.contains('chap__yr'); }),
+          { y: 28, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.07, duration: 0.5 }, '<0.12')
+        .addLabel('c' + i)
+        .to({}, { duration: 1.0 });
+    });
+  }
+
+  function pinShow(gsap) {
+    var rail = show.closest('.rail');
+    rail.classList.add('rail--pin');
+    var dist = function () { return Math.max(0, show.scrollWidth - show.clientWidth); };
+    if (dist() < 200) { rail.classList.remove('rail--pin'); return; }
+    gsap.to(show, {
+      x: function () { return -dist(); }, ease: 'none',
+      scrollTrigger: {
+        trigger: rail, start: 'top top', end: function () { return '+=' + dist(); },
+        pin: true, scrub: 0.9, anticipatePin: 1, invalidateOnRefresh: true
+      }
+    });
+  }
 })();

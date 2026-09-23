@@ -1231,3 +1231,106 @@ html:not([lang="en"]) .bug__id i{ line-height:1.2; }
 /* on paper, volt text is invisible: invert the chip the way .btn--volt does */
 .sec--paper .traits li.is-live{ background:var(--volt); border-color:var(--volt); color:#07150f; }
 .sec--paper .traits li.is-live em{ color:#0f251c; }
+
+/* ═══ 17. THE STORY (home) ═══════════════════════════════════════════════
+   Eight chapters from data/story.json. The resting layout is a plain list,
+   complete without JS, in print and under reduced motion. On wide screens
+   site.js adds .story--pin and GSAP pins the stage: one chapter at a time,
+   photo wiped in from below, year sliding across, text arriving in steps. */
+.story{
+  position:relative;
+  padding:clamp(48px,7vw,96px) var(--gut) clamp(40px,6vw,80px);
+  background:
+    radial-gradient(70% 50% at 85% 10%, rgba(200,255,46,.08), transparent 60%),
+    linear-gradient(180deg,#050f0b 0%,#07150f 55%,#050d0a 100%);
+  color:var(--chalk);
+  overflow:clip;
+}
+.story__head{ max-width:var(--max); margin:0 auto clamp(26px,4vw,48px); }
+.story__head h2{ margin:10px 0 0; font:400 var(--t-h2)/.98 var(--display); text-transform:uppercase; letter-spacing:.005em; }
+.story__head .muted{ color:var(--chalk-fade); }
+.story__stage{ position:relative; max-width:var(--max); margin-inline:auto; }
+.story__meter{ display:none; }
+.story__list{ list-style:none; margin:0; padding:0; display:grid; gap:clamp(40px,6vw,72px); counter-reset:chap; }
+.chap{ counter-increment:chap; display:grid; gap:18px 36px; align-items:center; }
+@media(min-width:760px){ .chap{ grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); } .chap:nth-child(even) .chap__fig{ order:2; } }
+.chap__fig{ margin:0; position:relative; overflow:hidden; aspect-ratio:4/3; background:var(--pitch-800); border:1px solid var(--line-soft); }
+.chap__fig picture,.chap__fig img{ display:block; width:100%; height:100%; }
+.chap__fig img{ object-fit:cover; }
+.chap__fig::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(3,10,7,.55)); pointer-events:none; }
+.chap__txt{ position:relative; }
+.chap--contain .chap__fig{ background:radial-gradient(60% 70% at 50% 40%, #1b3a2c, var(--pitch-900)); }
+.chap--contain .chap__fig img{ object-fit:contain; }
+.story--pin .chap:not(.is-on) .chap__txt::before{ visibility:hidden; }
+.chap__txt::before{
+  content:counter(chap, decimal-leading-zero) " / 08";
+  display:block; margin-bottom:10px;
+  font:600 var(--t-label)/1 var(--body); letter-spacing:.2em; color:var(--volt);
+}
+.chap__yr{
+  margin:0; font:400 clamp(54px,9vw,128px)/.86 var(--display); letter-spacing:-.01em;
+  color:transparent; -webkit-text-stroke:1.5px var(--chalk-dim);
+}
+.chap--gold .chap__yr{ -webkit-text-stroke-color:var(--gold); }
+.chap__where{ margin:12px 0 0; font:600 var(--t-label)/1.2 var(--body); letter-spacing:.18em; text-transform:uppercase; color:var(--chalk-fade); }
+.chap__t{ margin:10px 0 0; font:400 var(--t-h3)/1.05 var(--display); text-transform:uppercase; color:var(--chalk); }
+.chap__b{ margin:12px 0 0; max-width:52ch; font-size:var(--t-body); line-height:1.62; color:var(--chalk-dim); }
+.chap__a{ display:inline-block; margin-top:16px; font:700 var(--t-label)/1 var(--body); letter-spacing:.16em; text-transform:uppercase; color:var(--volt); text-decoration:none; border-bottom:1px solid var(--line-volt); padding-bottom:4px; }
+.chap__a:hover,.chap__a:focus-visible{ border-color:var(--volt); }
+.story__foot{ max-width:var(--max); margin:clamp(34px,5vw,60px) auto 0; }
+
+/* pinned mode: set by site.js on wide screens with motion allowed */
+.story--pin .story__stage{ height:100vh; max-width:none; margin:0 calc(var(--gut) * -1); padding:0 var(--gut); display:flex; align-items:center; }
+.story--pin .story__list{ position:relative; width:100%; max-width:var(--max); margin-inline:auto; height:min(78vh,720px); display:block; }
+.story--pin .chap{ position:absolute; inset:0; grid-template-columns:minmax(0,.95fr) minmax(0,1.1fr); gap:0 clamp(28px,4vw,64px); }
+.story--pin .chap:nth-child(even) .chap__fig{ order:0; }
+.story--pin .chap__fig{ order:2; aspect-ratio:auto; height:100%; }
+.story--pin .story__meter{
+  display:block; position:absolute; left:var(--gut); right:var(--gut); bottom:clamp(18px,3vh,34px);
+  height:2px; background:var(--line-soft);
+}
+.story--pin .story__meter i{ display:block; height:100%; background:var(--volt); transform-origin:0 50%; transform:scaleX(0); box-shadow:0 0 12px var(--volt-glow); }
+
+/* ═══ 18. MOTION, SITE-WIDE ═════════════════════════════════════════════
+   Scroll-linked, transform only, so captures and prints stay complete.     */
+.scrollbar{ position:fixed; left:0; right:0; top:0; height:3px; z-index:200; pointer-events:none; }
+.scrollbar i{ display:block; height:100%; background:linear-gradient(90deg,var(--volt-deep),var(--volt)); transform-origin:0 50%; transform:scaleX(0); }
+@supports (animation-timeline: scroll()){
+  @media (prefers-reduced-motion:no-preference){
+    .scrollbar i{ animation:bar-grow linear both; animation-timeline:scroll(root); }
+    /* hero: the layers leave at different speeds, a cheap three-plane parallax */
+    .hero__ghost{ animation:par-slow linear both; animation-timeline:view(); animation-range:exit 0% exit 100%; }
+    .hero__shot{ animation:par-mid linear both; animation-timeline:view(); animation-range:exit 0% exit 100%; }
+    .hero__cup{ animation:par-fast linear both; animation-timeline:view(); animation-range:exit 0% exit 100%; }
+    /* headings and cards arrive as they enter */
+    .sec-head,.rail__head,.story__head,.hon li,.grid li,.src,.clips .clip,.reels > li,.tiles > li,.chap__fig{
+      animation:enter-up linear both; animation-timeline:view(); animation-range:entry 0% entry 55%;
+    }
+    .story:not(.story--pin) .chap__fig img{ animation:settle linear both; animation-timeline:view(); animation-range:entry 0% cover 50%; }
+  }
+}
+@keyframes bar-grow{ to{ transform:scaleX(1); } }
+@keyframes par-slow{ to{ transform:translate3d(0,18vh,0); } }
+@keyframes par-mid{ to{ transform:translate3d(0,-8vh,0) scale(1.04); } }
+@keyframes par-fast{ to{ transform:translate3d(0,-22vh,0) rotate(-2deg); } }
+@keyframes enter-up{ from{ transform:translate3d(0,34px,0) scale(.985); } to{ transform:none; } }
+@keyframes settle{ from{ transform:scale(1.14); } to{ transform:scale(1); } }
+
+/* pointer tilt on cards, fine pointers only; meaning never depends on it */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .tilt{ transition:transform .35s var(--ease), box-shadow .35s var(--ease); transform:perspective(900px) rotateX(var(--ry,0deg)) rotateY(var(--rx,0deg)); will-change:transform; }
+  .tilt:hover{ box-shadow:0 18px 50px -18px rgba(200,255,46,.28); }
+}
+
+/* the moments showcase: on wide screens site.js pins the home rail and
+   drives it sideways with the vertical scroll */
+.rail--pin{ overflow:clip; }
+.rail--pin .clips{ overflow:visible; scroll-snap-type:none; }
+.rail--pin .rail__line,.rail--pin .rail__hint{ display:none; }
+.clips .clip.is-live .clip__fig{ outline:1px solid var(--volt); outline-offset:3px; }
+
+@media (prefers-reduced-motion:reduce){
+  .scrollbar{ display:none; }
+  .tilt{ transform:none!important; }
+}
+@media print{ .scrollbar{ display:none; } .story--pin .chap{ position:static; } }
