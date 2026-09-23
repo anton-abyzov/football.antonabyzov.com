@@ -8,9 +8,22 @@
    3. mobile nav toggle
    4. self-hosted clips: pause a <video> once it leaves the viewport
    5. copy-to-clipboard for the Baller League application answers
+   6. language switcher: close on an outside click or Escape, keep the #anchor
 */
 (function () {
   'use strict';
+
+  /* the few strings this file writes itself, per <html lang> */
+  var UI = {
+    en: { copied: 'Copied', pressCopy: 'Press Ctrl+C', footage: 'Anton Abyzov match footage' },
+    ru: { copied: 'Скопировано', pressCopy: 'Нажмите Ctrl+C', footage: 'Видео матча Антона Абызова' },
+    es: { copied: 'Copiado', pressCopy: 'Pulsa Ctrl+C', footage: 'Vídeo del partido de Anton Abyzov' },
+    pt: { copied: 'Copiado', pressCopy: 'Pressione Ctrl+C', footage: 'Vídeo da partida de Anton Abyzov' },
+    de: { copied: 'Kopiert', pressCopy: 'Strg+C drücken', footage: 'Spielszenen von Anton Abyzov' },
+    fr: { copied: 'Copié', pressCopy: 'Appuyez sur Ctrl+C', footage: 'Images de match d\u2019Anton Abyzov' }
+  };
+  var LANG = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  function t(key) { return (UI[LANG] || UI.en)[key] || UI.en[key]; }
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasIO = 'IntersectionObserver' in window;
@@ -25,7 +38,7 @@
               (start ? '&start=' + encodeURIComponent(start) : '');
     var iframe = document.createElement('iframe');
     iframe.src = src;
-    iframe.title = root.getAttribute('data-title') || 'Anton Abyzov match footage';
+    iframe.title = root.getAttribute('data-title') || t('footage');
     iframe.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
@@ -173,7 +186,7 @@
       if (!src) return;
       var text = (src.innerText || src.textContent || '').trim();
       var done = function (ok) {
-        btn.textContent = ok ? 'Copied' : 'Press Ctrl+C';
+        btn.textContent = ok ? t('copied') : t('pressCopy');
         setTimeout(function () { btn.textContent = label; }, 2200);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -188,4 +201,26 @@
       }
     });
   });
+
+  /* ── 6. language switcher ───────────────────────────────────────────── */
+  /* A <details>, so it works with JS off. This closes it on a click outside
+     or Escape, and carries the current #anchor to the same page in the other
+     language, since every edition keeps the same ids. */
+  var lang = document.querySelector('details.lang');
+  if (lang) {
+    document.addEventListener('click', function (e) {
+      if (lang.open && !lang.contains(e.target)) lang.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lang.open) {
+        lang.open = false;
+        lang.querySelector('summary').focus();
+      }
+    });
+    [].forEach.call(lang.querySelectorAll('a[href]'), function (a) {
+      a.addEventListener('click', function () {
+        if (location.hash) a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash);
+      });
+    });
+  }
 })();

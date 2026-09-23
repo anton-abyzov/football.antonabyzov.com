@@ -22,6 +22,11 @@
 
   Per page: set aria-current="page" on the matching nav link in BOTH the
   desktop nav and the mobile panel. Change nothing else.
+
+  The language switcher between the nav and the toggle (<!-- i18n:switcher -->)
+  is written by scripts/build.py through scripts/i18n.py on every build: each
+  link points at the SAME page in that language. You may paste it as below or
+  leave it out; the build puts it back either way. Do not edit it by hand.
 -->
 <a class="skip" href="#main">Skip to content</a>
 <div class="fx fx--grain" aria-hidden="true"></div>
@@ -44,6 +49,19 @@
       <a href="/baller-league/">Baller League</a>
     </nav>
 
+    <!-- i18n:switcher -->
+    <details class="lang" translate="no">
+      <summary class="lang__btn" aria-label="Language: English"><span class="lang__globe" aria-hidden="true"></span><span aria-hidden="true">EN</span></summary>
+      <nav class="lang__menu" aria-label="Language">
+        <a href="/" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+        <a href="/es/" hreflang="es" lang="es">Español</a>
+        <a href="/pt/" hreflang="pt" lang="pt-BR">Português</a>
+        <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+      </nav>
+    </details>
+    <!-- /i18n:switcher -->
     <button class="bug__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
       <span class="bug__burger" aria-hidden="true"><i></i></span>Menu
     </button>

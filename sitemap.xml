@@ -1,63 +1,784 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://football.antonabyzov.com/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/highlights/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/highlights/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/highlights/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/highlights/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/highlights/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/highlights/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/highlights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/highlights/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/career/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/career/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/career/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/career/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/career/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/career/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/career/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/career/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/career/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/career/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/career/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/career/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/career/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/futsal/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/futsal/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/futsal/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/futsal/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/futsal/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/futsal/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/futsal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/futsal/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/football/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/football/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/football/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/football/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/football/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/football/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/football/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/football/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/football/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/football/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/football/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/football/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/football/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/coaching/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/coaching/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/coaching/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/coaching/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/coaching/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/coaching/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/coaching/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/gallery/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/gallery/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/gallery/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/gallery/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/gallery/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/gallery/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/records/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/records/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/records/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/records/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/records/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/records/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/records/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/records/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/records/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/records/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/records/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/records/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/records/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/baller-league/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/baller-league/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/baller-league/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/baller-league/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/baller-league/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/baller-league/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/baller-league/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/baller-league/"/>
   </url>
   <url>
     <loc>https://football.antonabyzov.com/watch/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/ru/watch/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/es/watch/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/pt/watch/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/de/watch/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
+  </url>
+  <url>
+    <loc>https://football.antonabyzov.com/fr/watch/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/"/>
   </url>
 </urlset>

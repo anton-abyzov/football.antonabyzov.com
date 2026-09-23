@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<!-- built from docs/_partials/head-meta.html · the link directory, rows from data/watch.json -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Смотреть все матчи | Антон Абызов</title>
+<meta name="description" content="Все полные матчи и нарезки Антона Абызова в одном списке: трансляции YouTube, клубные видео и посты в Instagram, мини-футбол и футбол, от Минска до Майами.">
+<link rel="canonical" href="https://football.antonabyzov.com/ru/watch/">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/watch/">
+<link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/watch/">
+<link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/watch/">
+<link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/watch/">
+<link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/watch/">
+<link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/watch/">
+<link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/watch/">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<!-- /i18n:alternates -->
+<meta name="author" content="Anton Abyzov">
+<meta name="theme-color" content="#06120e">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Антон Абызов · Футбол">
+<meta property="og:title" content="Антон Абызов: смотреть все матчи">
+<meta property="og:description" content="Полные матчи и видеонарезки, все ссылки в одном месте.">
+<meta property="og:url" content="https://football.antonabyzov.com/ru/watch/">
+<meta property="og:image" content="https://football.antonabyzov.com/assets/og/og-records.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Антон Абызов: смотреть все матчи">
+<meta name="twitter:description" content="Полные матчи и видеонарезки, все ссылки в одном месте.">
+<meta name="twitter:image" content="https://football.antonabyzov.com/assets/og/og-records.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Антон Абызов: смотреть все матчи",
+  "url": "https://football.antonabyzov.com/ru/watch/",
+  "description": "Все полные матчи и нарезки Антона Абызова в одном списке: трансляции YouTube, клубные видео и посты в Instagram, мини-футбол и футбол, от Минска до Майами.",
+  "inLanguage": "ru",
+  "about": { "@type": "Person", "name": "Антон Абызов", "alternateName": ["Антон Абызов"], "url": "https://football.antonabyzov.com/ru/" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://football.antonabyzov.com/ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Смотреть", "item": "https://football.antonabyzov.com/ru/watch/" }
+    ]
+  }
+}
+</script>
+
+<style>
+/* /records/ and /watch/ + AA pill ink -> fold into site.css */
+.key{display:grid;gap:10px;margin:26px 0 0;padding:0;list-style:none;max-width:74ch}
+@media(min-width:720px){.key{grid-template-columns:1fr 1fr}}
+.key li{display:flex;gap:10px;align-items:baseline;font-size:12.5px;line-height:1.55;color:var(--fg-dim)}
+.st{flex:none;padding:4px 8px 3px;border:1px solid currentColor;font:700 var(--t-micro)/1 var(--body);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.st--live{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.st--browser{border-style:dashed}
+.st--dead{color:var(--fg-dim);text-decoration:line-through}
+.st--file{border-style:dotted}
+.srcs,.vids{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+.src{padding:18px 0;border-bottom:1px solid var(--hair)}
+.src__top{display:flex;flex-wrap:wrap;gap:9px 12px;align-items:center}
+.src__ico{flex:none;width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--hair);font:700 10px/1 var(--body);text-transform:uppercase;color:var(--fg-fade)}
+.src__t{flex:1 1 16ch;margin:0;font:400 clamp(16px,2.1vw,21px)/1.16 var(--display);text-transform:uppercase;color:var(--fg)}
+.src__d{margin:10px 0 0;max-width:70ch;font-size:13px;line-height:1.62;color:var(--fg-dim)}
+.src__d b,.vid__w b{color:var(--fg);font-weight:700}
+.src__u{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.src__u li{font-size:12px;line-height:1.5}
+.src__u em,.vid__a em,.vid__ch{font-style:normal;font-size:var(--t-micro);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-fade)}
+.src__u em{margin-right:7px}
+.src__u a{color:var(--fg-dim);text-decoration:none;border-bottom:1px solid var(--hair)}
+.src__u a,.src__u s,.vid__a{overflow-wrap:anywhere}
+.src__u a:hover{color:var(--accent);border-color:var(--accent)}
+.vid{padding:15px 0;border-bottom:1px solid var(--hair);display:grid;gap:7px}
+@media(min-width:960px){.vid{grid-template-columns:24ch minmax(0,1fr) 17ch;gap:20px;align-items:baseline}}
+.vid__a{text-decoration:none;color:var(--fg);font-size:12.5px}
+.vid__a code{font-family:ui-monospace,Menlo,monospace;font-size:12px;border-bottom:1px solid var(--accent)}
+.vid__a em{display:block;margin-top:5px}
+.vid__w{margin:0;font-size:13px;line-height:1.6;color:var(--fg-dim)}
+.vid__ch{font-weight:600}
+.pager{display:grid;gap:1px;margin-top:38px;background:var(--line-soft);border:1px solid var(--line-soft)}
+@media(min-width:620px){.pager{grid-template-columns:1fr 1fr}}
+.pager a{background:var(--pitch-000);padding:16px;text-decoration:none;color:var(--chalk)}
+.pager a:hover{background:var(--volt);color:#07150f}
+.pager em{display:block;margin-bottom:8px;font-style:normal;font:600 var(--t-micro)/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--chalk-fade)}
+.pager a:hover em{color:#07150f}
+.pager b{font:400 clamp(18px,2.4vw,26px)/1 var(--display);letter-spacing:.02em;text-transform:uppercase}
+.pager .is-next{text-align:right}
+.pill:not(.pill--out):not(.pill--gold){color:#180200}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER · score bug with the merged data line (docs/_partials/header.html) ══ -->
+<a class="skip" href="#main">Перейти к содержимому</a>
+<div class="fx fx--grain" aria-hidden="true"></div>
+
+<header class="bug" id="top">
+  <div class="bug__bar">
+    <a class="bug__crest" href="/ru/">
+      <span class="bug__mark" aria-hidden="true">A</span>
+      <span class="bug__id"><b>АБЫЗОВ</b><i>Универсал · Плеймейкер</i></span>
+    </a>
+
+    <nav class="bug__nav" aria-label="Разделы">
+      <a href="/ru/highlights/">Лучшие моменты</a>
+      <a href="/ru/career/">Карьера</a>
+      <a href="/ru/futsal/">Мини-футбол</a>
+      <a href="/ru/football/">Футбол</a>
+      <a href="/ru/coaching/">Тренерская работа</a>
+      <a href="/ru/gallery/">Галерея</a>
+      <a href="/ru/records/">Документы</a>
+      <a href="/ru/baller-league/">Baller League</a>
+    </nav>
+
+    <!-- i18n:switcher -->
+    <details class="lang" translate="no">
+      <summary class="lang__btn" aria-label="Язык: Русский"><span class="lang__globe" aria-hidden="true"></span><span aria-hidden="true">RU</span></summary>
+      <nav class="lang__menu" aria-label="Язык">
+        <a href="/watch/" hreflang="en" lang="en">English</a>
+        <a href="/ru/watch/" hreflang="ru" lang="ru" aria-current="true">Русский</a>
+        <a href="/es/watch/" hreflang="es" lang="es">Español</a>
+        <a href="/pt/watch/" hreflang="pt" lang="pt-BR">Português</a>
+        <a href="/de/watch/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/watch/" hreflang="fr" lang="fr">Français</a>
+      </nav>
+    </details>
+    <!-- /i18n:switcher -->
+    <button class="bug__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+      <span class="bug__burger" aria-hidden="true"><i></i></span>Меню
+    </button>
+  </div>
+
+  <nav class="bug__panel" id="nav-panel" aria-label="Разделы, компактно" hidden>
+    <a href="/ru/highlights/">Лучшие моменты</a>
+    <a href="/ru/career/">Карьера</a>
+    <a href="/ru/futsal/">Мини-футбол</a>
+    <a href="/ru/football/">Футбол</a>
+    <a href="/ru/coaching/">Тренерская работа</a>
+    <a href="/ru/gallery/">Галерея</a>
+    <a href="/ru/records/">Документы</a>
+    <a href="/ru/baller-league/">Baller League</a>
+  </nav>
+
+  <dl class="dataline" role="group" aria-label="Данные игрока" tabindex="0">
+    <div><dt>Позиция</dt><dd>Универсал · Плеймейкер</dd></div>
+    <div><dt>Рост</dt><dd>188 см (6 ft 2 in)</dd></div>
+    <div><dt>Нога</dt><dd>Правая, забиваю обеими</dd></div>
+    <div><dt>Живёт в</dt><dd>Майами, Флорида</dd></div>
+    <div class="is-live"><dt>Готов к</dt><dd><span class="dot" aria-hidden="true"></span> 6 на 6 в зале</dd></div>
+    <div><dt>Город</dt><dd>Майами</dd></div>
+  </dl>
+</header>
+
+<main id="main">
+
+  <nav class="crumbs" aria-label="Навигационная цепочка">
+    <ol><li><a href="/ru/">Главная</a></li><li aria-current="page">Смотреть</li></ol>
+  </nav>
+
+  <section class="sec sec--pitch" id="intro" aria-labelledby="h-watch">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Запись</span>Полные матчи и лучшие моменты</p>
+        <h1 id="h-watch">Смотрите каждый матч.</h1>
+      </div>
+
+      <p class="lede">
+        Все полные матчи, которые есть у меня на видео, и все видеонарезки в одном списке, сначала свежие. Полные матчи – это трансляции лиг и клубов; нарезки – мой собственный монтаж и публикации клубов. Если на сайте хранится своя копия голов, её открывает последняя ссылка.
+      </p>
+
+      <ul class="key">
+        <li><span class="st st--live">полный матч</span><span>Весь матч, обычно трансляция лиги. Если мой момент отмечен, ссылка открывается на нём.</span></li>
+        <li><span class="st st--file">лучшие моменты</span><span>Нарезка: мой собственный фильм, публикация клуба или ролик.</span></li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn btn--ghost" href="#full">Полные матчи</a>
+        <a class="btn btn--ghost" href="#films">Видеонарезки и публикации</a>
+        <a class="btn btn--ghost" href="#beyond">Не только футбол</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper" id="full" aria-labelledby="h-full">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Первое</span>Полные матчи</p>
+        <h2 id="h-full">Полные матчи.</h2>
+      </div>
+
+      <ul class="srcs reveal">
+        <!-- BEGIN:full -->
+        <!-- src: YouTube sjiFQYLE5A0 (Premierliga PLAY, 11431 s, 7 Aug 2026); premierliga.pro/match/5782521 -->
+        <li class="src" id="w-kapitan-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">EasyChamp 12:0 КАПИТАН</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Премьерлига 5x5, Летний Кубок, СК МАПИД, Минск · 6 августа 2026 года</b> Пять моих голов в одном матче. Трансляция охватывает весь вечер; ссылка открывается на нашем матче.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=sjiFQYLE5A0&t=5350s" rel="noopener">Трансляция Premierliga PLAY, YouTube</a></li>
+            <li><em>Фильм о сезоне</em><a href="https://www.youtube.com/watch?v=U-lw9dmTQyY&t=910s" rel="noopener">13 голов и 9 голевых передач, Abyzov World</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#summer">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube Tj9lu99s0t0 (Premierliga PLAY, 7255 s, 26 Jun 2026) -->
+        <li class="src" id="w-corner-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">Летний Кубок, 25 июня 2026 года</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Премьерлига 5x5, Летний Кубок, СК МАПИД, Минск · 25 июня 2026 года</b> Розыгрыш углового, забитый с первой попытки.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=Tj9lu99s0t0&t=1773s" rel="noopener">Трансляция Premierliga PLAY, YouTube</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#summer">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube p3kv0_LCCqA (PS23 SOCCER, 2345 s, 17 Feb 2026) -->
+        <li class="src" id="w-patagonia-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">EasyChamp FC против Patagonia</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>PS23 Superliga 8v8, Майами · 17 февраля 2026 года</b> Четыре гола. Ссылка открывается на первом.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=p3kv0_LCCqA&t=1578s" rel="noopener">Трансляция PS23 SOCCER, YouTube</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#patagonia">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube dP7uCHUt-VQ (Felafu Futbol, 3457 s, 15 Nov 2025) -->
+        <li class="src" id="w-machos-2025">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2025</span>
+            <h3 class="src__t">Gulfstream FC против 8 Machos</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Liga Evolution 8v8, Fecha 9, Felafu, Майами · 14 ноября 2025 года</b></p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=dP7uCHUt-VQ&t=2410s" rel="noopener">Felafu Futbol, YouTube</a></li>
+            <li><em>На этом сайте</em><a href="/ru/football/#tape">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube O5f6Z1YwImo (Felafu Futbol, 3343 s, 3 May 2025) -->
+        <li class="src" id="w-allstars-2025">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2025</span>
+            <h3 class="src__t">Gulfstream FC 7-2 Miami All Stars</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Liga Evolution 8v8, Fecha 7, Халландейл-Бич · 2 мая 2025 года</b> Гол головой.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=O5f6Z1YwImo" rel="noopener">Felafu Futbol, YouTube</a></li>
+            <li><em>На этом сайте</em><a href="/ru/football/#tape">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube dJL-yvc4qI8 (enditangels, 3460 s, 19 Nov 2024); Instagram DCmWGuKNDwM (20 Nov 2024); VK wall7307656_120 (same edit, 20 Nov 2024) -->
+        <li class="src" id="w-lared-2024">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2024</span>
+            <h3 class="src__t">End It Soccer X Spanish 5-1 Five Stars FC</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Liga Corporativa La Red, Майами · 18 ноября 2024 года</b> Четыре гола в неделю моего сорокалетия.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=dJL-yvc4qI8" rel="noopener">enditangels, YouTube</a></li>
+            <li><em>Лучшие моменты</em><a href="https://www.instagram.com/p/DCmWGuKNDwM/" rel="noopener">Четыре гола, Instagram @aabyzov</a></li>
+            <li><em>На этом сайте</em><a href="/ru/football/#tape">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube DuwUJHRf00U (AFL Belarus, 5590 s, 12 Aug 2021) -->
+        <li class="src" id="w-itcup-2021">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2021</span>
+            <h3 class="src__t">ISsoft 3-2 «Луч», финал IT Cup</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>8 на 8, Минск · 12 августа 2021 года</b> Гол, сравнявший счёт: 1-1. Ссылка открывается на нём.</p>
+          <ul class="src__u">
+            <li><em>Полный матч</em><a href="https://www.youtube.com/watch?v=DuwUJHRf00U&t=2497s" rel="noopener">Трансляция АФЛ, YouTube</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#itcup">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- END:full -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sec--pitch" id="films" aria-labelledby="h-films">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Второе</span>Фильмы, ролики и публикации</p>
+        <h2 id="h-films">Видеонарезки и публикации.</h2>
+      </div>
+
+      <ul class="srcs reveal">
+        <!-- BEGIN:highlights -->
+        <!-- src: YouTube U-lw9dmTQyY (Abyzov World, 1599 s, 16 Sep 2026) -->
+        <li class="src" id="w-summer-film-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">13 голов и 9 голевых передач, Летний Кубок 5x5</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Минск, лето 2026 года, фильм о сезоне с разбивкой на главы · 16 сентября 2026 года</b> Каждый гол и каждая голевая передача сезона, по главе на матч.</p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=U-lw9dmTQyY" rel="noopener">Abyzov World, 26:39</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#summer">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube zjnTwFIKEVc (Abyzov World, 754 s, 29 Aug 2026) -->
+        <li class="src" id="w-first3-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">3 гола и 3 голевые передачи в моих первых 3 матчах по мини-футболу в Минске</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Мини-футбол в Минске, 2026 · 29 августа 2026 года</b></p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=zjnTwFIKEVc" rel="noopener">Abyzov World, 12:34</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#outdoor">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube VKLUxHV11BM (383 s, 18 Aug 2026); 3zbbJ5dihno (96 s, 18 Jul 2026) -->
+        <li class="src" id="w-outdoor-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">Лето 2026 года в Беларуси</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>ЛФЛ 7x7 и Премьерлига 8x8, Минск · 18 августа 2026 года</b></p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=VKLUxHV11BM" rel="noopener">Abyzov World, 6:23</a></li>
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=3zbbJ5dihno" rel="noopener">7x7: гол пяткой, финт и удар пяткой, 1:36</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#outdoor">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube UZmmD6TzHDA (EasyChamp, 190 s, 22 Feb 2026) -->
+        <li class="src" id="w-atenas-2026">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2026</span>
+            <h3 class="src__t">EasyChamp 4-5 Atenas Pocito</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>PS23 Master Liga 8v8, 1-я неделя, Майами · 22 февраля 2026 года</b></p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=UZmmD6TzHDA" rel="noopener">Все голы и лучшие моменты, канал EasyChamp</a></li>
+            <li><em>На этом сайте</em><a href="/ru/football/#tape">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: Instagram DOxXwHBjI_a (19 Sep 2025) -->
+        <li class="src" id="w-nigmatullin">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2025</span>
+            <h3 class="src__t">Пенальти в ворота Руслана Нигматуллина</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Конкурс пенальти, по дате публикации · 19 сентября 2025 года</b></p>
+          <ul class="src__u">
+            <li><em>Instagram</em><a href="https://www.instagram.com/reel/DOxXwHBjI_a/" rel="noopener">Ролик @aabyzov</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#archive">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube KMrn87K-320 (Abyzov World, 68 s, 15 Mar 2026) -->
+        <li class="src" id="w-superliga-title-2025">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2025</span>
+            <h3 class="src__t">EasyChamp FC, чемпионы Superliga 8v8</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>PS23 Superliga 8x8, Майами, 2025 · июль 2025 года</b> Празднование титула.</p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=KMrn87K-320" rel="noopener">Abyzov World, 1:08</a></li>
+            <li><em>На этом сайте</em><a href="/ru/football/#miami">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: Instagram ChnjTToOLwT (Alligators Fc, 23 Aug 2022, 'Resumen del partido de anoche') -->
+        <li class="src" id="w-alligators-2022">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2022</span>
+            <h3 class="src__t">Alligators FC против Bauta FC</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Miami Futsal League, 2022 · 22 августа 2022 года</b> Лучшие моменты матча от самого клуба.</p>
+          <ul class="src__u">
+            <li><em>Instagram</em><a href="https://www.instagram.com/p/ChnjTToOLwT/" rel="noopener">Alligators FC</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#best-outdoor">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube -b36FHlDdJA (Abyzov World, 241 s, 5 Jul 2022); fussball.de fixture -->
+        <li class="src" id="w-rangsdorf-2022">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2022</span>
+            <h3 class="src__t">SV Rangsdorf 28 1-0 SV Siethen</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Окружной товарищеский матч, Бранденбург, Германия · 10 апреля 2022 года</b> Я забил единственный гол.</p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=-b36FHlDdJA" rel="noopener">Abyzov World, 4:01</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#germany">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube MyMOJP1nuic (Abyzov World, 366 s, 8 Aug 2022) -->
+        <li class="src" id="w-lidselmash-2019">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2019</span>
+            <h3 class="src__t">«Территория-Макслайн» против «Лидсельмаша»</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Высшая лига чемпионата Беларуси по мини-футболу · 17 февраля 2019 года</b></p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=MyMOJP1nuic" rel="noopener">Abyzov World, 6:06</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#champion">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube e1Rb1zbKYuM (Abyzov World, 459 s, 16 Jun 2015) -->
+        <li class="src" id="w-1415">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2015</span>
+            <h3 class="src__t">Сезон 2014-15 в мини-футболе</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>«Итранзишэн», Минск · 16 июня 2015 года</b></p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=e1Rb1zbKYuM" rel="noopener">Abyzov World, 7:39</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#archive">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- END:highlights -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sec--paper" id="beyond" aria-labelledby="h-beyond">
+    <div class="sec__in">
+      <div class="sec-head">
+        <p class="sec-kick"><span class="pill pill--out">Третье</span>Другие виды спорта</p>
+        <h2 id="h-beyond">Не только футбол.</h2>
+      </div>
+
+      <ul class="srcs reveal">
+        <!-- BEGIN:beyond -->
+        <!-- src: Instagram CrEZ5eDt63d (Teq Truck East Coast, 15 Apr 2023) -->
+        <li class="src" id="w-teqball-2023">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2023</span>
+            <h3 class="src__t">Розыгрыши в текбол с Dade County FC</h3>
+            <span class="st st--file">лучшие моменты</span>
+          </div>
+          <p class="src__d"><b>Revo Soccer, Майами · 15 апреля 2023 года</b></p>
+          <ul class="src__u">
+            <li><em>Instagram</em><a href="https://www.instagram.com/p/CrEZ5eDt63d/" rel="noopener">Teq Truck East Coast</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#best-beyond">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- src: YouTube BKab-1SjT4A (Abyzov World, 884 s, 2 May 2021): description 'Мужская категория: 1-е место - Антон Абызов'; VK wall7307656_109 (3 May 2021) -->
+        <li class="src" id="w-crossfit-2021">
+          <div class="src__top">
+            <span class="src__ico" aria-hidden="true">2021</span>
+            <h3 class="src__t">1-е место, клубный чемпионат ARGYMENT по кроссфиту</h3>
+            <span class="st st--live">полный матч</span>
+          </div>
+          <p class="src__d"><b>Мужская категория, Минск · 25 апреля 2021 года</b> Соревнования целиком, 14 минут.</p>
+          <ul class="src__u">
+            <li><em>YouTube</em><a href="https://www.youtube.com/watch?v=BKab-1SjT4A" rel="noopener">Abyzov World, 14:44</a></li>
+            <li><em>На этом сайте</em><a href="/ru/highlights/#best-beyond">Нарезка с отмеченными голами</a></li>
+          </ul>
+        </li>
+        <!-- END:beyond -->
+      </ul>
+
+      <nav class="pager" aria-label="Предыдущая и следующая страница">
+        <a href="/ru/highlights/"><em>Предыдущая</em><b>Лучшие моменты</b></a>
+        <a class="is-next" href="/ru/records/"><em>Следующая</em><b>Документы</b></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER (docs/_partials/footer.html) ════════════════════════════════════ -->
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <p class="foot__name">Антон Абызов</p>
+      <p class="foot__role">Универсал · Плеймейкер · Тренер · Майами, Флорида</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="В других местах">
+      <a href="https://antonabyzov.com" rel="noopener">antonabyzov.com <em>Разработка ПО</em></a>
+      <a href="https://easychamp.com" rel="noopener">EasyChamp <em>Компания</em></a>
+      <a href="https://www.youtube.com/@antonabyzov" rel="noopener">AI Power <em>YouTube</em></a>
+      <a href="https://www.youtube.com/@aabyzov" rel="noopener">Мой YouTube-канал <em>youtube.com/@aabyzov</em></a>
+      <a href="https://www.instagram.com/aabyzov/" rel="noopener">Instagram <em>@aabyzov</em></a>
+      <a href="/ru/watch/">Смотреть <em>Все матчи, все ссылки</em></a>
+      <a href="/ru/records/">Документы <em>Каждая цифра с источником</em></a>
+    </nav>
+
+    <p class="foot__fine">
+      Все цифры на сайте ведут к источникам, перечисленным на странице <a href="/ru/records/">/records/</a>. Зафиксированные цифры – это зафиксированные цифры, а не итог карьеры: многие матчи никто не снимал и не записывал.
+    </p>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

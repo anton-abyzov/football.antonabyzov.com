@@ -348,6 +348,108 @@ section[id]{ scroll-margin-top:118px; }
 }
 @media (min-width:980px){ .bug__panel{ display:none!important; } }
 
+/* The Russian edition. Anton and Archivo ship no Cyrillic, so /ru/ swaps the
+   display face for Oswald SemiBold (SIL Open Font License, self-hosted from
+   Google Fonts, cyrillic + latin subsets, 20 KB) under a family of its own, and
+   sets body copy in the system face, which has Cyrillic on every platform.
+   Only pages with lang="ru" ever request these two files. */
+@font-face{
+  font-family:"Anton Cyrillic"; font-style:normal; font-weight:400; font-display:swap;
+  src:url("/assets/fonts/oswald-600-cyrillic.woff2") format("woff2");
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face{
+  font-family:"Anton Cyrillic"; font-style:normal; font-weight:400; font-display:swap;
+  src:url("/assets/fonts/oswald-600-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212;
+}
+html[lang="ru"]{
+  --display:"Anton Cyrillic","Anton","Arial Narrow",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+/* Oswald runs about 15% wider than Anton; the hero name keeps its footprint */
+html[lang="ru"] .hero h1{ font-size:calc(var(--t-mega) * .86); }
+
+/* language switcher. scripts/i18n.py writes the markup into every page, a
+   <details> so it opens with no JS; site.js only closes it on an outside click
+   or Escape and carries the #anchor across. Sits between the nav and the menu
+   toggle, pushed right on phones, after the centred nav on desktop. */
+.lang{ position:relative; flex:0 0 auto; margin-left:auto; }
+/* the bar's backdrop-filter makes it a stacking context; lift it over the
+   data line so the open menu is not painted underneath the next row */
+.bug__bar{ position:relative; z-index:2; }
+.lang + .bug__toggle{ margin-left:0; }
+.lang__btn{
+  list-style:none; display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  border:1px solid var(--line-soft); border-radius:var(--r); padding:8px 10px;
+  color:var(--chalk); user-select:none;
+  font:600 var(--t-micro)/1 var(--body); letter-spacing:.14em; text-transform:uppercase;
+}
+.lang__btn::-webkit-details-marker{ display:none; }
+.lang__btn::marker{ content:""; }
+.lang__btn:hover,.lang[open] .lang__btn{ border-color:var(--volt); color:var(--volt); }
+.lang__btn:focus-visible{ outline:2px solid var(--volt); outline-offset:2px; }
+.lang__globe{
+  position:relative; width:11px; height:11px; flex:0 0 auto;
+  border:1.5px solid currentColor; border-radius:50%;
+}
+.lang__globe::before{
+  content:""; position:absolute; top:-1.5px; bottom:-1.5px; left:2px; right:2px;
+  border:1.5px solid currentColor; border-radius:50%;
+}
+.lang__globe::after{
+  content:""; position:absolute; left:0; right:0; top:50%; height:1.5px;
+  margin-top:-.75px; background:currentColor;
+}
+.lang__menu{
+  position:absolute; right:0; top:calc(100% + 8px); z-index:120;
+  display:grid; min-width:11.5rem; padding:6px;
+  background:var(--pitch-800); border:1px solid var(--line-soft); border-radius:var(--r);
+  box-shadow:0 14px 34px rgba(0,0,0,.5);
+}
+.lang__menu a{
+  padding:11px 12px; text-decoration:none; color:var(--chalk-dim);
+  font:600 13px/1 var(--body); letter-spacing:.02em;
+}
+.lang__menu a:hover,.lang__menu a:focus-visible{ color:var(--chalk); background:var(--pitch-700); }
+.lang__menu a[aria-current]{ color:var(--volt); }
+.lang__menu a[aria-current]::after{ content:" \2713"; }
+@media (min-width:980px){ .lang{ margin-left:0; } }
+@media (min-width:980px) and (max-width:1279px){ .bug__nav{ gap:16px; } }
+@media (min-width:980px) and (max-width:1099px){ .bug__nav{ gap:12px; } }
+
+/* The translated editions carry longer words than English. The crest line may
+   wrap onto two lines on a phone instead of pushing the bar wider, and below
+   1280px the eight sections stay behind the Menu button, as they do on a
+   phone, because a translated nav row does not fit beside the crest there. */
+.bug__crest{ min-width:0; flex-shrink:1; }
+.bug__id{ min-width:0; }
+html:not([lang="en"]) .bug__id i{ line-height:1.2; }
+@media (min-width:980px) and (max-width:1279px){
+  html:not([lang="en"]) .bug__nav{ display:none; }
+  html:not([lang="en"]) .bug__toggle{ display:inline-flex; }
+  html:not([lang="en"]) .lang{ margin-left:auto; }
+  html:not([lang="en"]) .bug__panel{
+    display:grid!important; grid-template-columns:repeat(4,1fr); column-gap:24px;
+    background:var(--pitch-800); border-bottom:1px solid var(--line-soft);
+    padding:6px var(--gut) 14px;
+  }
+  html:not([lang="en"]) .bug__panel[hidden]{ display:none!important; }
+  html:not([lang="en"]) .bug__panel a{
+    padding:11px 0; text-decoration:none; border-bottom:1px solid var(--line-soft);
+    font:600 12px/1 var(--body); letter-spacing:.14em; text-transform:uppercase; color:var(--chalk);
+  }
+}
+/* the data line is a single row from 980px up; translated labels are longer,
+   so there it may take a second row rather than run off the right edge */
+@media (min-width:980px){
+  html:not([lang="en"]) .dataline{ flex-wrap:wrap; row-gap:6px; }
+}
+@media (min-width:1280px){
+  html:not([lang="en"]) .bug__nav{ gap:clamp(14px,1.3vw,22px); }
+  html:not([lang="en"]) .bug__nav a{ letter-spacing:.1em; }
+}
+
 /* ═══ 6. HERO ════════════════════════════════════════════════════════════ */
 .hero{
   position:relative; overflow:hidden;

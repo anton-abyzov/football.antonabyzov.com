@@ -25,6 +25,10 @@ this README in the same commit.
   `Чурилов Евгений Владимирович (Churilov Evgeny Vladimirovich)`.
 - **No em dashes** in copy. Commas, full stops and colons do the work.
 - Mobile-first: everything must work at **375px with 16px gutters and zero horizontal scroll**.
+- **Write English only.** `scripts/build.py` generates the `/ru/`, `/es/`, `/pt/`, `/de/` and `/fr/`
+  editions from each English page, adds the hreflang block and the language switcher, and takes the
+  words from `i18n/<lang>.json` (ADD-CONTENT.md section 6b). Text that must never be translated goes
+  in an element with `translate="no"`.
 
 ---
 

@@ -11,6 +11,10 @@
   {{JSONLD}}       one JSON-LD object for this page (Person on /, WebPage +
                    BreadcrumbList elsewhere). Keep it valid JSON, no comments.
 
+  The hreflang block (<!-- i18n:alternates -->, one <link rel="alternate"> per
+  language plus x-default, and og:locale:alternate) is inserted right after the
+  canonical link by scripts/build.py. Do not write it by hand.
+
   Two font families only: Anton (display) and Archivo (body/UI, variable, its
   width axis carries the condensed labels). Do not add a third.
 -->

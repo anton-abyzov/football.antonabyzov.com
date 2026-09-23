@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie | Anton Abyzov</title>
+<meta name="description" content="Football, futsal, entraînement et vie hors du terrain, des dernières saisons à Miami jusqu&#x27;à l&#x27;Allemagne, la Biélorussie et l&#x27;équipe nationale.">
+<link rel="canonical" href="https://football.antonabyzov.com/fr/gallery/">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://football.antonabyzov.com/gallery/">
+<link rel="alternate" hreflang="ru" href="https://football.antonabyzov.com/ru/gallery/">
+<link rel="alternate" hreflang="es" href="https://football.antonabyzov.com/es/gallery/">
+<link rel="alternate" hreflang="pt" href="https://football.antonabyzov.com/pt/gallery/">
+<link rel="alternate" hreflang="de" href="https://football.antonabyzov.com/de/gallery/">
+<link rel="alternate" hreflang="fr" href="https://football.antonabyzov.com/fr/gallery/">
+<link rel="alternate" hreflang="x-default" href="https://football.antonabyzov.com/gallery/">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<!-- /i18n:alternates -->
+<meta name="author" content="Anton Abyzov">
+<meta name="theme-color" content="#06120e">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Anton Abyzov · Football">
+<meta property="og:title" content="Anton Abyzov - Galerie">
+<meta property="og:description" content="Des photos par époque, de Baranovichi à Minsk, du Brandebourg à Miami, avec la source et la date sous chaque image.">
+<meta property="og:url" content="https://football.antonabyzov.com/fr/gallery/">
+<meta property="og:image" content="https://football.antonabyzov.com/assets/og/og-gallery.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anton Abyzov - Galerie">
+<meta name="twitter:description" content="Des photos par époque, de Baranovichi à Minsk, du Brandebourg à Miami, avec la source et la date sous chaque image.">
+<meta name="twitter:image" content="https://football.antonabyzov.com/assets/og/og-gallery.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+
+<!--
+  Page-scoped CSS, /gallery/ only. Four things site.css does not carry yet.
+  Fold 1 and 2 into site.css §8/§13, and 3 and 4 into §1/§10/§13, when a second
+  page needs them. 3 and 4 are site-wide fixes held here because this task may
+  not touch site.css.
+    1. .pending is drawn for the dark sections. This page runs half its eras on
+       paper, so the missing-frame slot needs the ink treatment there too.
+    2. .shot--receipt is the wide scoreboard strip cut out of a match record.
+    3. WCAG AA on the paper sections. --ink-fade #726c59 measures 4.36:1 against
+       the grain-overlaid paper, under the 4.5:1 floor. #68624f measures 5.07:1
+       on the overlaid paper, 5.25:1 on bare --paper, 4.67:1 on --paper-2. The
+       two 9.5px lines that carry sourced facts go up to 12px and 12.5px.
+    4. Grid cells stretched to the row height while neither child filled them,
+       leaving up to 311px of bordered dead space. Placeholders now fill the
+       row, photo cells sit at the top of it.
+-->
+<style>
+.sec--paper .pending{
+  border-color:rgba(22,21,15,.36);
+  background:repeating-linear-gradient(45deg,rgba(22,21,15,.05) 0 9px,transparent 9px 18px),var(--paper-2);
+}
+.sec--paper .pending b{ color:var(--ink); }
+.sec--paper .pending span{ color:var(--ink-soft); }
+/* The fussball.de screenshot is 1100px wide and no larger capture exists, so
+   the figure is capped to it instead of being stretched across the 1240px
+   column and resampled up. */
+.shot--receipt{ margin-top:14px; overflow:visible; border:0; background:none; max-width:1100px; }
+.shot--receipt img{ aspect-ratio:32/11; border:1px solid var(--hair); }
+.shot--receipt figcaption{
+  position:static; padding:12px 0 0; background:none;
+  color:var(--fg); letter-spacing:.09em;
+}
+.shot--receipt figcaption em{ color:var(--fg-fade); max-width:80ch; }
+
+.hon__y{ font-size:12px; letter-spacing:.13em; }
+.shot figcaption em{ font-size:12px; }
+.shot--receipt figcaption em{ font-size:12.5px; line-height:1.5; }
+
+/* 4. no dead space inside grid cells */
+.grid > li{ display:grid; }
+.grid > li > .pending{ height:100%; aspect-ratio:auto; min-height:190px; }
+.grid > li:has(> .shot){ align-self:start; }
+
+/* ── QA fix: the era captions are no longer laid over the photograph ────────
+   From 1360px up the six era grids settle at 237px columns, where a landscape
+   tile is 134 to 159px tall and its caption runs 152 to 184px. Six captions
+   were taller than the tile they sat in (master-of-sport-certificate,
+   nantes-2009-squad, kayseri-2012-medal, kayseri-2012-match,
+   itransition-futsal-squad, kayseri-2012-trophy-plaque) and every other tile
+   had 60 to 90 per cent of the frame hidden behind the scrim. The caption now
+   sits UNDER the frame in normal flow, so no caption can exceed its tile and
+   every photograph is fully visible at every width. The border and the hover
+   crop move to the <picture>, which is now the framed element.
+   SHARED FIX: fold into site.css section 13 when a second page wants it. */
+.grid .shot{ overflow:visible; border:0; background:none; }
+.grid .shot picture{
+  overflow:hidden; border:1px solid var(--hair); background:var(--pitch-800);
+}
+.grid .shot figcaption{
+  position:static; padding:10px 0 0; background:none; color:var(--fg);
+}
+.grid .shot figcaption em{ color:var(--fg-fade); }
+
+/* The Churilov portrait is a 210x280 archive file from a university staff page
+   and no larger scan exists, so it is centred at native size in its cell
+   instead of being resampled up to 402px. Same intent as the #eras rule on
+   /career/. */
+.grid .shot--native picture{
+  display:grid; place-items:center; aspect-ratio:3/4;
+  background:radial-gradient(70% 60% at 50% 45%,#12211a,#070f0c 78%);
+}
+.grid .shot--native img{
+  width:auto; max-width:min(210px,100%); height:auto; max-height:100%;
+  aspect-ratio:auto; object-fit:contain;
+}
+.grid .shot--native:hover img{ transform:none; }
+
+#intro{padding-block:clamp(32px,4vw,56px)}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "name": "Galerie football d'Anton Abyzov",
+      "url": "https://football.antonabyzov.com/fr/gallery/",
+      "description": "Des photos par époque, de Baranovichi à Minsk, du Brandebourg à Miami, avec la source et la date sous chaque image.",
+      "dateModified": "2026-09-19",
+      "inLanguage": "fr",
+      "isPartOf": { "@type": "WebSite", "name": "Anton Abyzov · Football", "url": "https://football.antonabyzov.com/fr/" },
+      "about": {
+        "@type": "Person",
+        "name": "Anton Abyzov",
+        "alternateName": "Антон Абызов",
+        "url": "https://football.antonabyzov.com/fr/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://football.antonabyzov.com/fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Galerie", "item": "https://football.antonabyzov.com/fr/gallery/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ══ HEADER · score bug with the merged data line (docs/_partials/header.html) ══ -->
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="fx fx--grain" aria-hidden="true"></div>
+
+<header class="bug" id="top">
+  <div class="bug__bar">
+    <a class="bug__crest" href="/fr/">
+      <span class="bug__mark" aria-hidden="true">A</span>
+      <span class="bug__id"><b>ABYZOV</b><i>Polyvalent · Meneur de jeu</i></span>
+    </a>
+
+    <nav class="bug__nav" aria-label="Rubriques">
+      <a href="/fr/highlights/">Temps forts</a>
+      <a href="/fr/career/">Carrière</a>
+      <a href="/fr/futsal/">Futsal</a>
+      <a href="/fr/football/">Football</a>
+      <a href="/fr/coaching/">Entraîneur</a>
+      <a href="/fr/gallery/" aria-current="page">Galerie</a>
+      <a href="/fr/records/">Archives</a>
+      <a href="/fr/baller-league/">Baller League</a>
+    </nav>
+
+    <!-- i18n:switcher -->
+    <details class="lang" translate="no">
+      <summary class="lang__btn" aria-label="Langue: Français"><span class="lang__globe" aria-hidden="true"></span><span aria-hidden="true">FR</span></summary>
+      <nav class="lang__menu" aria-label="Langue">
+        <a href="/gallery/" hreflang="en" lang="en">English</a>
+        <a href="/ru/gallery/" hreflang="ru" lang="ru">Русский</a>
+        <a href="/es/gallery/" hreflang="es" lang="es">Español</a>
+        <a href="/pt/gallery/" hreflang="pt" lang="pt-BR">Português</a>
+        <a href="/de/gallery/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/gallery/" hreflang="fr" lang="fr" aria-current="true">Français</a>
+      </nav>
+    </details>
+    <!-- /i18n:switcher -->
+    <button class="bug__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+      <span class="bug__burger" aria-hidden="true"><i></i></span>Menu
+    </button>
+  </div>
+
+  <nav class="bug__panel" id="nav-panel" aria-label="Rubriques, version compacte" hidden>
+    <a href="/fr/highlights/">Temps forts</a>
+    <a href="/fr/career/">Carrière</a>
+    <a href="/fr/futsal/">Futsal</a>
+    <a href="/fr/football/">Football</a>
+    <a href="/fr/coaching/">Entraîneur</a>
+    <a href="/fr/gallery/" aria-current="page">Galerie</a>
+    <a href="/fr/records/">Archives</a>
+    <a href="/fr/baller-league/">Baller League</a>
+  </nav>
+
+  <dl class="dataline" role="group" aria-label="Fiche joueur" tabindex="0">
+    <div><dt>Poste</dt><dd>Polyvalent · Meneur de jeu</dd></div>
+    <div><dt>Taille</dt><dd>188 cm (6 ft 2 in)</dd></div>
+    <div><dt>Pied</dt><dd>Droit, marque des deux pieds</dd></div>
+    <div><dt>Basé à</dt><dd>Miami, FL</dd></div>
+    <div class="is-live"><dt>Disponible pour</dt><dd><span class="dot" aria-hidden="true"></span> 6 contre 6 en salle</dd></div>
+    <div><dt>Ville</dt><dd>Miami</dd></div>
+  </dl>
+</header>
+
+<main id="main">
+<nav class="crumbs" aria-label="Fil d’Ariane">
+    <ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Galerie</li></ol>
+  </nav>
+<section class="sec sec--pitch" id="intro"><div class="sec__in"><h1 id="h-gallery">Galerie.</h1><p class="lede">Matchs, entraînements et vie hors du terrain. Les plus récentes d'abord.</p><nav class="cta-row" aria-label="Années des photos">
+<a class="btn btn--ghost" href="#era-1">2026</a>
+<a class="btn btn--ghost" href="#era-2">2025–2023</a>
+<a class="btn btn--ghost" href="#era-3">2022</a>
+<a class="btn btn--ghost" href="#era-4">2021–2019</a>
+<a class="btn btn--ghost" href="#era-5">2015–2012</a>
+<a class="btn btn--ghost" href="#era-6">2010–2007</a>
+<a class="btn btn--ghost" href="#era-7">Sans date</a>
+</nav></div></section>
+<section class="sec sec--pitch" id="era-1" aria-labelledby="h-era-1"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Miami et entraînement</p><h2 id="h-era-1">2026</h2></div><ul class="grid">
+        <!-- BEGIN:era-1 -->
+        <li>
+          <!-- src: video/artem-training/final/anton_artem_training_2026-05-24_9x16.mp4 at 26.2s -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/still-1v1.webp" type="image/webp"><img src="/assets/img/still-1v1.jpg" width="595" height="744" alt="Deux joueurs lors d&#x27;un exercice de un contre un sur un terrain synthétique de Miami, avec des palmiers et un immeuble d&#x27;habitation en arrière-plan." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCzLKy5IXdUEMzNKROyxL2Bolacoy7DychgRVJ1uGdS8JfA9aLkl5pQrEGVTjviissR3WOEcD0x0opXA1fMpQ4oorEBfMFFFFAz/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Entraînement à Miami, mai 2026<em>Un contre un sur le synthétique.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: SanDisk 02-REUSABLE/football/baller-league/IMG_6556.DNG, Apple ProRAW, April 2026; DOSSIER 2026-04-28 row -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-baller-league-pitchside-800.webp 600w, /assets/img/gallery/miami-baller-league-pitchside-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-baller-league-pitchside-800.jpg" width="600" height="800" alt="Anton Abyzov au bord du terrain dans l&#x27;arène de la Baller League Miami, les panneaux lumineux de la ligue derrière lui." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCUzk5ZF5H0pzebux5R/Dmt2TiNmABYDjNMiWTILMhB7LXP7S/Qau1cxMS/wDPN/yorodh9TRS9oK5Vub2OAFer+lN/tCRAPOHy5wcDpRRWipqy8xx2ZJ9vt/79FFFP2MSD//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Baller League Miami, avril 2026<em>Au bord du terrain, dans l'arène, un jour de match. J'ai été dans cette salle, et aucune de ces images ne me montre en train d'y jouer.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: SanDisk 02-REUSABLE/football/baller-league, Apple ProRAW, April 2026; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-baller-league-arena-800.webp 800w, /assets/img/gallery/miami-baller-league-arena-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-baller-league-arena-800.jpg" width="800" height="600" alt="Le terrain vert vide et la tribune de l&#x27;arène de la Baller League Miami avant un match." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCnHdDaCflXpn1qcTxkYGKswnTZYQyxDB/SlEenr0Qj8aydRAUWlPOOlFWLlbJImdS+ccAetFWmpIZj6WTlhk429Ktxklhn1oorOpuJkOpE+QeaKKK1p7Af/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Dans l'arène<em>Baller League Miami, avril 2026, depuis la tribune avant un match.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: SanDisk 02-REUSABLE/football/baller-league, Apple ProRAW, April 2026; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-baller-league-kit-wall-800.webp 800w, /assets/img/gallery/miami-baller-league-kit-wall-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-baller-league-kit-wall-800.jpg" width="800" height="600" alt="Des maillots numérotés suspendus dans des casiers en bois sous une enseigne lumineuse Baller League." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDNtYYXH7xG9sDrVn7LagZ2PUFreLGUbzQCnQcVN9qSRRiUA5zzSuxpGZdBVYhU4+lFTX0plZQzLhc9BRQnfcdjLoooqhACfWiiikB//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Le mur des maillots<em>Baller League Miami, avril 2026. Maillots numérotés dans les casiers, sous l'enseigne.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-1 -->
+</ul></div></section>
+<section class="sec sec--paper" id="era-2" aria-labelledby="h-era-2"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Clubs et trophées à Miami</p><h2 id="h-era-2">2025–2023</h2></div><ul class="grid">
+        <!-- BEGIN:era-2 -->
+        <li>
+          <!-- src: ~/Pictures easychamp_fc_team_photos, July 2025; DOSSIER 2025 July Superliga row -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/miami-easychamp-champions-team-800.webp 709w, /assets/img/gallery/miami-easychamp-champions-team-1600.webp 1010w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-easychamp-champions-team-800.jpg" width="709" height="800" alt="L&#x27;effectif d&#x27;EasyChamp FC avec la coupe et les médailles sur un terrain éclairé par les projecteurs, après le titre en Superliga 8v8." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCV3mdPl4OOuazrmO43AykHPTNW4ZZJoAS6oQeBimHyrkFnmIcN8nHak5XGkV0aSNBkYB6Z70VYmlVNiI3mKo4OKKXOwsinbzJdTrEswXPQngCrj2SQxM32mHCgng0UVcqaiBnfb7c9XH5UUUUezQj/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>EasyChamp FC, champion de la Superliga 8v8<em>Miami, juillet 2025. Mon propre club : j'en suis le propriétaire, je l'entraîne et j'y joue avec le numéro 8. Une photo d'équipe. Personne n'y est nommé.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: PS23 champions card, July 2025; DOSSIER 2025 July Superliga row -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/miami-easychamp-champions-card-800.webp 640w, /assets/img/gallery/miami-easychamp-champions-card-1600.webp 1279w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-easychamp-champions-card-800.jpg" width="640" height="800" alt="Un visuel PS23 portant la mention July 2025 Champions sur une photo de l&#x27;effectif d&#x27;EasyChamp FC." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDWa6gtiflBb2FR3GpQsojbgsPxFZU94sssjbsc7lx3qBHhkdJGd1Ydf6VCVlYtu7ua8UQEYG5j780VHFqUflrulAOOaKj2aL9qzmtOiT7V5dy4K47nAFX9QjsorQmBl8zIxtbJoorqaSlYze5mCIYH+NFFFb2XYo//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>La carte des champions de la ligue<em>La PS23 l'a publiée pour le titre en Superliga 8v8 de juillet 2025. Photo : PS23 Soccer.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: PS23 Superliga honours board graphic; DOSSIER 2025 July Superliga row -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/miami-superliga-honours-board-800.webp 640w, /assets/img/gallery/miami-superliga-honours-board-1600.webp 1279w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-superliga-honours-board-800.jpg" width="640" height="800" alt="Le palmarès de la PS23 Superliga 8v8, avec les vainqueurs de 26 éditions depuis 2016, dont EasyChamp en face de juillet 2025." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCGGPfCrs5AYdR3pGSP/VrOB2xVi2H+gQbsYx6VBMqlwYwQQa6+ZPSxy7laS3ldyRKSPXNFPBcD/HNFa8wWZcsiWtUiJ2mMc5YDNNltmfJV0GP9qiisk7bDUE9SiBLjhX/76ooopOq7kXP/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Au palmarès<em>Le tableau d'honneur de la Superliga 8v8 de la PS23 recense 26 éditions depuis 2016. EasyChamp figure en face de juillet 2025. Photo : PS23 Soccer.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: ~/Pictures easychamp_fc_all, July 2025; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-easychamp-trophy-800.webp 451w, /assets/img/gallery/miami-easychamp-trophy-1600.webp 640w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-easychamp-trophy-800.jpg" width="451" height="800" alt="Une coupe argentée sur un socle en bois, avec une plaque des champions EasyChamp FC." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYAA4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC1e3dzbPwQVz0xU9lNcXCb3YY9AKq3s8Uk6qwyR6HrVu1mhSEAELUXGZ15byGWN7eMkjOccVPaQSCHEyYbJ6ntRRSGf//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>La coupe elle-même<em>Le trophée de la Superliga 8v8, avec la plaque des champions sur le socle.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos USSL 2024 album, EXIF 30 June 2024 20:56; DOSSIER 2024 USSL row; content/LATE-ADDITIONS.md gallery curation evidence -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-ussl-2024-trophy-hold-800.webp 601w, /assets/img/gallery/miami-ussl-2024-trophy-hold-1600.webp 769w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-ussl-2024-trophy-hold-800.jpg" width="601" height="800" alt="Anton Abyzov tenant le trophée de l’USSL sous les projecteurs du Traz Powell Stadium, en tenue de Dade County FC." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDtLEtceXjn0rbtrFUnCHrTbKGO3EsszhmxwT2p8cqgh92SeeKnnQGwNPjx1FFUhOxGdxopc6Gc/N++jLMx+U/zq1aXcVjuSSMSjgAmiiswHNcoWJCYBPTPSiiikI//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>USSL 2024, Dade County FC<em>Traz Powell Stadium, 30 juin 2024. Le championnat a été remporté et aucune phase finale n’a été disputée : il n’y a donc pas eu de finale à photographier.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos USSL 2024 album, EXIF 30 June 2024 20:56; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-ussl-2024-trophy-lift-800.webp 601w, /assets/img/gallery/miami-ussl-2024-trophy-lift-1600.webp 769w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-ussl-2024-trophy-lift-800.jpg" width="601" height="800" alt="Anton Abyzov soulève le trophée de l&#x27;USSL au-dessus de sa tête, sur le terrain, de nuit." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDOt9OLxeZjgVsWunL5O7HAFV7eMxRbDJkVdeRoUMYfkjNTzpgVzbpk0VCTNn7y/nRRzruMzxOznG7k1Jb3Ijt283Mjsflbd09qKKxQFtbiHaOI+ncmiiiiyA//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Le trophée brandi<em>Le même soir, 30 juin 2024, Traz Powell Stadium.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos USSL 2024 album, EXIF 30 June 2024; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-portrait-night-800.webp 601w, /assets/img/gallery/miami-dcfc-portrait-night-1600.webp 769w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-portrait-night-800.jpg" width="601" height="800" alt="Portrait d&#x27;Anton Abyzov sous un haut de Dade County FC, sur le terrain, de nuit." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCh9kWRyzHC5xnGcU+622jRWzXAlil4KY4FXFs54JfKUMRnJbHBrN1HT7qW+80qNikcr2qHqy9Eik+iXe9tseVzwfUUVvpcKEUbeg9KKnmY+VGxG7EsGGBWS2DcyKZtuG6CiirkQNMXJw4xRRRUWHY//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Dade County FC, le même soir<em>Traz Powell Stadium, 30 juin 2024.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Canon EOS R50 frame, Miami, 23 June 2024; content/LATE-ADDITIONS.md gallery curation evidence -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-gol-gala-2024-champions-800.webp 600w, /assets/img/gallery/miami-gol-gala-2024-champions-1600.webp 768w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-gol-gala-2024-champions-800.jpg" width="600" height="800" alt="Anton Abyzov et ses coéquipiers tiennent un chèque géant de champions de la Gol Gala daté du 23 juin 2024." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCAzxhM8A4qOCcu0gYEfLxmkt7cOpCknsxznmrMsJCszEnA4z2rTmlbyGoQe71M/dRTjbsSTsjoqOdGdkMMeSrK5UA9ATzTmBcqoJOTjBaiis76FDPtNx/zw/8AHqKKKkk//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Champions de la Gol Gala, 23 juin 2024<em>Le chèque géant indique la compétition, la date et la dotation : trois mille dollars. Miami.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Canon EOS R50 frame, Miami, 23 June 2024; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-gol-gala-drive-800.webp 533w, /assets/img/gallery/miami-gol-gala-drive-1600.webp 1067w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-gol-gala-drive-800.jpg" width="533" height="800" alt="Anton Abyzov, en tenue rose, efface un défenseur sur un terrain de Miami, avec des tours en arrière-plan." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCaS+a4CyS9EPGDSvNHNGxXunI71Thgkd5A2DHjgZ4zUiqUYEOnHTijmt1KdrKxEpZehI+hppzzRRWFyD//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Le défenseur effacé, Gol Gala<em>Miami, 23 juin 2024. La meilleure photo de jeu dont je détiens pleinement les droits.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Canon EOS R50 frame, Miami, 23 June 2024; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-gol-gala-duel-800.webp 800w, /assets/img/gallery/miami-gol-gala-duel-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-gol-gala-duel-800.jpg" width="800" height="533" alt="Anton Abyzov, en tenue rose, protège le ballon face à un adversaire sur un terrain de Miami." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCIyoWwCoPmDjNalvcBRKyMFKqOetc+IRvDcAirEbTHK+YBkEcdaOYcbX1LHiG/8t1aIjJQHkUVhagss9wQW3bEA5PaipsnqS4Rb2P/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Épaule contre épaule<em>Miami, 23 juin 2024, même match.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Miami album, EXIF 4 June 2024; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-squad-white-purple-night-800.webp 601w, /assets/img/gallery/miami-squad-white-purple-night-1600.webp 769w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-squad-white-purple-night-800.jpg" width="601" height="800" alt="Une équipe de foot à 8 en maillots blancs et shorts violets, alignée sur un terrain éclairé par les projecteurs à Miami." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDm7iBppC0EDbQBnHNS2du0Ts0ls7DBwDW2qtFu8o7MjnHOaGaVihYk7e2cZ+tZ+1VhpGCYZ8/6v9aK3+vJjTP0ope2CwA0maKK5yh2RRRRQB//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>L'équipe, Miami, 4 juin 2024<em>Maillot blanc et short violet, la tenue d'EasyChamp à 8 contre 8. Une photo d'équipe. La légende nomme l'équipe, pas le joueur.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Miami album; his own Facebook post on the Patagonia title; DOSSIER Team Patagonia row; content/LATE-ADDITIONS.md gallery curation evidence -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-patagonia-cup-and-medal-800.webp 450w, /assets/img/gallery/miami-patagonia-cup-and-medal-1600.webp 901w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-patagonia-cup-and-medal-800.jpg" width="450" height="800" alt="Anton Abyzov, en maillot rouge de Patagonia FC, tient la coupe dorée d&#x27;une main et une médaille de vainqueur de l&#x27;autre." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDFtdJ8ySRZjtCqSMetVlsn56V09zILY4Rch+px2pYEUxA7Rg9Mis/aG0qdoKXczNQnlMoRVyNpNWLSZ5LZGY4PoaKKzfwmbnJpJ7I//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Championship Clubs League 5v5, North Miami<em>Team Patagonia a remporté le titre, et j'ai joué pour eux dans ce tournoi à cinq. La plaque sur le socle de la coupe indique 5v5 Champions, Patagonia. Lors du match à 8 de février 2026, Patagonia était l'adversaire et je portais le blanc d'EasyChamp, numéro 8. L'année, 2024, vient de sa propre publication. Aucun jour n'est consigné.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Miami album, 2024; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/miami-patagonia-squad-medals-800.webp 450w, /assets/img/gallery/miami-patagonia-squad-medals-1600.webp 900w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-patagonia-squad-medals-800.jpg" width="450" height="800" alt="L&#x27;équipe de Team Patagonia en tenue rouge, médailles autour du cou, sur un terrain éclairé par les projecteurs." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDm0t5N2Np4rZjT7NEg3glhk+1SToJJGdY2BP8AKrNtbJ5f77JPap9oiuVWvcXzMUGQ0UVziP/Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Patagonia, médailles au cou<em>North Miami, 2024, après le titre à 5 contre 5. Une photo d'équipe. La légende nomme l'équipe, pas le joueur.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Miami album, 2024; research/gallery-curation.md -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/miami-patagonia-squad-night-800.webp 640w, /assets/img/gallery/miami-patagonia-squad-night-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-patagonia-squad-night-800.jpg" width="640" height="800" alt="L&#x27;équipe de Team Patagonia réunie autour de la coupe sur un terrain éclairé, de nuit." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnPssittIIP0rS0+0UTYnzgelXLoQyzFvMAK4IwevtUEaMXwnUjkenoaSmaKCa3Fd1VyFzgGitNLGJlBZzuI5ope0RDRCIY8fdpyxxochRRRXOA/eKKKKAP//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Avec la coupe, North Miami<em>Le même soir que les médailles. Une photo d'équipe. La légende nomme l'équipe, pas le joueur.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: https://www.instagram.com/p/CzEilVUOWuG/?img_index=1; Anton explicitly identified this as his UPSL training photo in Claude session efc7ca6c-7b5f-4484-b697-53a9b4ecc5a7 line 383; pink boots corroborate current description -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-player-passing-2023-800.webp 800w, /assets/img/gallery/miami-dcfc-player-passing-2023-1600.webp 1440w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-player-passing-2023-800.jpg" width="800" height="534" alt="Anton Abyzov, chasuble verte et chaussures roses, face à un coéquipier lors d&#x27;un exercice de passes à Dade County FC." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCO6uLsRNMqqVmJ6jJFTWms6g3l26IiADGStPLvkHk/7OeKkKsy4KDkc1PMLUz5b/c5Ekb5HBwKKvhR3A/Kin7QD//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Réception de passe, Dade County FC<em>31 octobre 2023. Un exercice de passes, en chasuble verte. <a href="https://www.instagram.com/p/CzEilVUOWuG/?img_index=1" target="_blank" rel="noopener">Publication d'origine</a>. Photo : Dade County FC.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: https://www.instagram.com/p/Cx8YT6iuty6/?img_index=1; Anton explicitly identified slide 1 as himself in Claude session efc7ca6c-7b5f-4484-b697-53a9b4ecc5a7 line 383 and session 934539a7-f7d5-4ebc-8804-697153ba05c7 line 14228; pink boots corroborate current description -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-player-ball-control-2023-800.webp 724w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-player-ball-control-2023-800.jpg" width="724" height="482" alt="Anton Abyzov contrôle le ballon, en maillot d&#x27;entraînement bleu de Dade County FC et chaussures roses." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBF1JVHMMg/4DQdSBbOxwv0qFZeKUSsDx0pKYWJzqUO37rj/gNFQl2I6ZHvRRzgf//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Contrôle du ballon, Dade County FC<em>3 octobre 2023. Maillot d'entraînement bleu et chaussures roses. <a href="https://www.instagram.com/p/Cx8YT6iuty6/?img_index=1" target="_blank" rel="noopener">Publication d'origine</a>. Photo : Dade County FC.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: https://www.instagram.com/p/Cx8YT6iuty6/?img_index=3; Anton explicitly selected slide 3 in Claude sessions efc7ca6c-7b5f-4484-b697-53a9b4ecc5a7 line 383 and 934539a7-f7d5-4ebc-8804-697153ba05c7 line 14228 -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-between-drills-2023-800.webp 724w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-between-drills-2023-800.jpg" width="724" height="482" alt="Des joueurs de Dade County FC à côté de piquets d&#x27;entraînement orange et de sacs de matériel, au bord de la piste." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDD3XUzLK0pz2OelB+0RuJA2WHerQlw4QIMUk06Ln5FB7HsPrUp3HKNitPd3M8e2V2KjjHaitGK5tZhtEeDjnHrRVWuLQ//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Entre deux exercices, Dade County FC<em>3 octobre 2023. Avec le groupe, à côté du matériel d'entraînement. <a href="https://www.instagram.com/p/Cx8YT6iuty6/?img_index=3" target="_blank" rel="noopener">Publication d'origine</a>. Photo : Dade County FC.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Original post dated 3 October 2023. User explicitly selected carousel slides 1, 3 and 6 in Claude session 934539a7-f7d5-4ebc-8804-697153ba05c7, user message line 14228. Original slide 6 downloaded from the public post on 21 September 2026. -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-rondo-2023-800.webp 724w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-rondo-2023-800.jpg" width="724" height="482" alt="Des joueurs de Dade County FC en maillots d&#x27;entraînement bleus et une chasuble verte font un toro sur un terrain extérieur." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwATyUsXimuVc9QfSi3ubXzI5ml3OigY2kgVQAUj7lPX5V2gKF7ip5kLUv3d5ZzJsx8pbcSForPZlA7CijmQ7n//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Toro, Dade County FC <span class="shot__ok" title="3 octobre 2023, Dade County FC">✓ daté</span><em>3 octobre 2023. Faire circuler le ballon à l'entraînement. <a href="https://www.instagram.com/p/Cx8YT6iuty6/?img_index=6" target="_blank" rel="noopener">Publication d'origine</a>. Photo : Dade County FC.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: https://www.instagram.com/p/CxGLGW1u2QP/?img_index=1; personally selected by Anton in Claude session efc7ca6c-7b5f-4484-b697-53a9b4ecc5a7 line 383; pink boots corroborate current description -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-dcfc-player-dribbling-2023-800.webp 724w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-dcfc-player-dribbling-2023-800.jpg" width="724" height="482" alt="Anton Abyzov conduit le ballon devant un plot d&#x27;entraînement, en maillot bleu, short sombre et chaussures roses." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDEWEKwzVh4FwSpzj0q0kinqq05Ci5IVRnvRdCKaIpT7oLA9xRVsy47L+VFF0B//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Conduite de balle, Dade County FC<em>12 septembre 2023. Travail avec ballon lors d'une séance d'entraînement du club. <a href="https://www.instagram.com/p/CxGLGW1u2QP/?img_index=1" target="_blank" rel="noopener">Publication d'origine</a>. Photo : Dade County FC.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Instagram CoiC9A-Le-e, @easychamp_inc, 11 February 2023, tagged aabyzov and torbinskiydmitry; SanDisk 00-INBOX/ig-vk-football-2026-09-23/igphoto-CoiC9A-Le-e-1.jpg -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/2-miami-with-dmitry-torbinskiy-800.webp 640w, /assets/img/gallery/2-miami-with-dmitry-torbinskiy-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/2-miami-with-dmitry-torbinskiy-800.jpg" width="640" height="800" alt="Anton Abyzov en débardeur d’entraînement blanc sur un terrain éclairé par les projecteurs, à côté de Dmitry Torbinskiy en maillot noir." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl1tJ3k2iNs1da08zTt0SHzEOGHrWjcSyebFHtWMY4fpWpp+xNNeRolyMjPrUczauOyOL+xXX/ADyf8qK6d4gXJD4B5x6UVn7ZBYo6tv8AMVCGLKDxVq2vL1IUhMSNG3TI5Aooo5uWKsO1yYtk9qKKK5xH/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Avec Dmitry Torbinskiy <span class="shot__ok" title="11 février 2023, EasyChamp (@easychamp_inc)">✓ daté</span><em>Miami, après un match dans la même équipe. Torbinskiy a marqué pour la Russie lors de la victoire 3-1 contre les Pays-Bas à l’Euro 2008. Publiée le 11 février 2023. Photo : EasyChamp (@easychamp_inc).</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Instagram C6340DluNvB slide 2, @artem_baranovskyi, 12 May 2024, tagged aabyzov; SanDisk 00-INBOX/ig-vk-football-2026-09-23/igphoto-C6340DluNvB-2.jpg -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/2-miami-dcfc-party-with-artem-2024-800.webp 640w, /assets/img/gallery/2-miami-dcfc-party-with-artem-2024-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/2-miami-dcfc-party-with-artem-2024-800.jpg" width="640" height="800" alt="Anton Abyzov en costume bleu marine et Artem Baranovskyi en tee-shirt blanc devant un mur de ballons du Dade County Football Club." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC7dXYjk2h8Mo3EdiKR2vVgadArDGQM9RWNq80UtzvicMCAox1q7JqkSWK2+H80YX0Fc1PD0+ROS1Lc30EjvrrYMzAH0J6UVKINOA+cLu75Y0U/rkFpyv7iPZS7mCts5bJyOc81ZntpXDNlXAwzY7UUVo5tu53ewgo2NeLUbRYlUxnIAHK0UUVxOhEv2UT/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Dade County FC, premier de l’USSL <span class="shot__ok" title="12 mai 2024, Artem Baranovskyi (@artem_baranovskyi)">✓ daté</span><em>La fête du club en mai 2024 avec Artem Baranovskyi, avec qui j’entraînais l’équipe. Publiée le 12 mai 2024. Photo : Artem Baranovskyi (@artem_baranovskyi).</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Instagram DJhtQ0RNme7 slide 1, @miamisoccerteam, 11 May 2025; SanDisk 00-INBOX/ig-vk-football-2026-09-23/igphoto-DJhtQ0RNme7-1.jpg -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/2-miami-gulfstream-throw-in-2025-800.webp 640w, /assets/img/gallery/2-miami-gulfstream-throw-in-2025-1600.webp 840w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/2-miami-gulfstream-throw-in-2025-800.jpg" width="640" height="800" alt="Anton Abyzov en maillot blanc de Gulfstream et short foncé, avec le numéro 12, effectuant une touche sur un terrain synthétique." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDRh1KIxKJHAY+opn9ohZ2YjMCj73vVUfZhwFZvwApv26BJWtjGdzDgdRUqVybo0DqUGf8AWLRWeVQ8+Uv5UUvaiuVRdA9VKj6VJHAryefgHjAzRRWdtQQ0yEnJzRRRSsSf/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Gulfstream FC, numéro 12 <span class="shot__ok" title="11 mai 2025, SC Gulfstream (@miamisoccerteam)">✓ daté</span><em>Une touche pour le SC Gulfstream, Miami. Publiée le 11 mai 2025. Photo : SC Gulfstream (@miamisoccerteam).</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-2 -->
+</ul></div></section>
+<section class="sec sec--pitch" id="era-3" aria-labelledby="h-era-3"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Rangsdorf et la vie sur la route</p><h2 id="h-era-3">2022</h2></div><ul class="grid">
+        <!-- BEGIN:era-3 -->
+        <li>
+          <!-- src: media/google-photos/physique/2022-06-05_hotel-gym_IMG_6993.heic, iPhone HEIC, EXIF 5 June 2022 17:53:15; research/chrome-abs.md section 2 row 12 -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/fitness-hotel-gym-2022-800.webp 600w, /assets/img/gallery/fitness-hotel-gym-2022-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-hotel-gym-2022-800.jpg" width="600" height="800" alt="Anton Abyzov, en haut d&#x27;entraînement noir, contracte les deux bras dans la salle de sport d&#x27;un hôtel, entouré d&#x27;appareils de cardio et d&#x27;haltères." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC88YVtyDcR3BphYbsckld1U574WsgOH2suSmOnFZenytc6m5EkiqEyBmpsVd3N3efT9KKkE3AyDmilZBdkF5MnktEyF/lIJx0rI0iZEhby1zMTtBx70UVK2Le5rh7ogHyk/Oiiio5mPlR//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Salle de sport d'hôtel, juin 2022 <span class="shot__ok" title="5 juin 2022, mon propre appareil, archives familiales">✓ daté</span><em>5 juin 2022, en déplacement, entre les appareils de cardio et les haltères. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/germany/2022-04-10_rangsdorf_match_red-kit_IMG_2576.HEIC, EXIF 2022-04-10 15:05:47; DOSSIER 2022-04-10 row -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/europe-rangsdorf-2022-match-800.webp 800w, /assets/img/gallery/europe-rangsdorf-2022-match-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/europe-rangsdorf-2022-match-800.jpg" width="800" height="600" alt="Anton Abyzov dans la tenue rouge du SV Rangsdorf 28, sur le terrain pendant le match contre le SV Siethen." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCreWyiRY4jvTbkn3qS304Sxgb442wCQxq5sHoKaFIOcD8qx9ouwJ9ysujxTO6faURl+96H0xRVoKck/wBKKPaeQrklIKKKxEJ60UUUAf/Z);background-size:cover;background-position:center"></picture>
+            <figcaption>SV Rangsdorf 28 contre SV Siethen<em>Stadion Rangsdorfer See, 10 avril 2022. J’ai marqué le seul but de l’après-midi. Photo personnelle.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: User-selected Google Photos photo AF1QipNAstHG7gN7rEuNrzIw1ocaZrtyEfylBGZGJr8, IMG_1410.HEIC, also present in Downloads; EXIF 10 April 2022 13:37:37. Explicit source in Claude session efc7ca6c-7b5f-4484-b697-53a9b4ecc5a7 user message line 38. -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/europe-rangsdorf-2022-banner-800.webp 600w, /assets/img/gallery/europe-rangsdorf-2022-banner-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/europe-rangsdorf-2022-banner-800.jpg" width="600" height="800" alt="Anton Abyzov devant le panneau du club SV Rangsdorf 28 e.V., à l&#x27;entrée du stade." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDWkSCWZjDOqyqOFqpZjzJ3xgZYk46HtVaSMvMyxlRxndng0y2WWPftZQwbjkj8aV0NpHRhYwMYNFYv2q6/vR/nRRzomxz9jKzQ3ALkKqZHPQ1r20qyW8b8kleTRRRIqI7K0UUVBZ//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Rangsdorf, 10 avril 2022<em>SV Rangsdorf 28 e.V., Birkenallee 49. Je vivais à Rangsdorf ce printemps-là et je jouais pour le club local.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Germany album original: media/google-photos/germany/2022-04-10_134113_rangsdorf_img_1411.heic. Selected 21 September 2026 as match-day context; no personal player attribution. The written list on the original image explicitly reads 17 Anton. -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/europe-rangsdorf-2022-tactics-800.webp 800w, /assets/img/gallery/europe-rangsdorf-2022-tactics-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/europe-rangsdorf-2022-tactics-800.jpg" width="800" height="600" alt="Un tableau blanc avec un schéma de terrain et des aimants de joueurs, dans le vestiaire rouge, blanc et bleu de Rangsdorf." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDYaF+Gz+tRyRuRgn9aJdYsljGJN/svJqm2u2JBOX46/LUcpTbW49tw3Anp70VAb63mjlZJBznAPBoqLFHNSMRkgkHHarFuAbGUkZOBzRRXRP4mZvoQLxdx/hRRRWc+hoj/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Avant le coup d'envoi, Rangsdorf <span class="shot__ok" title="21 septembre 2026, mes propres archives">✓ daté</span><em>10 avril 2022, 13:41. Le tableau du jour de match m'inscrit sous le numéro 17 : Anton. Photo : mes propres archives.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Germany album original: media/google-photos/germany/2022-04-10_150007_rangsdorf_img_2559.heic. Selected 21 September 2026 as match-day context; individual players are not identified. -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/europe-rangsdorf-2022-lineup-800.webp 800w, /assets/img/gallery/europe-rangsdorf-2022-lineup-1600.webp 1400w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/europe-rangsdorf-2022-lineup-800.jpg" width="800" height="600" alt="Les joueurs de Rangsdorf en rouge et ceux de Siethen en blanc se rassemblent sur le terrain, près de la ligne médiane." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCCG/kmnVV3epxU39pIxdc8E1YNtESTjBPpS/ZowOFFY+2QaFFtXlOEJYRg4FFXGto2OSDRT9sgJfWkPaiiuYQmTnrRRRQB/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Entrée des équipes, Stadion Rangsdorfer See <span class="shot__ok" title="21 septembre 2026, mes propres archives">✓ daté</span><em>SV Rangsdorf 28 et SV Siethen, 10 avril 2022, 15:00. Les équipes se rassemblent avant le match. Photo : mes propres archives.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos original IMG_2669, 10 April 2022 16:08:37. Number 17 visible on shirt; same-day IMG_1411 tactics board explicitly reads 17 Anton. Identity supported by written roster and shirt number, not visual face matching. -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/europe-rangsdorf-2022-number17-play-800.webp 600w, /assets/img/gallery/europe-rangsdorf-2022-number17-play-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/europe-rangsdorf-2022-number17-play-800.jpg" width="600" height="800" alt="Le numéro 17 de Rangsdorf, en rouge, remonte le terrain aux côtés de coéquipiers et de joueurs de Siethen, avec le tableau d&#x27;affichage en arrière-plan." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDGhTlmlBTnilnvrlkEageWowOM1cWL724deelHkALhQtL2iFoigLi6Axg8e1FWjDzyhJ9aKfOhFveKNwoornAMj1ooooA//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Numéro 17, Rangsdorf <span class="shot__ok" title="10 avril 2022, mes propres archives">✓ daté</span><em>10 avril 2022, 16:08. En rouge contre Siethen ; le tableau d'équipe du jour de match m'inscrit sous le numéro 17. Photo : mes propres archives.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-3 -->
+</ul></div></section>
+<section class="sec sec--paper" id="era-4" aria-labelledby="h-era-4"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Futsal et préparation physique à Minsk</p><h2 id="h-era-4">2021–2018</h2></div><ul class="grid">
+        <!-- BEGIN:era-4 -->
+        <li>
+          <!-- src: media/google-photos crossfit set, EXIF 29 April 2021; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/fitness-crossfit-floor-800.webp 800w, /assets/img/gallery/fitness-crossfit-floor-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-crossfit-floor-800.jpg" width="800" height="535" alt="Une vue en noir et blanc d&#x27;une salle de sport, des athlètes entre les racks et les structures." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDKNq8C4mjU54B3f4UyG3LSbRE0nshqSXUGkLKRgNg/jUhvym14xhhgbhQA2DTb4y5ghIB4w3T6GimDVbmKRvKkKjdnHvRQB//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>La salle<em>Minsk, 29 avril 2021.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos crossfit set, EXIF 29 April 2021; content/media-map.md note on the Argument 2024 caption; result: YouTube BKab-1SjT4A description "Мужская категория: 1-е место - Антон Абызов" and VK wall7307656_109 (3 May 2021) -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/fitness-crossfit-podium-800.webp 800w, /assets/img/gallery/fitness-crossfit-podium-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-crossfit-podium-800.jpg" width="800" height="535" alt="Des athlètes sur un podium à la fin d&#x27;une compétition en salle." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDP+xyW6ESIjDpnOajhtXd/ljEgzjapqV9RlMQBwA3X3p0F8yTRyKeR1HagBkel3jTb4Y9hU+vSimSalOs0hSTGX3HHrRQB/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Première place, championnat du club ARGYMENT<em>Catégorie hommes, Minsk, avril 2021. Le résultat figure dans la description du film de la compétition et dans ma propre publication du 3 mai 2021.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/named/crossfit-minsk-2021-04-25/, Nikon D4, EXIF 25 April 2021; research/chrome-round2.md crossfit finding -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/fitness-crossfit-burpee-over-bar-800.webp 800w, /assets/img/gallery/fitness-crossfit-burpee-over-bar-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-crossfit-burpee-over-bar-800.jpg" width="800" height="533" alt="Anton Abyzov en plein burpee au-dessus d&#x27;une barre chargée, lors d&#x27;une compétition de crossfit." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDTtgxgj+70rJ1Nme6kjRWJGCcVUj1WfYFzgAcFaI9QkbzJJBkjAFKxKKt/gsu0FZOjEdqKllnjeHBXMhcktjtRTRVz/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Championnat du club ARGYMENT, 25 avril 2021<em>Compétition interclubs de CrossFit à Minsk.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/named/crossfit-minsk-2021-04-25/, EXIF 25 April 2021; research/chrome-round2.md crossfit finding -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/fitness-crossfit-dumbbell-lunge-800.webp 533w, /assets/img/gallery/fitness-crossfit-dumbbell-lunge-1600.webp 1067w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-crossfit-dumbbell-lunge-800.jpg" width="533" height="800" alt="Anton Abyzov en fente, un haltère tenu au-dessus de la tête, lors d&#x27;une compétition de crossfit." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIl09t2Ax/MVBJYHPyOxPuKvWzzFpI22yAuDnPP4VFtIaRy6xsQcfN0P0pak/MqROVKndyPShizMTnOTmiirsB/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Fente avec charge au-dessus de la tête<em>Compétition de crossfit interclubs à Minsk, 25 avril 2021.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/physique/2019-06-12_larnaca-cyprus-beach_DSC_2441.jpg, Nikon D3100, EXIF DateTimeOriginal 12 June 2019; Google Photos album Cyprus Kipr Larnaka leto 2019; research/chrome-abs.md section 1 -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/fitness-larnaca-2019-800.webp 533w, /assets/img/gallery/fitness-larnaca-2019-1600.webp 1067w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-larnaca-2019-800.jpg" width="533" height="800" alt="Anton Abyzov en squat profond sur une plage de Larnaca, entre deux troncs de palmiers, poings levés, la Méditerranée derrière lui." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDT05h/Z8bucBRgn6VLdM8duZIQG4zz6VX0+TFu0eAQGPHeplYzQ7H+Q4IxT59LC5OpEmlqJN5lfcDxjipobWSKT5kQr/eycmiisTU//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Larnaca, juin 2019 <span class="shot__ok" title="12 juin 2019, mon propre appareil, archives familiales">✓ daté</span><em>Chypre, 12 juin 2019, sur la plage de Larnaca. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: 02-REUSABLE/football/soccer-local/Территория - Лидсельмаш.mp4 at 158s; match 17 Feb 2019 -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Match de futsal au SK MAPID à Minsk, un joueur en tenue vert clair balle au pied, avec le terrain et la tribune derrière." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Territory-Maxline contre Lidselmash, 17 février 2019<em>SK MAPID, Minsk, face au champion de Biélorussie en titre.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: VK wall7307656_95 'Турнир в Словакии', 7 September 2018, photo7307656_456239722; SanDisk 00-INBOX/ig-vk-football-2026-09-23/vk-wall95-slovakia-2018-09-07.jpg -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/gallery/4-europe-slovakia-tournament-2018-800.webp 800w, /assets/img/gallery/4-europe-slovakia-tournament-2018-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/4-europe-slovakia-tournament-2018-800.jpg" width="800" height="450" alt="Une équipe en tenue bleu et blanc pose pour une photo de groupe sur un terrain en herbe, dans une campagne vallonnée." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCefVGVQIgwbuetVv7WuU4LH8RWWZmU8Ej8aX7QxYHJ6+tEJwUbNGbT7m5Z6mXVvOkIOeCtFYvnE84x9BRWEnd3RV2f/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Slovaquie, septembre 2018 <span class="shot__ok" title="7 septembre 2018, Anton Abyzov, VK">✓ daté</span><em>Une équipe biélorusse lors d’un tournoi face à des formations slovaques. Je suis à côté de Dmitry Verkhovtsov (Верховцов), qui a disputé de nombreux matchs avec l’équipe nationale de Biélorussie. Photo : Anton Abyzov, VK. Date et pays tirés de ma propre publication VK du 7 septembre 2018. C’est moi qui nomme les personnes sur la photo.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Instagram CE0Bd5tJxgR (private link from Anton), @mikt0r, 6 September 2020, 'Scout team Belarus. #scoutsportclub', slide 1; Anton tagged on slide 2 as number 10; SanDisk 00-INBOX/ig-vk-football-2026-09-23/ig-CE0Bd5tJxgR-mikt0r-1.jpg -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/4-minsk-scout-team-belarus-2020-800.webp 800w, /assets/img/gallery/4-minsk-scout-team-belarus-2020-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/4-minsk-scout-team-belarus-2020-800.jpg" width="800" height="800" alt="Anton Abyzov en tenue blanche à manches longues avec liserés rouges, derrière un coéquipier barbu, lors d’un match de futsal dans une salle ornée d’une banderole Mapid." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDOEyDBJyD6DmkE6yMCGwexK1ZWBQcpED9BWhsia0O2DCkYKj1x1o5h8qMpplgVXZm+boQuc0Vci05CoDouAPU0UXQWa2Zq7Mfw4/ConkaKYKSvlsOB3BooqCiYhRxjFFFFAH//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Scout team Belarus, Minsk <span class="shot__ok" title="6 septembre 2020, @mikt0r">✓ daté</span><em>Futsal en blanc, septembre 2020. Publiée le 6 septembre 2020. Photo : @mikt0r.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-4 -->
+</ul></div></section>
+<section class="sec sec--pitch" id="era-5" aria-labelledby="h-era-5"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Itransition, Kayseri et entraînement</p><h2 id="h-era-5">2015–2012</h2></div><ul class="grid">
+        <!-- BEGIN:era-5 -->
+        <li>
+          <!-- src: YouTube e1Rb1zbKYuM, "Futsal Season 2014-2015 (Anton Abyzov)", 8.2s -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/futsal-2015-run.webp" type="image/webp"><img src="/assets/img/futsal-2015-run.jpg" width="1100" height="619" alt="Match de futsal sur un parquet en salle, un joueur en vert conduit le ballon dans l&#x27;axe face à une équipe en jaune." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCsl/cjooA+lWE1CYYOzgHmolIBHFXVgH2Rpe4PSoTfczdiIanPziJcGilGDjiinzS7hZdj/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Percée solitaire dans l'axe<em>Itransition, Minsk, saison 2014/15.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: YouTube e1Rb1zbKYuM, burned-in caption "Итранзишн 4-5 РТИ · 27.12.2014", 27.3s -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/futsal-2015-drive.webp" type="image/webp"><img src="/assets/img/futsal-2015-drive.jpg" width="1100" height="619" alt="Un joueur en tenue verte provoque un défenseur en jaune sur un terrain de futsal en salle." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCCe+llhKKCATnB6U/7eyWhjlj+Ucq3TFDFRtGOCcU7UlESpEox0Oam7ZlZXLUGsu8Cfu9/HWiiNEIUBQKKach2if/Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Face à la défense<em>Itransition contre RTI, 27 décembre 2014.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/physique/2013-07-15_minsk-schorsa-flat_IMG_1245.jpg, iPhone 5, EXIF 15 July 2013 23:40:02, GPS Minsk; research/chrome-abs.md section 1 -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/fitness-minsk-2013-800.webp 600w, /assets/img/gallery/fitness-minsk-2013-1600.webp 960w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-minsk-2013-800.jpg" width="600" height="800" alt="Anton Abyzov photographié chez lui à Minsk en 2013, torse éclairé de côté, abdominaux dessinés." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQtYXnjDgYRujGs29gmiv1xFuC/dwOtWYr+Q3CAErCBtVfWrslyEjLtnjpmsbnZFWRnYfupB9KKzX1S4LsRL3PaigvnFa6T7ZHGTgL+pq7e3QMG0N2oopW2MovQyfJY85FFFFSLmZ//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Minsk, juillet 2013 <span class="shot__ok" title="15 juillet 2013, mon propre appareil, archives familiales">✓ daté</span><em>15 juillet 2013. Tirée de mes archives photo personnelles. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: media/google-photos/physique/2013-07-15_minsk-schorsa-flat_IMG_1246.jpg; EXIF 15 July 2013 23:40:57; original selected by Anton; imagegen light/color correction 21 September 2026, original preserved, edited master media/edits/fitness-minsk-2013-front-corrected.png. -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/fitness-minsk-2013-front-corrected-800.webp 600w, /assets/img/gallery/fitness-minsk-2013-front-corrected-1600.webp 1086w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-minsk-2013-front-corrected-800.jpg" width="600" height="800" alt="Anton Abyzov de face, abdominaux visibles, Minsk, juillet 2013." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCebTsxgIc7RgZ71LDZ+XamPdjdycdqWwufOgGR81JqNyYLKQ4w204rnuzr0sUf+EfftOMfSipYb+UwpmJs7R2oo1Jsh2mRlLeNs9RzS6qoltmUnA70UUdR/ZMVtWlViqu20HA5ooorQysf/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Minsk, juillet 2013 <span class="shot__ok" title="15 juillet 2013, mon propre appareil, archives familiales">✓ daté</span><em>15 juillet 2013. Couleurs et contraste retouchés à partir de la photo d'origine. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012; DOSSIER 2012 Kayseri row; content/LATE-ADDITIONS.md gallery curation evidence; playing is my own account, content/LATE-ADDITIONS.md «Anton's answers, round 2» -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-medal-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-medal-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-medal-800.jpg" width="800" height="600" alt="Anton Abyzov dans le maillot blanc de l’équipe nationale de Biélorussie, une médaille d’or au ruban de champion d’Europe à la main." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB0aN5e5RwDyaj1CIM0ROOn5VPbzoIQrZBq4628se6QA7ecmpaKi0tyhMq4oqO5lB5GB9KKLElVCdvWrKO2xfmPT1ooqkBSmJyeT1NFFFJiP//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Médaille d’or, Kayseri, 9 juin 2012<em>Kayseri, 9 juin 2012, la dernière journée. J’ai joué le Championnat d’Europe 2012 et voici la médaille d’or de cette compétition, sur un ruban de champion d’Europe. La médaille est bien dans le cadre ; ma participation repose sur mon propre témoignage, car la liste de l’effectif n’a jamais été publiée.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-cup-lift-800.webp 600w, /assets/img/gallery/national-team-kayseri-2012-cup-lift-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-cup-lift-800.jpg" width="600" height="800" alt="Un joueur en maillot blanc de la Biélorussie soulève la coupe du championnat au-dessus de sa tête, dans l&#x27;embrasure du but, sous la banderole de Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCpNcR3AUPG3HpRb3ENuSUR8njmraNE2AFjBPtT8QK4G2M4B5xRzaFadiD+0Y/7jUVPvh/uR/8AfNFLmD3exnK5Re1PWRicjA49KKK7eSPY4eeXcXe3r+lFFFL2cew+eXc//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>La coupe, devant le but<em>Kayseri, 9 juin 2012, le jour de la finale.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-cup-goal-800.webp 600w, /assets/img/gallery/national-team-kayseri-2012-cup-goal-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-cup-goal-800.jpg" width="600" height="800" alt="Un joueur en maillot blanc de la Biélorussie tient la coupe devant le but, avec la banderole rouge de Kayseri tendue sur le mur derrière." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDPnminC4kK49qktbhIN2ZiwPTrSpHBj7g/BqVYLcFRs/NqOZ2KtHsSfbYv+ehopvk239wf99UUcwrRKKNsX1x604TEnOBRRXT7OPY5FOXcdvPoKKKKXs49h+0l3P/Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Sous la banderole de Kayseri<em>Kayseri, 9 juin 2012, après la finale.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012 18:51; research/gallery-curation.md; playing is my own account, content/LATE-ADDITIONS.md «Anton's answers, round 2» -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-squad-flag-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-squad-flag-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-squad-flag-800.jpg" width="800" height="600" alt="L&#x27;équipe de Biélorussie debout derrière une banderole de sponsor, le drapeau national brandi derrière elle, dans la salle de Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCdL6LeU2nIGelOF+rpvjTK5xkmqcclozmViVYjGDU8S2iQNHG/GSTzVcrHeJFJqY8xeMqQciisfUlSC4RIshSMnnNFQ3bSxagpaq5eukUOmFA+cdveqt4xHk8nknPv81FFbMxQuq/6z/gI/nRRRWE9zsofCf/Z);background-size:cover;background-position:center"></picture>
+            <figcaption>L'équipe et le drapeau<em>Kayseri, 9 juin 2012. L'équipe derrière la banderole du sponsor, drapeau biélorusse levé. C'est l'équipe dans laquelle j'ai joué.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 9 June 2012 18:51; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-squad-banner-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-squad-banner-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-squad-banner-800.jpg" width="800" height="600" alt="Un plan plus large de l&#x27;équipe de Biélorussie derrière la banderole du sponsor, dans la salle de Kayseri, avec la signalétique du tournoi au mur." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxHcAYAA5OKlSRmPLIPwrPZo5CEWUKe4NSQpClsIvOUsBjOatphoWpJEMZ/eDggE0Vz15+5cJv3hhnPrRWTk0zaEItbkkwAZiBz6/jSx/6tvqf6UUVuc5BfD5bf/dNFFFZT3Oijsf/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Même instant, deuxième appareil<em>Kayseri, 9 juin 2012, sous l'inscription de la salle Futbol engel tanimaz, « le football ne connaît pas d'obstacles ».</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 5 June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-delegation-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-delegation-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-delegation-800.jpg" width="800" height="600" alt="Toute la délégation biélorusse en polos rouges de l&#x27;équipe, alignée sur la piste d&#x27;athlétisme d&#x27;un stade à Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDaks0iCl1EZ6cPSfa7eOMgsoPTdurK1fUBeKpA2lffrWKcsfmYD8Kn0NoxVtTpSFuVbZIzAc/KRxRWJYO8O5wRg8YzRRztdDKUHf3R+Ka4HpRRSN0IoAB+lFFFAz//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>La délégation, Kadir Has Stadium<em>Kayseri, 5 juin 2012, en polo rouge de l'équipe sur la piste d'athlétisme.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, EXIF 2 June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-departure-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-departure-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-departure-800.jpg" width="800" height="600" alt="Des joueurs en survêtements rouges de la Biélorussie, debout au-dessus des sacs de l&#x27;équipe, dans un hall de départ d&#x27;aéroport." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDLjc+c6St8gbHPNXIrcMAdwGOgNVLa5RxJujUEjIJplxLJFMpDBlIBzVO6HBQb947LTmENqkYx9SaKw2mc6SSGIOPy5oprUXJG71Ma6AW4bAA47VegUGzhJAPHcUUU3siV1H3XGmsBwM/1oooqo7ESP//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Départ de Minsk, 2 juin 2012<em>Survêtements rouges et sacs de l'équipe à l'aéroport, le début du voyage.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-cup-800.webp 600w, /assets/img/gallery/national-team-kayseri-2012-cup-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-cup-800.jpg" width="600" height="800" alt="Le trophée du championnat d&#x27;Europe IBSA 2012 posé sur une table." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwByzO3CjFDiQn5s8U7b8p+Xr6UR7FU7lY985pIGR7TRUmYfQ/nRTEE+9IvkyTnsM0sG8xHOQc9xiiinZBcjIkyflWiiiiwXZ//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Le trophée lui-même<em>Kayseri, juin 2012.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-lineup-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-lineup-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-lineup-800.jpg" width="800" height="600" alt="Deux équipes de futsal alignées face aux officiels sous les drapeaux nationaux avant un match à Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCacx+QyhwCeBk0lkuI2E+xhn5eapTxeaeXwQeTjrSJFiERBi3z5zio51c1UHy2H6jbW/3l+Uexopktk5jBbIAUAZoodRC9kwkq5YAbhwKKK5vtHV9kn1D/AFY+lFFFOe4obH//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Alignement avant un match<em>Kayseri, juin 2012, les deux équipes et les officiels sous les drapeaux du tournoi.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-huddle-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-huddle-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-huddle-800.jpg" width="800" height="600" alt="Des joueurs en rouge et blanc réunis sur le terrain bleu après un match à Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBkT3Ea5MAwPeoHCmXzjb5YnOQ3FSGV3iZc9RioEjcW5jZuT3q/ZzEq0DRNxMYHT7ISWwQc0VH9odYxnHAopckw9rDsU4vuipO1FFdbOJDX+5RRRQM//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Le cercle d'après-match<em>Kayseri, juin 2012.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-match-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-match-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-match-800.jpg" width="800" height="450" alt="Un plan large d&#x27;un match de futsal en cours dans la salle de Kayseri, des joueurs en rouge et blanc sur un terrain bleu." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCIwSRsVefec8/LTj5gGDLgf7lX1tlBA9KimjxMFGMEHNUosXPEpMJlXCzjA/2KKtCEEc0U+QnnZ//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>En jeu, Kayseri<em>Juin 2012. Les images de match de cet album sont toutes en plan large et aucun numéro de maillot n'est lisible : voyez-y l'ambiance de la salle, pas une identification.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos Turkey 2012 album, June 2012; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-kayseri-2012-trophy-plaque-800.webp 800w, /assets/img/gallery/national-team-kayseri-2012-trophy-plaque-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-kayseri-2012-trophy-plaque-800.jpg" width="800" height="600" alt="Gros plan sur la plaque gravée du trophée du championnat d&#x27;Europe 2012 à Kayseri." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDpFEFxC8R4wMkisLUbZQpjR/k7ggVLNJc2Uk6wW7OMKuSCc+9UJpr+YE/ZGz/umnKKZKZk3EKo+1W3cZoq3Fplzcyk3CNAAvBIooSBtHfL0pr/AHTRRT6i6GBqhO5uTRRRSe4I/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Ce que dit la plaque<em>La plaque gravée du trophée : IBSA B2/B3 Futsal European Championship, 4 au 9 Haziran (juin) 2012, Kayseri, Turkiye, I. L'événement, les dates, la ville et le classement sur une seule image.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: VK wall7307656_56, 1 January 2014, photo7307656_317514017, date stamp 29.12.2013; SanDisk 00-INBOX/ig-vk-football-2026-09-23/vk-wall56-chelsea-liverpool-2013.jpg -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/5-europe-stamford-bridge-2013-800.webp 800w, /assets/img/gallery/5-europe-stamford-bridge-2013-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/5-europe-stamford-bridge-2013-800.jpg" width="800" height="600" alt="Anton Abyzov, lunettes et manteau noir, dans les tribunes de Stamford Bridge, avec la pelouse et les joueurs à l’échauffement derrière lui." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC3beI5xGoNsrAD+E1ci8QmXgWrk5xwa4QSSQh0yeB1FOsLq4SbKyFQepJ4ouKx276xdljtgAHvRXMpqd2spDMR3GTRU+/2/EV7FaYDyH4H3azYydjjPHpRRREtjySUOSeKKKKsk//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Chelsea 2-1 Liverpool, depuis les tribunes <span class="shot__ok" title="1er janvier 2014, Anton Abyzov, VK">✓ daté</span><em>Stamford Bridge, 29 décembre 2013. L’horodatage de l’appareil figure sur l’image. Photo : Anton Abyzov, VK.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-5 -->
+</ul></div></section>
+<section class="sec sec--paper" id="era-6" aria-labelledby="h-era-6"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Équipe nationale et premières années en club</p><h2 id="h-era-6">2010–2007</h2></div><ul class="grid">
+        <!-- BEGIN:era-6 -->
+        <li>
+          <!-- src: ~/Pictures Itransition squad photograph, EXIF 23 March 2010; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/belarus-itransition-futsal-squad-800.webp 800w, /assets/img/gallery/belarus-itransition-futsal-squad-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/belarus-itransition-futsal-squad-800.jpg" width="800" height="600" alt="Une équipe de futsal en tenue blanche alignée avec son entraîneur devant un but vert, dans une salle de sport de Minsk." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFCpk8pMF8ZxTg4YuABlODVHT5Qb0SXD/wEZHGa0TLZDcerN9761noQkiJ42J+6Md6KrXV2FmfyGO0rjn1opaEtIpx9RUoooqGQMl6miiimgP/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Itransition, l'équipe de l'entreprise<em>Minsk, 23 mars 2010. L'équipe de futsal que j'ai lancée au sein de l'entreprise, dans la tenue du sponsor. Je fais partie de cette équipe, et à cette taille d'image je ne vais désigner personne. Le joueur que je suis n'est pas indiqué.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Ministry of Sport and Tourism identity booklet photographed 2026-09-19, media/pictures-folder/master_of_sport_certificate_preview.jpg, 1400x1050; content/LATE-ADDITIONS.md Master of Sport section -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/gallery/national-team-master-of-sport-certificate-800.webp 800w, /assets/img/gallery/national-team-master-of-sport-certificate-1600.webp 1183w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-master-of-sport-certificate-800.jpg" width="800" height="320" alt="Le livret d’attestation de Maître des sports délivré par le ministère des Sports et du Tourisme de Biélorussie, ouvert à la page qui mentionne Anton Abyzov." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAKABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCnp0dpLbpHIiFwuSSOc/WnPpllJehNpC+XuOG75rnpGPn9TRHI4fIdh+NSUa9xpdokcjKGG0E9aKzWlkKMC7EY9aKEI//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Maître des sports, 18 novembre 2009<em>Ministère des Sports et du Tourisme de la République de Biélorussie. Le livret mentionne le futsal pour déficients visuels et indique le 18 novembre 2009 comme date d'attribution du titre. Le numéro du certificat est volontairement flouté.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos album Нант 2009; media/google-photos/nantes-2009/_picks/01_ANTON-with-european-cup_2009-07-05_0943_IMG_1978.jpg, EXIF 5 July 2009 09:43, 1600x1200; the Google face tag on the album names me in this frame; research/anton-additions-2026-09-19.md, Google Photos round 3 -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-nantes-2009-european-cup-800.webp 800w, /assets/img/gallery/national-team-nantes-2009-european-cup-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-nantes-2009-european-cup-800.jpg" width="800" height="600" alt="Anton Abyzov en survêtement de la Biélorussie, à côté de la coupe du championnat d&#x27;Europe posée sur un comptoir de l&#x27;aéroport de Nantes, un bras levé." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCP7RBBcsVjDDGQN3AIqvPcRASNsDM5yOelbky2sUuSsa8d8VlazaQrH50E25nfJUYwBii4JLqUnu9zRK0W5QOcZHFFdE89lHaox8scDoBmikO7OXkdmddzE8dzSzfdX60UVJothG+6KKKKYH//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Avec la coupe d'Europe, le lendemain de la finale. Nantes, 5 juillet 2009. <span class="shot__ok" title="5 juillet 2009, mon propre appareil, archives familiales">✓ daté</span><em>L'aéroport de Nantes sur le chemin du retour, la coupe sur le comptoir d'enregistrement. Championnat d'Europe IBSA B2/B3, onze équipes, la Biélorussie bat l'Ukraine 4-0 dans le match décisif. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: personal-website achievements/soccer_france_euro_national_2008_after_winner.jpg, EXIF 2009-07-05; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/national-team-nantes-2009-homecoming-800.webp 600w, /assets/img/gallery/national-team-nantes-2009-homecoming-1600.webp 1200w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-nantes-2009-homecoming-800.jpg" width="600" height="800" alt="Anton Abyzov en survêtement de la Biélorussie brandit sa médaille de champion à côté d&#x27;une femme en rose, sous un panneau indiquant Secteur 6." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMl0tdjPECT7VTSyuBA844WM854NbUMMEels5J3bcq2T1qqS8du8M564Y85I9KbfM9EPlcdzL+0S/5FFWNmecp+dFFmSdK1t9n0+TzU3QoAQVPJrJOowMZ4xEXEzggkdAO1FFCLnJy3JjYQFidzDnpjpRRRV2Rldn/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>De retour de Nantes avec la médaille du championnat d'Europe 2009<em>Biélorussie, 5 juillet 2009, le jour du retour de l'équipe de Nantes. Ma propre photo. Le lieu exact n'est pas consigné dans le fichier.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: Google Photos album Нант 2009; media/google-photos/nantes-2009/_picks/03_anton-gold-medal-minsk-airport_2009-07-05_1700_IMG_1992.jpg, EXIF 5 July 2009 17:00, 1600x1200; research/anton-additions-2026-09-19.md, Google Photos round 3 -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/national-team-minsk-2009-gold-medal-800.webp 800w, /assets/img/gallery/national-team-minsk-2009-gold-medal-1600.webp 1600w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-minsk-2009-gold-medal-800.jpg" width="800" height="600" alt="Anton Abyzov, souriant, dans le hall des arrivées internationales de l&#x27;aéroport de Minsk, la médaille d&#x27;or du championnat d&#x27;Europe 2009 autour du cou et un sac sur l&#x27;épaule." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCe4iWOJpmhQhBgtG+cZ9qqiOG7hfy8Lhed46VjW5ZI23OxAAAGeOtW4JnUMqn5m9O9UpySsLlTZRu7QxMzKQyk9VNFbkdxYXm6PaYSEyC3AJoqQMq2/wBTc/7lJZcytn0oooNIfEis38P0ooopmZ//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>De retour à Minsk avec la médaille d'or du championnat d'Europe 2009, 5 juillet 2009. <span class="shot__ok" title="5 juillet 2009, mon propre appareil, archives familiales">✓ daté</span><em>Le hall des arrivées internationales de l'aéroport de Minsk, secteur 6, quelques heures après le vol retour de Nantes. La médaille autour du cou, le reste de l'équipe arrive derrière moi. Photo : mon propre appareil, archives familiales.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: personal-website achievements/soccer_france_euro_national_2008_winner.jpg, 440x269 original; DOSSIER 2009 row; research/gallery-curation.md -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/gallery/national-team-nantes-2009-squad-800.webp 440w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/national-team-nantes-2009-squad-800.jpg" width="440" height="269" alt="L&#x27;équipe de Biélorussie de futsal pour déficients visuels, assise derrière la coupe avec ses médailles après le championnat d&#x27;Europe 2009 à Nantes." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODUK/9sAQwAUDg8SDw0UEhASFxUUGB4yIR4cHB49LC4kMklATEtHQEZFUFpzYlBVbVZFRmSIZW13e4GCgU5gjZeMfZZzfoF8/9sAQwEVFxceGh47ISE7fFNGU3x8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8/8AAEQgADwAYAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8AhMFtDaxBXJkI+Zc881XlKxj5lYc469K1pdGEc7yk8HPNVXtoQJNzM5Yccd6x57m0ElHVakM0SSw/IWGANwB/Q0Vas7I/aVG4lSPmOetFWqqW6MakJX90/9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Champions d'Europe, Nantes, 2009<em>Championnat d'Europe IBSA B2/B3, France, juillet 2009. La Biélorussie bat l'Ukraine 4-0 dans le match décisif. La seule copie conservée de cette image fait 440 pixels de large, elle reste donc volontairement petite.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: ~/Pictures Itransition trophy photograph, EXIF 22 April 2007; research/gallery-curation.md -->
+          <figure class="shot shot--34">
+            <picture><source srcset="/assets/img/gallery/belarus-itransition-trophies-800.webp 533w, /assets/img/gallery/belarus-itransition-trophies-1600.webp 650w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/belarus-itransition-trophies-800.jpg" width="533" height="800" alt="Trois trophées de futsal dorés posés sur une table de remise des prix rouge, dans une salle de sport." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCpHE8oUBWPPpTWhlGco2QcYxV2URykr9rCgEFVBHBqzHHPuZTIrxdjjmsGjdSOZiMUg2yISfUGrMEz20oaKR9o/gJ4ooobZ6NOlBx2P//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Trois coupes sur la table<em>Minsk, 22 avril 2007, mes propres archives. La fin d'une saison dans les ligues d'entreprise. Rien sur l'image ne nomme la compétition, donc cette page ne la nomme pas non plus.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-6 -->
+</ul></div></section>
+<section class="sec sec--pitch" id="era-7" aria-labelledby="h-era-7"><div class="sec__in"><div class="sec-head"><p class="sec-kick">Encore des archives</p><h2 id="h-era-7">Sans date</h2></div><ul class="grid">
+        <!-- BEGIN:era-7 -->
+        <li>
+          <!-- src: tmpc.barsu.by/index.php/o-sektsii/sotrudniki-sektsii/churilov-evgenij-vladimirovich -->
+          <figure class="shot shot--34 shot--native">
+            <picture><source srcset="/assets/img/churilov.webp" type="image/webp"><img src="/assets/img/churilov.jpg" width="210" height="280" alt="Portrait d&#x27;Evgeny Vladimirovich Churilov, tiré de sa page du personnel de l&#x27;Université d&#x27;État de Baranovichi." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture>
+            <figcaption>Mon premier entraîneur de football<em>Evgeny Vladimirovich Churilov (Чурилов Евгений Владимирович), professeur d'éducation physique au Lycée n° 1 de Baranovichi. Il m'a emmené aux tournois de la ville. Photo : Université d'État de Baranovichi, tmpc.barsu.by</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: SC Gulfstream club post; DOSSIER Gulfstream FC row and date of birth row -->
+          <figure class="shot shot--45">
+            <picture><source srcset="/assets/img/gallery/miami-scgulfstream-birthday-portrait-800.webp 640w, /assets/img/gallery/miami-scgulfstream-birthday-portrait-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-scgulfstream-birthday-portrait-800.jpg" width="640" height="800" alt="Un visuel d&#x27;anniversaire de Gulfstream FC montrant Anton Abyzov bras croisés, en maillot du club, avec November 16 et son nom inscrits dans le ciel." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABMDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDasZJynzKykDvVSA3YtHJLylnOec0+Kcb2zwo45PWrPnKOEGBjgCrlozFVY2aMNre7ZiQjgZ6UVcnguJJmdGwrc43Giq1Mva0+5nWd5HJIFuJNrDgN6/Wta6uLG3td8bqZOOhoorNpN6nTFtLQlhv7UxLmVPzooorTmZB//9k=);background-size:cover;background-position:center"></picture>
+            <figcaption>Gulfstream FC, 16 novembre<em>Le club l'a publié le jour de mon anniversaire. Le texte est incrusté dans l'image, c'est pourquoi elle figure ici et nulle part ailleurs sur le site. Photo : SC Gulfstream.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: ~/Pictures my_photo_miami, Brickell waterfront; research/gallery-curation.md -->
+          <figure class="shot shot--32">
+            <picture><source srcset="/assets/img/gallery/miami-brickell-portrait-800.webp 800w, /assets/img/gallery/miami-brickell-portrait-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/miami-brickell-portrait-800.jpg" width="800" height="533" alt="Anton Abyzov assis sur le front de mer de Brickell à Miami, avec les gratte-ciel derrière lui." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQttQh8zO7r+NMmnia6dtxI9MUliQhLMmBjuKz7u6SOZWVQSx55xipsxXNCC5T5lZwB1FFUre+GwFIi8h/IUUWGmf/2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Brickell, loin du terrain<em>Miami. Ce n'est pas une photo de football : elle est là pour le rythme, pas comme preuve.</em></figcaption>
+          </figure>
+        </li>
+        <li>
+          <!-- src: ~/Pictures half-marathon2; DOSSIER 2019 half marathon row (CLAIMED) -->
+          <figure class="shot shot--169">
+            <picture><source srcset="/assets/img/gallery/fitness-half-marathon-finish-800.webp 800w, /assets/img/gallery/fitness-half-marathon-finish-1600.webp 1280w" sizes="(min-width:960px) 30vw, (min-width:620px) 45vw, 92vw" type="image/webp"><img src="/assets/img/gallery/fitness-half-marathon-finish-800.jpg" width="800" height="450" alt="Trois coureurs avec leur médaille de finisher après un semi-marathon." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBzlrTasjh4n+6e9SwMkyHCFQeQc9R6065Md1CBKgIUDH1q3ZJHDASyBlHy9OcCjZ3L5U1YzzH8uQOD60VZN7FcXP2dIiO4J9KK15kYNH//2Q==);background-size:cover;background-position:center"></picture>
+            <figcaption>Semi-marathon, médaille de finisher<em>Dossard 393. L'épreuve, la date et le temps n'ont pas pu être lus sur la page de chronométrage, donc aucun n'est indiqué ici.</em></figcaption>
+          </figure>
+        </li>
+        <!-- END:era-7 -->
+</ul></div></section>
+<section class="band" id="next"><div class="band__in"><h2>Voir le mouvement.</h2><p class="cta-row"><a class="btn btn--volt" href="/fr/highlights/">Voir les temps forts</a><a class="btn btn--ghost" href="/fr/records/">Archives de carrière</a></p></div></section>
+</main>
+
+<!-- ══ FOOTER (docs/_partials/footer.html) ════════════════════════════════════ -->
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <p class="foot__name">Anton Abyzov</p>
+      <p class="foot__role">Joueur polyvalent · Meneur de jeu · Entraîneur · Miami, Floride</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="Ailleurs">
+      <a href="https://antonabyzov.com" rel="noopener">antonabyzov.com <em>Ingénierie logicielle</em></a>
+      <a href="https://easychamp.com" rel="noopener">EasyChamp <em>L’entreprise</em></a>
+      <a href="https://www.youtube.com/@antonabyzov" rel="noopener">AI Power <em>YouTube</em></a>
+      <a href="https://www.youtube.com/@aabyzov" rel="noopener">Ma chaîne YouTube <em>youtube.com/@aabyzov</em></a>
+      <a href="https://www.instagram.com/aabyzov/" rel="noopener">Instagram <em>@aabyzov</em></a>
+      <a href="/fr/watch/">Regarder <em>Chaque match, chaque lien</em></a>
+      <a href="/fr/records/">Archives <em>Chaque chiffre, sourcé</em></a>
+    </nav>
+
+    <p class="foot__fine">
+      Les chiffres de ce site renvoient aux sources listées sur <a href="/fr/records/">/records/</a>. Les chiffres enregistrés sont des chiffres enregistrés, pas des totaux de carrière : beaucoup de matchs n’ont jamais été filmés ni consignés.
+    </p>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
