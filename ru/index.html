@@ -246,75 +246,24 @@
     <div class="story__head">
       <p class="sec-kick"><span class="pill pill--out">История</span>1984–2026</p>
       <h2 id="h-story">Сорок лет с мячом.<br><span class="muted">Восемь глав, один игрок.</span></h2>
+      <div class="story__order" role="group" aria-label="Порядок глав" hidden>
+        <button type="button" data-order="newest" aria-pressed="true">Сначала новое</button>
+        <button type="button" data-order="oldest" aria-pressed="false">С самого начала</button>
+      </div>
     </div>
     <div class="story__stage">
       <div class="story__meter" aria-hidden="true"><i></i></div>
       <ol class="story__list" id="story-list">
         <!-- BEGIN:story -->
-        <!-- src: data/timeline.json 1990s row; research/baranovichi-origins.md -->
-        <li class="chap chap--contain" id="chap-start">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/churilov.webp" type="image/webp"><img src="/assets/img/churilov.jpg" width="210" height="280" alt="Евгений Чурилов, первый футбольный тренер Антона Абызова." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture></figure>
+        <!-- src: data/timeline.json 2026 rows; premierliga.pro squad page -->
+        <li class="chap" id="chap-now">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/hero-baller-league.webp" type="image/webp"><img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600" alt="Антон Абызов на арене Baller League в Майами, апрель 2026 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center"></picture></figure>
           <div class="chap__txt">
-            <p class="chap__yr">1990s</p>
-            <p class="chap__where">Барановичи, Беларусь</p>
-            <h3 class="chap__t">Учитель физкультуры и городские турниры</h3>
-            <p class="chap__b">Лицей № 1 в Барановичах. Мой первый тренер, Евгений Чурилов, преподавал там физкультуру и возил меня на городские турниры.</p>
-            <a class="chap__a" href="/ru/career/">Вся карьера<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2009 rows; data/honours.json -->
-        <li class="chap chap--gold" id="chap-nantes">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/nantes-2009-european-cup.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup.jpg" width="1200" height="800" alt="Антон Абызов с кубком чемпионата Европы в Нанте, июль 2009 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKO6it7iQrEjcZBJ6VDLcRjzG8tXZzkE9q3DbW6TMREg/CsrW9O8mFpo5QfMkHygAYouCSvqZ0l2zQxqIw34UV00EdqunxuUjHyDkj2opFKTWiP//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2009</p>
-            <p class="chap__where">Нант, Франция</p>
-            <h3 class="chap__t">Чемпион Европы в составе сборной Беларуси</h3>
-            <p class="chap__b">Чемпионат Европы IBSA B2/B3 в составе сборной Беларуси по мини-футболу среди слабовидящих. В решающем матче Беларусь обыграла Украину 4:0. В том же году пришли звание мастера спорта и Благодарность Президента.</p>
-            <a class="chap__a" href="/ru/futsal/#euro-2009">Нант, 2009<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2010, 2010/11, 2011, 2012 rows -->
-        <li class="chap" id="chap-itransition">
-          <figure class="chap__fig"><picture class="chap__pic"><source type="image/webp" srcset="/assets/img/gallery/belarus-itransition-futsal-squad-1600.webp 1600w, /assets/img/gallery/belarus-itransition-futsal-squad-800.webp 800w" sizes="(min-width:760px) 55vw, 100vw"><img src="/assets/img/gallery/belarus-itransition-futsal-squad-800.jpg" width="1600" height="1200" alt="Команда Итранзишэн по мини-футболу в форме спонсора выстроилась в минском спортзале, март 2010 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFCpk8pMF8ZxTg4YuABlODVHT5Qb0SXD/wEZHGa0TLZDcerN9761noQkiJ42J+6Md6KrXV2FmfyGO0rjn1opaEtIpx9RUoooqGQMl6miiimgP/2Q==);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2010–2015</p>
-            <p class="chap__where">Минск</p>
-            <h3 class="chap__t">Из корпоративной команды в Высшую лигу</h3>
-            <p class="chap__b">Я создал команду Итранзишэн по мини-футболу и был её капитаном. Мы выиграли чемпионат Минска, получили путёвку в Высшую лигу и в 2012 году заняли там пятое место.</p>
-            <a class="chap__a" href="/ru/futsal/#itransition">Годы в «Итранзишэне»<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2019 row; official protocol -->
-        <li class="chap" id="chap-lidselmash">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Матч по мини-футболу между «Территорией-Макслайн» и «Лидсельмашем» в Минске, февраль 2019 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2019</p>
-            <p class="chap__where">СК МАПИД, Минск</p>
-            <h3 class="chap__t">Гол в ворота чемпиона</h3>
-            <p class="chap__b">«Территория-Макслайн» против действующего чемпиона Беларуси «Лидсельмаша» в Высшей лиге. Я забил на 13-й минуте при 220 зрителях.</p>
-            <a class="chap__a" href="/ru/highlights/#champion">Смотреть гол<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2021 rows; YouTube DuwUJHRf00U -->
-        <li class="chap" id="chap-2021">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/poster-itcup.webp" type="image/webp"><img src="/assets/img/poster-itcup.jpg" width="1280" height="720" alt="Кадр из трансляции финала IT Cup, Минск, август 2021 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBwnI4z0ppmPfpTI4i8auWxu6VX8zp9ea5+V9SC35w7cH1oqucdSoHuKKpRb2DlP//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2021</p>
-            <p class="chap__where">Минск</p>
-            <h3 class="chap__t">Самый насыщенный год в архиве</h3>
-            <p class="chap__b">48 учтённых матчей, 81 гол и 28 голевых передач. В финале IT Cup я сравнял счёт ударом в касание после контратаки три в три, и мы победили 3:2.</p>
-            <a class="chap__a" href="/ru/highlights/#itcup">Ответный гол в финале<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2022 row; fussball.de fixture -->
-        <li class="chap" id="chap-germany">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/rangsdorf-2022.webp" type="image/webp"><img src="/assets/img/rangsdorf-2022.jpg" width="675" height="900" alt="Stadion Rangsdorfer See, Германия, 10 апреля 2022 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMnizLKhGRFwSKsW9k0sYaKMsxXge1W/s65c5+8cn3qSOR0kDLM3A29BWXOio2d7lE6RdZ/wCPQ/n/APXorU+0y/8APU0U+eJFxuKTaKKK5xCbfrRRRQB//9k=);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2022</p>
-            <p class="chap__where">Рангсдорф, Германия</p>
-            <h3 class="chap__t">Единственный гол и звание лучшего игрока</h3>
-            <p class="chap__b">SV Rangsdorf 28 1-0 SV Siethen, Бранденбург. Я забил единственный гол, и тренер назвал меня лучшим игроком матча.</p>
-            <a class="chap__a" href="/ru/highlights/#germany">Rangsdorf 1:0 Siethen<span aria-hidden="true"> →</span></a>
+            <p class="chap__yr">2026</p>
+            <p class="chap__where">Минск и Майами</p>
+            <h3 class="chap__t">Тринадцать голов в десяти матчах, в 41 год</h3>
+            <p class="chap__b">Летний Кубок Премьерлиги 5x5 в Минске: 13 голов в 10 матчах, так указано на странице состава на сайте самой лиги. Четверо игроков из моего майамского состава дошли до финала четырёх Baller League USA.</p>
+            <a class="chap__a" href="/ru/baller-league/">Почему формат 6 на 6 подходит моей игре<span aria-hidden="true"> →</span></a>
           </div>
         </li>
         <!-- src: data/timeline.json 2024 and 2025 rows; data/honours.json -->
@@ -328,15 +277,70 @@
             <a class="chap__a" href="/ru/football/#miami">Годы в Майами<span aria-hidden="true"> →</span></a>
           </div>
         </li>
-        <!-- src: data/timeline.json 2026 rows; premierliga.pro squad page -->
-        <li class="chap" id="chap-now">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/hero-baller-league.webp" type="image/webp"><img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600" alt="Антон Абызов на арене Baller League в Майами, апрель 2026 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center"></picture></figure>
+        <!-- src: data/timeline.json 2022 row; fussball.de fixture -->
+        <li class="chap" id="chap-germany">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/rangsdorf-2022.webp" type="image/webp"><img src="/assets/img/rangsdorf-2022.jpg" width="675" height="900" alt="Stadion Rangsdorfer See, Германия, 10 апреля 2022 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMnizLKhGRFwSKsW9k0sYaKMsxXge1W/s65c5+8cn3qSOR0kDLM3A29BWXOio2d7lE6RdZ/wCPQ/n/APXorU+0y/8APU0U+eJFxuKTaKKK5xCbfrRRRQB//9k=);background-size:cover;background-position:center"></picture></figure>
           <div class="chap__txt">
-            <p class="chap__yr">2026</p>
-            <p class="chap__where">Минск и Майами</p>
-            <h3 class="chap__t">Тринадцать голов в десяти матчах, в 41 год</h3>
-            <p class="chap__b">Летний Кубок Премьерлиги 5x5 в Минске: 13 голов в 10 матчах, так указано на странице состава на сайте самой лиги. Четверо игроков из моего майамского состава дошли до финала четырёх Baller League USA.</p>
-            <a class="chap__a" href="/ru/baller-league/">Почему формат 6 на 6 подходит моей игре<span aria-hidden="true"> →</span></a>
+            <p class="chap__yr">2022</p>
+            <p class="chap__where">Рангсдорф, Германия</p>
+            <h3 class="chap__t">Единственный гол и звание лучшего игрока</h3>
+            <p class="chap__b">SV Rangsdorf 28 1-0 SV Siethen, Бранденбург. Я забил единственный гол, и тренер назвал меня лучшим игроком матча.</p>
+            <a class="chap__a" href="/ru/highlights/#germany">Rangsdorf 1:0 Siethen<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2021 rows; YouTube DuwUJHRf00U -->
+        <li class="chap" id="chap-2021">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/poster-itcup.webp" type="image/webp"><img src="/assets/img/poster-itcup.jpg" width="1280" height="720" alt="Кадр из трансляции финала IT Cup, Минск, август 2021 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBwnI4z0ppmPfpTI4i8auWxu6VX8zp9ea5+V9SC35w7cH1oqucdSoHuKKpRb2DlP//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2021</p>
+            <p class="chap__where">Минск</p>
+            <h3 class="chap__t">Самый насыщенный год в архиве</h3>
+            <p class="chap__b">48 учтённых матчей, 81 гол и 28 голевых передач. В финале IT Cup я сравнял счёт ударом в касание после контратаки три в три, и мы победили 3:2.</p>
+            <a class="chap__a" href="/ru/highlights/#itcup">Ответный гол в финале<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2019 row; official protocol -->
+        <li class="chap" id="chap-lidselmash">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Матч по мини-футболу между «Территорией-Макслайн» и «Лидсельмашем» в Минске, февраль 2019 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2019</p>
+            <p class="chap__where">СК МАПИД, Минск</p>
+            <h3 class="chap__t">Гол в ворота чемпиона</h3>
+            <p class="chap__b">«Территория-Макслайн» против действующего чемпиона Беларуси «Лидсельмаша» в Высшей лиге. Я забил на 13-й минуте при 220 зрителях.</p>
+            <a class="chap__a" href="/ru/highlights/#champion">Смотреть гол<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2010, 2010/11, 2011, 2012 rows -->
+        <li class="chap" id="chap-itransition">
+          <figure class="chap__fig"><picture class="chap__pic"><source type="image/webp" srcset="/assets/img/gallery/belarus-itransition-futsal-squad-1600.webp 1600w, /assets/img/gallery/belarus-itransition-futsal-squad-800.webp 800w" sizes="(min-width:760px) 55vw, 100vw"><img src="/assets/img/gallery/belarus-itransition-futsal-squad-800.jpg" width="1600" height="1200" alt="Команда Итранзишэн по мини-футболу в форме спонсора выстроилась в минском спортзале, март 2010 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFCpk8pMF8ZxTg4YuABlODVHT5Qb0SXD/wEZHGa0TLZDcerN9761noQkiJ42J+6Md6KrXV2FmfyGO0rjn1opaEtIpx9RUoooqGQMl6miiimgP/2Q==);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2010–2015</p>
+            <p class="chap__where">Минск</p>
+            <h3 class="chap__t">Из корпоративной команды в Высшую лигу</h3>
+            <p class="chap__b">Я создал команду Итранзишэн по мини-футболу и был её капитаном. Мы выиграли чемпионат Минска, получили путёвку в Высшую лигу и в 2012 году заняли там пятое место.</p>
+            <a class="chap__a" href="/ru/futsal/#itransition">Годы в «Итранзишэне»<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2009 rows; data/honours.json -->
+        <li class="chap chap--gold" id="chap-nantes">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/nantes-2009-european-cup.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup.jpg" width="1200" height="800" alt="Антон Абызов с кубком чемпионата Европы в Нанте, июль 2009 года." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKO6it7iQrEjcZBJ6VDLcRjzG8tXZzkE9q3DbW6TMREg/CsrW9O8mFpo5QfMkHygAYouCSvqZ0l2zQxqIw34UV00EdqunxuUjHyDkj2opFKTWiP//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2009</p>
+            <p class="chap__where">Нант, Франция</p>
+            <h3 class="chap__t">Чемпион Европы в составе сборной Беларуси</h3>
+            <p class="chap__b">Чемпионат Европы IBSA B2/B3 в составе сборной Беларуси по мини-футболу среди слабовидящих. В решающем матче Беларусь обыграла Украину 4:0. В том же году пришли звание мастера спорта и Благодарность Президента.</p>
+            <a class="chap__a" href="/ru/futsal/#euro-2009">Нант, 2009<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 1990s row; research/baranovichi-origins.md -->
+        <li class="chap chap--contain" id="chap-start">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/churilov.webp" type="image/webp"><img src="/assets/img/churilov.jpg" width="210" height="280" alt="Евгений Чурилов, первый футбольный тренер Антона Абызова." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">1990s</p>
+            <p class="chap__where">Барановичи, Беларусь</p>
+            <h3 class="chap__t">Учитель физкультуры и городские турниры</h3>
+            <p class="chap__b">Лицей № 1 в Барановичах. Мой первый тренер, Евгений Чурилов, преподавал там физкультуру и возил меня на городские турниры.</p>
+            <a class="chap__a" href="/ru/career/">Вся карьера<span aria-hidden="true"> →</span></a>
           </div>
         </li>
         <!-- END:story -->

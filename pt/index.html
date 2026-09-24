@@ -246,75 +246,24 @@
     <div class="story__head">
       <p class="sec-kick"><span class="pill pill--out">A história</span>De 1984 a 2026</p>
       <h2 id="h-story">Quarenta anos com a bola.<br><span class="muted">Oito capítulos, um jogador.</span></h2>
+      <div class="story__order" role="group" aria-label="Ordem da história" hidden>
+        <button type="button" data-order="newest" aria-pressed="true">Mais recente primeiro</button>
+        <button type="button" data-order="oldest" aria-pressed="false">Desde o início</button>
+      </div>
     </div>
     <div class="story__stage">
       <div class="story__meter" aria-hidden="true"><i></i></div>
       <ol class="story__list" id="story-list">
         <!-- BEGIN:story -->
-        <!-- src: data/timeline.json 1990s row; research/baranovichi-origins.md -->
-        <li class="chap chap--contain" id="chap-start">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/churilov.webp" type="image/webp"><img src="/assets/img/churilov.jpg" width="210" height="280" alt="Evgeny Churilov, o primeiro treinador de futebol de Anton Abyzov." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture></figure>
+        <!-- src: data/timeline.json 2026 rows; premierliga.pro squad page -->
+        <li class="chap" id="chap-now">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/hero-baller-league.webp" type="image/webp"><img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600" alt="Anton Abyzov na arena da Baller League em Miami, abril de 2026." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center"></picture></figure>
           <div class="chap__txt">
-            <p class="chap__yr">1990s</p>
-            <p class="chap__where">Baranovichi, Belarus</p>
-            <h3 class="chap__t">Um professor de educação física e os torneios da cidade</h3>
-            <p class="chap__b">Liceu nº 1 de Baranovichi. Meu primeiro treinador, Evgeny Churilov, era o professor de educação física de lá, e era ele quem me levava aos torneios da cidade.</p>
-            <a class="chap__a" href="/pt/career/">A carreira completa<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2009 rows; data/honours.json -->
-        <li class="chap chap--gold" id="chap-nantes">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/nantes-2009-european-cup.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup.jpg" width="1200" height="800" alt="Anton Abyzov com a taça do Campeonato Europeu em Nantes, julho de 2009." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKO6it7iQrEjcZBJ6VDLcRjzG8tXZzkE9q3DbW6TMREg/CsrW9O8mFpo5QfMkHygAYouCSvqZ0l2zQxqIw34UV00EdqunxuUjHyDkj2opFKTWiP//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2009</p>
-            <p class="chap__where">Nantes, França</p>
-            <h3 class="chap__t">Campeão europeu com Belarus</h3>
-            <p class="chap__b">Campeonato Europeu IBSA B2/B3 com a seleção de Belarus de futsal para deficientes visuais. Belarus venceu a Ucrânia por 4 a 0 no jogo decisivo. No mesmo ano vieram o título de Mestre do Esporte e uma Menção de louvor do Presidente.</p>
-            <a class="chap__a" href="/pt/futsal/#euro-2009">Nantes 2009<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2010, 2010/11, 2011, 2012 rows -->
-        <li class="chap" id="chap-itransition">
-          <figure class="chap__fig"><picture class="chap__pic"><source type="image/webp" srcset="/assets/img/gallery/belarus-itransition-futsal-squad-1600.webp 1600w, /assets/img/gallery/belarus-itransition-futsal-squad-800.webp 800w" sizes="(min-width:760px) 55vw, 100vw"><img src="/assets/img/gallery/belarus-itransition-futsal-squad-800.jpg" width="1600" height="1200" alt="O time de futsal da Itransition, com o uniforme do patrocinador, perfilado num ginásio de Minsk, março de 2010." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFCpk8pMF8ZxTg4YuABlODVHT5Qb0SXD/wEZHGa0TLZDcerN9761noQkiJ42J+6Md6KrXV2FmfyGO0rjn1opaEtIpx9RUoooqGQMl6miiimgP/2Q==);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">De 2010 a 2015</p>
-            <p class="chap__where">Minsk</p>
-            <h3 class="chap__t">De time de empresa à primeira divisão nacional</h3>
-            <p class="chap__b">Fundei o time de futsal da Itransition e fui o capitão. Ganhamos o campeonato municipal de Minsk, que nos levou à Vysshaya Liga, e lá terminamos em quinto em 2012.</p>
-            <a class="chap__a" href="/pt/futsal/#itransition">Os anos de Itransition<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2019 row; official protocol -->
-        <li class="chap" id="chap-lidselmash">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Jogo de futsal entre Territory-Maxline e Lidselmash em Minsk, fevereiro de 2019." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2019</p>
-            <p class="chap__where">SK Mapid, Minsk</p>
-            <h3 class="chap__t">Um gol contra os campeões</h3>
-            <p class="chap__b">Territory-Maxline contra o Lidselmash, atual campeão de Belarus, na primeira divisão nacional. Meu gol saiu aos 13 minutos, diante de 220 torcedores.</p>
-            <a class="chap__a" href="/pt/highlights/#champion">Assistir ao gol<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2021 rows; YouTube DuwUJHRf00U -->
-        <li class="chap" id="chap-2021">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/poster-itcup.webp" type="image/webp"><img src="/assets/img/poster-itcup.jpg" width="1280" height="720" alt="Uma imagem da transmissão da final da IT Cup, Minsk, agosto de 2021." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBwnI4z0ppmPfpTI4i8auWxu6VX8zp9ea5+V9SC35w7cH1oqucdSoHuKKpRb2DlP//Z);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2021</p>
-            <p class="chap__where">Minsk</p>
-            <h3 class="chap__t">O maior ano do arquivo</h3>
-            <p class="chap__b">48 jogos registrados, 81 gols e 28 assistências. Na final da IT Cup, fiz o gol de empate de primeira, num contra-ataque de três contra três, e vencemos por 3 a 2.</p>
-            <a class="chap__a" href="/pt/highlights/#itcup">O gol de empate na final<span aria-hidden="true"> →</span></a>
-          </div>
-        </li>
-        <!-- src: data/timeline.json 2022 row; fussball.de fixture -->
-        <li class="chap" id="chap-germany">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/rangsdorf-2022.webp" type="image/webp"><img src="/assets/img/rangsdorf-2022.jpg" width="675" height="900" alt="Stadion Rangsdorfer See, Alemanha, 10 de abril de 2022." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMnizLKhGRFwSKsW9k0sYaKMsxXge1W/s65c5+8cn3qSOR0kDLM3A29BWXOio2d7lE6RdZ/wCPQ/n/APXorU+0y/8APU0U+eJFxuKTaKKK5xCbfrRRRQB//9k=);background-size:cover;background-position:center"></picture></figure>
-          <div class="chap__txt">
-            <p class="chap__yr">2022</p>
-            <p class="chap__where">Rangsdorf, Alemanha</p>
-            <h3 class="chap__t">O único gol e o prêmio de melhor em campo</h3>
-            <p class="chap__b">SV Rangsdorf 28 1 x 0 SV Siethen, em Brandemburgo. Fiz o único gol e o técnico me escolheu como o melhor em campo.</p>
-            <a class="chap__a" href="/pt/highlights/#germany">Rangsdorf 1 x 0 Siethen<span aria-hidden="true"> →</span></a>
+            <p class="chap__yr">2026</p>
+            <p class="chap__where">Minsk e Miami</p>
+            <h3 class="chap__t">Treze gols em dez jogos, aos 41 anos</h3>
+            <p class="chap__b">Premierliga 5x5 Summer Cup em Minsk: 13 gols em 10 jogos, na página do elenco da própria liga. Quatro jogadores do meu elenco de Miami chegaram ao final four da Baller League USA.</p>
+            <a class="chap__a" href="/pt/baller-league/">Por que o 6 contra 6 combina com o meu jogo<span aria-hidden="true"> →</span></a>
           </div>
         </li>
         <!-- src: data/timeline.json 2024 and 2025 rows; data/honours.json -->
@@ -328,15 +277,70 @@
             <a class="chap__a" href="/pt/football/#miami">Os anos em Miami<span aria-hidden="true"> →</span></a>
           </div>
         </li>
-        <!-- src: data/timeline.json 2026 rows; premierliga.pro squad page -->
-        <li class="chap" id="chap-now">
-          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/hero-baller-league.webp" type="image/webp"><img src="/assets/img/hero-baller-league.jpg" width="1200" height="1600" alt="Anton Abyzov na arena da Baller League em Miami, abril de 2026." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIXTZ4zwXH5U42FyW4bg9c4rXkDeU2zhscU2OBlKuXdj3yuBiudTbQ0m1cyv7Puv8AY/MUVt7R6UVPtGTcpXN/HFlFyX6fSm/bpo1zLlgGwR6UUVt7OKsi47Mf/aVv6n8qKKKr2MTM/9k=);background-size:cover;background-position:center"></picture></figure>
+        <!-- src: data/timeline.json 2022 row; fussball.de fixture -->
+        <li class="chap" id="chap-germany">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/rangsdorf-2022.webp" type="image/webp"><img src="/assets/img/rangsdorf-2022.jpg" width="675" height="900" alt="Stadion Rangsdorfer See, Alemanha, 10 de abril de 2022." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMnizLKhGRFwSKsW9k0sYaKMsxXge1W/s65c5+8cn3qSOR0kDLM3A29BWXOio2d7lE6RdZ/wCPQ/n/APXorU+0y/8APU0U+eJFxuKTaKKK5xCbfrRRRQB//9k=);background-size:cover;background-position:center"></picture></figure>
           <div class="chap__txt">
-            <p class="chap__yr">2026</p>
-            <p class="chap__where">Minsk e Miami</p>
-            <h3 class="chap__t">Treze gols em dez jogos, aos 41 anos</h3>
-            <p class="chap__b">Premierliga 5x5 Summer Cup em Minsk: 13 gols em 10 jogos, na página do elenco da própria liga. Quatro jogadores do meu elenco de Miami chegaram ao final four da Baller League USA.</p>
-            <a class="chap__a" href="/pt/baller-league/">Por que o 6 contra 6 combina com o meu jogo<span aria-hidden="true"> →</span></a>
+            <p class="chap__yr">2022</p>
+            <p class="chap__where">Rangsdorf, Alemanha</p>
+            <h3 class="chap__t">O único gol e o prêmio de melhor em campo</h3>
+            <p class="chap__b">SV Rangsdorf 28 1 x 0 SV Siethen, em Brandemburgo. Fiz o único gol e o técnico me escolheu como o melhor em campo.</p>
+            <a class="chap__a" href="/pt/highlights/#germany">Rangsdorf 1 x 0 Siethen<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2021 rows; YouTube DuwUJHRf00U -->
+        <li class="chap" id="chap-2021">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/poster-itcup.webp" type="image/webp"><img src="/assets/img/poster-itcup.jpg" width="1280" height="720" alt="Uma imagem da transmissão da final da IT Cup, Minsk, agosto de 2021." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBwnI4z0ppmPfpTI4i8auWxu6VX8zp9ea5+V9SC35w7cH1oqucdSoHuKKpRb2DlP//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2021</p>
+            <p class="chap__where">Minsk</p>
+            <h3 class="chap__t">O maior ano do arquivo</h3>
+            <p class="chap__b">48 jogos registrados, 81 gols e 28 assistências. Na final da IT Cup, fiz o gol de empate de primeira, num contra-ataque de três contra três, e vencemos por 3 a 2.</p>
+            <a class="chap__a" href="/pt/highlights/#itcup">O gol de empate na final<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2019 row; official protocol -->
+        <li class="chap" id="chap-lidselmash">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/lidselmash-scene.webp" type="image/webp"><img src="/assets/img/lidselmash-scene.jpg" width="1080" height="720" alt="Jogo de futsal entre Territory-Maxline e Lidselmash em Minsk, fevereiro de 2019." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBTqEuzEcKjCnkiqQubrYWwqjp2o/tcQ3xDophPT0q4t3ZzTLtC7O4DVjeSRpZMzmu7srjeR+NFazLaMTgED3FFPnDlR//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2019</p>
+            <p class="chap__where">SK Mapid, Minsk</p>
+            <h3 class="chap__t">Um gol contra os campeões</h3>
+            <p class="chap__b">Territory-Maxline contra o Lidselmash, atual campeão de Belarus, na primeira divisão nacional. Meu gol saiu aos 13 minutos, diante de 220 torcedores.</p>
+            <a class="chap__a" href="/pt/highlights/#champion">Assistir ao gol<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2010, 2010/11, 2011, 2012 rows -->
+        <li class="chap" id="chap-itransition">
+          <figure class="chap__fig"><picture class="chap__pic"><source type="image/webp" srcset="/assets/img/gallery/belarus-itransition-futsal-squad-1600.webp 1600w, /assets/img/gallery/belarus-itransition-futsal-squad-800.webp 800w" sizes="(min-width:760px) 55vw, 100vw"><img src="/assets/img/gallery/belarus-itransition-futsal-squad-800.jpg" width="1600" height="1200" alt="O time de futsal da Itransition, com o uniforme do patrocinador, perfilado num ginásio de Minsk, março de 2010." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFCpk8pMF8ZxTg4YuABlODVHT5Qb0SXD/wEZHGa0TLZDcerN9761noQkiJ42J+6Md6KrXV2FmfyGO0rjn1opaEtIpx9RUoooqGQMl6miiimgP/2Q==);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">De 2010 a 2015</p>
+            <p class="chap__where">Minsk</p>
+            <h3 class="chap__t">De time de empresa à primeira divisão nacional</h3>
+            <p class="chap__b">Fundei o time de futsal da Itransition e fui o capitão. Ganhamos o campeonato municipal de Minsk, que nos levou à Vysshaya Liga, e lá terminamos em quinto em 2012.</p>
+            <a class="chap__a" href="/pt/futsal/#itransition">Os anos de Itransition<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 2009 rows; data/honours.json -->
+        <li class="chap chap--gold" id="chap-nantes">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/nantes-2009-european-cup.webp" type="image/webp"><img src="/assets/img/nantes-2009-european-cup.jpg" width="1200" height="800" alt="Anton Abyzov com a taça do Campeonato Europeu em Nantes, julho de 2009." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKO6it7iQrEjcZBJ6VDLcRjzG8tXZzkE9q3DbW6TMREg/CsrW9O8mFpo5QfMkHygAYouCSvqZ0l2zQxqIw34UV00EdqunxuUjHyDkj2opFKTWiP//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">2009</p>
+            <p class="chap__where">Nantes, França</p>
+            <h3 class="chap__t">Campeão europeu com Belarus</h3>
+            <p class="chap__b">Campeonato Europeu IBSA B2/B3 com a seleção de Belarus de futsal para deficientes visuais. Belarus venceu a Ucrânia por 4 a 0 no jogo decisivo. No mesmo ano vieram o título de Mestre do Esporte e uma Menção de louvor do Presidente.</p>
+            <a class="chap__a" href="/pt/futsal/#euro-2009">Nantes 2009<span aria-hidden="true"> →</span></a>
+          </div>
+        </li>
+        <!-- src: data/timeline.json 1990s row; research/baranovichi-origins.md -->
+        <li class="chap chap--contain" id="chap-start">
+          <figure class="chap__fig"><picture class="chap__pic"><source srcset="/assets/img/churilov.webp" type="image/webp"><img src="/assets/img/churilov.jpg" width="210" height="280" alt="Evgeny Churilov, o primeiro treinador de futebol de Anton Abyzov." loading="lazy" decoding="async" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxBGLiXazdu9F7pwggLiTcc+lV7K7Tz9rKBu4HvV6+nj+zYK4du1dMpy9skjnjGLotsxN7/wB40U/fH/zz/Wiu75HHdmdO5EilCQynINWUupLgKJTu29z1oorksnO503ap2H7xRRRXRdnPY//Z);background-size:cover;background-position:center"></picture></figure>
+          <div class="chap__txt">
+            <p class="chap__yr">1990s</p>
+            <p class="chap__where">Baranovichi, Belarus</p>
+            <h3 class="chap__t">Um professor de educação física e os torneios da cidade</h3>
+            <p class="chap__b">Liceu nº 1 de Baranovichi. Meu primeiro treinador, Evgeny Churilov, era o professor de educação física de lá, e era ele quem me levava aos torneios da cidade.</p>
+            <a class="chap__a" href="/pt/career/">A carreira completa<span aria-hidden="true"> →</span></a>
           </div>
         </li>
         <!-- END:story -->

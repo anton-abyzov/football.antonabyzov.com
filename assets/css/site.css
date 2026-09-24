@@ -1249,6 +1249,11 @@ html:not([lang="en"]) .bug__id i{ line-height:1.2; }
 .story__head{ max-width:var(--max); margin:0 auto clamp(26px,4vw,48px); }
 .story__head h2{ margin:10px 0 0; font:400 var(--t-h2)/.98 var(--display); text-transform:uppercase; letter-spacing:.005em; }
 .story__head .muted{ color:var(--chalk-fade); }
+.story__order{ display:inline-flex; gap:0; margin-top:18px; border:1px solid var(--line-soft); }
+.story__order[hidden]{ display:none; }
+.story__order button{ appearance:none; border:0; background:transparent; color:var(--chalk-dim); padding:10px 14px; font:700 var(--t-label)/1 var(--body); letter-spacing:.16em; text-transform:uppercase; cursor:pointer; }
+.story__order button[aria-pressed="true"]{ background:var(--volt); color:#07150f; }
+.story__order button:focus-visible{ outline:2px solid var(--volt); outline-offset:2px; }
 .story__stage{ position:relative; max-width:var(--max); margin-inline:auto; }
 .story__meter{ display:none; }
 .story__list{ list-style:none; margin:0; padding:0; display:grid; gap:clamp(40px,6vw,72px); counter-reset:chap; }

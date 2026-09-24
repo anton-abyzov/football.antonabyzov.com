@@ -279,6 +279,46 @@
     vids.forEach(function (v) { showIO.observe(v); });
   }
 
+  /* story order: newest first is how the HTML ships; the visitor can read it
+     from the start instead, and the choice is remembered on this device */
+  var storyTL = null;
+  var story0 = document.querySelector('.story');
+  var orderBox = story0 && story0.querySelector('.story__order');
+  function storyOrder(order, rebuild) {
+    var list = story0.querySelector('.story__list');
+    var cur = list.getAttribute('data-order') || 'newest';
+    [].forEach.call(orderBox.querySelectorAll('button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-order') === order));
+    });
+    if (cur === order) return;
+    if (storyTL && window.__gsap) {
+      storyTL.scrollTrigger && storyTL.scrollTrigger.kill(true);
+      storyTL.kill(); storyTL = null;
+      window.__gsap.set(story0.querySelectorAll('.chap__fig, .chap__txt > *, .chap img'), { clearProps: 'all' });
+      story0.classList.remove('story--pin');
+      [].forEach.call(story0.querySelectorAll('.chap'), function (c) { c.classList.remove('is-on'); });
+    }
+    [].slice.call(list.children).reverse().forEach(function (li) { list.appendChild(li); });
+    list.setAttribute('data-order', order);
+    try { localStorage.setItem('storyOrder', order); } catch (e) {}
+    if (rebuild && window.__gsap) {
+      storyTL = pinStory(window.__gsap);
+      window.ScrollTrigger.refresh();
+    }
+  }
+  if (orderBox) {
+    orderBox.hidden = false;
+    var saved = null;
+    try { saved = localStorage.getItem('storyOrder'); } catch (e) {}
+    if (saved === 'oldest') storyOrder('oldest', false);
+    orderBox.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-order]');
+      if (!b) return;
+      storyOrder(b.getAttribute('data-order'), true);
+      story0.querySelector('.story__head').scrollIntoView({ block: 'start' });
+    });
+  }
+
   /* GSAP only where a pinned sequence exists, only on wide screens with
      motion allowed; loaded from cdnjs after the page is interactive */
   var story = document.querySelector('.story');
@@ -292,7 +332,8 @@
     load(CDN + 'gsap.min.js', function () {
       load(CDN + 'ScrollTrigger.min.js', function () {
         var gsap = window.gsap; gsap.registerPlugin(window.ScrollTrigger);
-        if (story) pinStory(gsap);
+        window.__gsap = gsap;
+        if (story) storyTL = pinStory(gsap);
         if (show) pinShow(gsap);
         window.ScrollTrigger.refresh();
       });
@@ -301,7 +342,7 @@
 
   function pinStory(gsap) {
     var chaps = [].slice.call(story.querySelectorAll('.chap'));
-    if (chaps.length < 2) return;
+    if (chaps.length < 2) return null;
     story.classList.add('story--pin');
     chaps[0].classList.add('is-on');
     var stage = story.querySelector('.story__stage');
@@ -338,6 +379,7 @@
         .addLabel('c' + i)
         .to({}, { duration: 1.0 });
     });
+    return tl;
   }
 
   function pinShow(gsap) {
