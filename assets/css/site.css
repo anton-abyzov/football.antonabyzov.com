@@ -1339,3 +1339,12 @@ html:not([lang="en"]) .bug__id i{ line-height:1.2; }
   .tilt{ transform:none!important; }
 }
 @media print{ .scrollbar{ display:none; } .story--pin .chap{ position:static; } }
+
+/* story photos: keep the head in frame whatever box the chapter is drawn in */
+#chap-germany .chap__fig img{ object-position:50% 12%; }
+#chap-miami .chap__fig img{ object-position:50% 18%; }
+#chap-now .chap__fig img{ object-position:50% 62%; }
+#chap-nantes .chap__fig img{ object-position:88% 50%; }
+/* people photos: when a tile has to crop, keep the top (heads), not the middle */
+.grid img{ object-position:50% 28%; }
+.fit__inset img{ object-position:50% 30%; }
